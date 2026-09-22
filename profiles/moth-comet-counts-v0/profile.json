@@ -1,0 +1,30 @@
+{
+  "profileId": "qev-moth-comet-counts-v0",
+  "schema": "qev.moth-comet-profile.v0",
+  "input": "Preserved HTTP bodies and local unsigned independent claim",
+  "entrypoint": "python -B -m qev.moth_replay",
+  "specification": "docs/MOTH_COMET_COUNTS_V0.md",
+  "adapter": "qev/moth_comet.py",
+  "captureReplay": "qev/moth_replay.py",
+  "request": {
+    "mode": "qpu",
+    "params": {
+      "num_qubits": 12,
+      "shots": 2048,
+      "output_bytes": 32,
+      "bell_witness": true,
+      "include_raw_counts": true,
+      "epsilon_log2": 64
+    }
+  },
+  "outcomes": ["CONSISTENT", "REFUTED", "REJECTED", "UNVERIFIABLE", "CANNOT_RECOMPUTE"],
+  "bitConvention": "Upstream qubit-0-leftmost counts strings; conditional interpretation",
+  "countsAndPulseEncoding": "Python JSON sorted keys, compact separators, ensure_ascii, UTF-8, no newline",
+  "encodingAuthority": "Observed hash match; no audited upstream implementation",
+  "commitmentEncoding": "UNRESOLVED",
+  "sourceLock": "sources.lock.json",
+  "nativeRvrReceiptosTsei": "NOT_INTEGRATED_FOR_THIS_COUNTS_PROFILE",
+  "runtimeNetwork": "FORBIDDEN",
+  "providerAuthentication": "NOT_ESTABLISHED",
+  "entropyQualification": "NOT_ESTABLISHED"
+}

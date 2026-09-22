@@ -241,3 +241,33 @@ LOCAL_FILES += (
     "tests/test_live_replay.py",
     "tools/pin_live_profile.py",
 )
+
+# Additive Moth Comet counts profile v0 inventory.
+LOCAL_FILES += (
+    'docs/MOTH_COMET_COUNTS_V0.md',
+    'docs/moth-comet-v0/openapi.raw.json',
+    'docs/moth-comet-v0/source.json',
+    'fixtures/moth-comet-v0/capture/SUBMIT_ATTEMPTED.json',
+    'fixtures/moth-comet-v0/capture/job-20260922T2328006744863Z.body.json',
+    'fixtures/moth-comet-v0/capture/job-20260922T2328006744863Z.http.json',
+    'fixtures/moth-comet-v0/capture/job-reference.json',
+    'fixtures/moth-comet-v0/capture/manifest.json',
+    'fixtures/moth-comet-v0/capture/request.body.json',
+    'fixtures/moth-comet-v0/capture/result-20260922T2328006744863Z.body.json',
+    'fixtures/moth-comet-v0/capture/result-20260922T2328006744863Z.http.json',
+    'fixtures/moth-comet-v0/capture/status-20260922T2326204143474Z.body.json',
+    'fixtures/moth-comet-v0/capture/status-20260922T2326204143474Z.http.json',
+    'fixtures/moth-comet-v0/capture/status-20260922T2326503636962Z.body.json',
+    'fixtures/moth-comet-v0/capture/status-20260922T2326503636962Z.http.json',
+    'fixtures/moth-comet-v0/capture/status-20260922T2328006744863Z.body.json',
+    'fixtures/moth-comet-v0/capture/status-20260922T2328006744863Z.http.json',
+    'fixtures/moth-comet-v0/capture/submit.body.json',
+    'fixtures/moth-comet-v0/capture/submit.http.json',
+    'fixtures/moth-comet-v0/capture/terminal-observation.json',
+    'fixtures/moth-comet-v0/claim.json',
+    'profiles/moth-comet-counts-v0/profile.json',
+    'qev/moth_comet.py',
+    'qev/moth_mutations.py',
+    'qev/moth_replay.py',
+    'tests/test_moth_comet.py',
+)

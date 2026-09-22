@@ -1,0 +1,16 @@
+{
+    "path":  "/api/v1/jobs/4daf7153-f837-4f5a-bf65-a0525bd9dd7a/result",
+    "method":  "GET",
+    "started_at_utc":  "2026-09-22T23:28:02.6638394Z",
+    "body_file":  "result-20260922T2328006744863Z.body.json",
+    "received_at_utc":  "2026-09-22T23:28:03.9122321Z",
+    "headers":  {
+                    "Date":  [
+                                 "Tue, 22 Sep 2026 23:28:03 GMT"
+                             ]
+                },
+    "byte_length":  69609,
+    "sha256":  "4a76c9aea407c2e8a7bc5756ecdd1caee8642b8c1eabf3366dfc3b538399331c",
+    "content_type":  "application/json",
+    "status":  200
+}

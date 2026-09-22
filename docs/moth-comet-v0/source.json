@@ -1,0 +1,7 @@
+{
+  "acquisition": "HTTPS_GET_BEFORE_SUBMIT",
+  "authority": "UPSTREAM_REPORTED_SCHEMA_NOT_ENGINE_IMPLEMENTATION",
+  "hash_encoding": "counts and pulse encodings inferred from observed byte matches; commitment encoding unresolved",
+  "sha256": "b0695071d500e28457a7d18fc4ef2e94cb60989761eeafff2cdd90f9bf553e39",
+  "url": "https://api.mothquantum.com/openapi.json"
+}
