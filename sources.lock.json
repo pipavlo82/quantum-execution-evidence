@@ -9,10 +9,10 @@
       "size_bytes": 350
     },
     {
-      "git_blob_sha1": "63a2934b48add5397f5d54f04444f9741798ab8f",
+      "git_blob_sha1": "910aafeda15b1f53ba06f1a65a663cf0cde9967f",
       "path": ".github/workflows/ci.yml",
-      "sha256": "26d817c6c6ddc19f5d6243e551d1430d7dd49d48c1ea0bb2d94e24e14b450514",
-      "size_bytes": 1369
+      "sha256": "922089b64a6fa61e048cb57b01e6ba077931ea017a44a23fb0202a59a76e5130",
+      "size_bytes": 1497
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
@@ -55,6 +55,12 @@
       "path": "docs/PROVENANCE.md",
       "sha256": "fb107922cac8e98fbbda4b97aa2ac37030e2a07555e12e7c7c544ab8793cd07d",
       "size_bytes": 2275
+    },
+    {
+      "git_blob_sha1": "5fd31708b7891792b4654c7651fc906f446d656f",
+      "path": "docs/QUANTUM_TRANSPILATION_BOUNDARY_V0.md",
+      "sha256": "75ae51be520e1d8cd8c4f6635ea393687fd3ff91f4367b76bbfcfd5c623da4d0",
+      "size_bytes": 1511
     },
     {
       "git_blob_sha1": "b000cf0005cc28c78c9328177a629f1a16a83e74",
@@ -663,10 +669,10 @@
       "size_bytes": 81
     },
     {
-      "git_blob_sha1": "7be49bdd82142df053c42a6c01f6f5681aff4e4e",
+      "git_blob_sha1": "9250003d77d5c914d14d978f3c942c0641336f4a",
       "path": "qev/__main__.py",
-      "sha256": "cb03fc9e36689c891be8c2716c2c05dbedf28c782ab5a4de8e8cfd4ae9b852a4",
-      "size_bytes": 2756
+      "sha256": "5ecbdee702789118a4b92d65a4ed7c8148fb43ddde875a71fb9d8aa72d47df6f",
+      "size_bytes": 3009
     },
     {
       "git_blob_sha1": "012d1065cad9e9adb6b36d7c25fcefdc89e103da",
@@ -705,6 +711,24 @@
       "size_bytes": 5299
     },
     {
+      "git_blob_sha1": "c0b282a3c09e3e0516fde0f223605acfb3aa40cd",
+      "path": "qev/quantum_transpile.py",
+      "sha256": "fc55300a3399b67f027231a2b9f0787fb5947bf596de40ee7d524a1ad2e90cc1",
+      "size_bytes": 5901
+    },
+    {
+      "git_blob_sha1": "5d116c1a4a4d7afd0b5110cffaf1daa074fbdf97",
+      "path": "qev/quantum_transpile_native.py",
+      "sha256": "4cde6de92b123c8c61bac39522c36cd00742e7d2252b766fb31e3d4699e02211",
+      "size_bytes": 6078
+    },
+    {
+      "git_blob_sha1": "029f78d552c780bd54f05380824a868b4f490158",
+      "path": "qev/quantum_transpile_tsei_bridge.ts",
+      "sha256": "a58d5c22e52f759b80541b37a3d42917f4400397b07913d5f106ec62139fb13e",
+      "size_bytes": 4399
+    },
+    {
       "git_blob_sha1": "1bde78f1b8a8d1008345196f5bfa8d26ae02674a",
       "path": "qev/receiptos_bridge.ts",
       "sha256": "7f41355b8d3eb5ba39fcc0d37a194788893c110b0f5c71ff07350aa0fdfd79e7",
@@ -735,10 +759,10 @@
       "size_bytes": 521
     },
     {
-      "git_blob_sha1": "0629da1f64b55f2a1a37fc28983f7bd41fdbc892",
+      "git_blob_sha1": "8843998cf090164a3cb241e22792d375d2b57b08",
       "path": "qev/source_inventory.py",
-      "sha256": "4c6c3ddf3334f507ac4161f96158d658a90fbf0b978eb871afcf82ce45dedaa6",
-      "size_bytes": 17612
+      "sha256": "ef57a5a1d3df95c569a5c99103ab601958acf20daaf67a26920452a7dc6de107",
+      "size_bytes": 17799
     },
     {
       "git_blob_sha1": "968084343b159c1f048b291a6509d42ab2297a8a",
@@ -781,6 +805,12 @@
       "path": "tests/test_profile.py",
       "sha256": "03281fbe6b3dd7338de37bdc8a189ddf2cad27c6087e9bc0e6fa8f8e5a648d7b",
       "size_bytes": 10711
+    },
+    {
+      "git_blob_sha1": "7787551f305eadde3e070c461a7f43a8c1fdb684",
+      "path": "tests/test_quantum_transpilation.py",
+      "sha256": "79cb790baff31fda60af22185a2a546c26dd606d8c44b2f2d17867c7330b9355",
+      "size_bytes": 2118
     },
     {
       "git_blob_sha1": "17796333624013c69d70f750cb66532987f3f216",
