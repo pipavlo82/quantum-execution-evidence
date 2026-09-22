@@ -9,10 +9,10 @@
       "size_bytes": 350
     },
     {
-      "git_blob_sha1": "910aafeda15b1f53ba06f1a65a663cf0cde9967f",
+      "git_blob_sha1": "91646c269daf089462b5f87d20a154e61c53dce8",
       "path": ".github/workflows/ci.yml",
-      "sha256": "922089b64a6fa61e048cb57b01e6ba077931ea017a44a23fb0202a59a76e5130",
-      "size_bytes": 1497
+      "sha256": "bb511ef1948fac91670b25d99c58585093bc57856f5d44ba3659f62858814413",
+      "size_bytes": 1619
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
@@ -55,6 +55,12 @@
       "path": "docs/PROVENANCE.md",
       "sha256": "d12822f42e8cadd4b2e1c754a4b2ea0d48fabf2e0eb9b02e9a4b2c182a6e2ea8",
       "size_bytes": 2251
+    },
+    {
+      "git_blob_sha1": "6cbeaec847b5f85c03a8d422bfa1000a7b2e7cb8",
+      "path": "docs/PROVIDER_EXECUTION_BINDING_V0.md",
+      "sha256": "4b893c13cb3e7b13bb72d71eedbf77984ca13fb6d9c93ac21ee2b8aba0d48999",
+      "size_bytes": 1761
     },
     {
       "git_blob_sha1": "5fd31708b7891792b4654c7651fc906f446d656f",
@@ -669,10 +675,10 @@
       "size_bytes": 81
     },
     {
-      "git_blob_sha1": "9250003d77d5c914d14d978f3c942c0641336f4a",
+      "git_blob_sha1": "f9bde1f254e049f40f02932bdeffe49f2f8ae5d4",
       "path": "qev/__main__.py",
-      "sha256": "5ecbdee702789118a4b92d65a4ed7c8148fb43ddde875a71fb9d8aa72d47df6f",
-      "size_bytes": 3009
+      "sha256": "f479dfce4ea92945b3e4410734da0b3d9467319a385a80b63c69a58a0c09ac8c",
+      "size_bytes": 3251
     },
     {
       "git_blob_sha1": "012d1065cad9e9adb6b36d7c25fcefdc89e103da",
@@ -709,6 +715,18 @@
       "path": "qev/mutations.py",
       "sha256": "aa76470e3d8729200e4344e52d5af92812001b7b03371cb60117b034ba56aff9",
       "size_bytes": 5299
+    },
+    {
+      "git_blob_sha1": "625d74871f6c0d8f96eb54a4a2d3dd5a6a34509f",
+      "path": "qev/provider_binding.py",
+      "sha256": "be96ad7ee641f2fe6deb82f38178822898ff4cfecd3735f0a25d7a309145faae",
+      "size_bytes": 5218
+    },
+    {
+      "git_blob_sha1": "50412f6f5906a1350e4ceace1f19d4fb23de62e2",
+      "path": "qev/provider_binding_native.py",
+      "sha256": "79c2d8e690f54ca9a4f8d7b860f7edec91327d7fd79a7befb0516e07d6b58b7b",
+      "size_bytes": 3484
     },
     {
       "git_blob_sha1": "c0b282a3c09e3e0516fde0f223605acfb3aa40cd",
@@ -759,10 +777,10 @@
       "size_bytes": 521
     },
     {
-      "git_blob_sha1": "8843998cf090164a3cb241e22792d375d2b57b08",
+      "git_blob_sha1": "fa91bcc771033cdb53c632b8f5633cc743fa1517",
       "path": "qev/source_inventory.py",
-      "sha256": "ef57a5a1d3df95c569a5c99103ab601958acf20daaf67a26920452a7dc6de107",
-      "size_bytes": 17799
+      "sha256": "cd613270023414a0dfcfc9d70d46af5da4ca300ad5143396d6450f4242765be6",
+      "size_bytes": 17935
     },
     {
       "git_blob_sha1": "968084343b159c1f048b291a6509d42ab2297a8a",
@@ -805,6 +823,12 @@
       "path": "tests/test_profile.py",
       "sha256": "03281fbe6b3dd7338de37bdc8a189ddf2cad27c6087e9bc0e6fa8f8e5a648d7b",
       "size_bytes": 10711
+    },
+    {
+      "git_blob_sha1": "fa9f2b8cf5161eb634c876394464d46bd6ded63a",
+      "path": "tests/test_provider_binding.py",
+      "sha256": "0ef3dd8880d9b4f15af3d07aa01fd936605a596b39320d05f3aef0a4ee945f17",
+      "size_bytes": 1775
     },
     {
       "git_blob_sha1": "7787551f305eadde3e070c461a7f43a8c1fdb684",
