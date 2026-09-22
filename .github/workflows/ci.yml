@@ -36,6 +36,8 @@ jobs:
         run: python -B -m qev rvr-mutation-check > rvr-mutations.json
       - name: Native ReceiptOS QEV capsule
         run: python -B -m qev receiptos-demo > receiptos-demo.json
+      - name: Native TSEI QEV preservation
+        run: python -B -m qev tsei-demo > tsei-demo.json
       - name: Source lock
         run: python -B -m qev sources > sources.json
       - name: Diff hygiene

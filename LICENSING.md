@@ -25,3 +25,9 @@ Files under `vendor/rvr-v0/` originate from pinned commit `549a7e150ddc75df88dc9
 Files under `vendor/receiptos-v0/` originate from pinned commit `45b46bf7df3a60b32583291f577a36bf19d22f00` of `pipavlo82/crystal-receipt`.
 
 `vendor/receiptos-v0/LICENSE` preserves the upstream Apache-2.0 license bytes. The vendored ReceiptOS files are used to execute the existing receipt-root, Evidence Capsule, Provenance Summary, and portable-proof-object semantics. Repository-authored QEV-to-ReceiptOS adapter files remain under the root-license status described above.
+
+## Vendored TSEI v0
+
+Files under `vendor/tsei-v0/` originate from pinned commit `45b46bf7df3a60b32583291f577a36bf19d22f00` of `pipavlo82/crystal-receipt`.
+
+`vendor/tsei-v0/LICENSE` preserves the upstream Apache-2.0 license bytes. The vendored generic transformation-stability core, comparator, conformance vectors, and standalone TSEI v0 specification are used as the native preservation mechanism. QEV-specific profile and bridge files remain under the root-license status described above.

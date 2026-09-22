@@ -18,7 +18,7 @@ def main():
     parser=argparse.ArgumentParser(description='OFFLINE SYNTHETIC quantum evidence experiment')
     sub=parser.add_subparsers(dest='command',required=True)
     sub.add_parser('demo'); sub.add_parser('mutation-check'); sub.add_parser('sources')
-    sub.add_parser('rvr-demo'); sub.add_parser('rvr-mutation-check'); sub.add_parser('receiptos-demo')
+    sub.add_parser('rvr-demo'); sub.add_parser('rvr-mutation-check'); sub.add_parser('receiptos-demo'); sub.add_parser('tsei-demo')
     for name in ('verify','check'):
         p=sub.add_parser(name); p.add_argument('--request',required=True); p.add_argument('package')
     args=parser.parse_args()
@@ -40,6 +40,9 @@ def main():
     elif args.command=='receiptos-demo':
         from .receiptos_native import run_gate
         out=run_gate(); code=0 if out.get('gate')=='RECEIPTOS_QEV_NATIVE_CAPSULE_PASS' else 1
+    elif args.command=='tsei-demo':
+        from .tsei_native import run_gate
+        out=run_gate(); code=0 if out.get('gate')=='TSEI_QEV_NATIVE_PRESERVATION_PASS' else 1
     else:
         try: out=checker.verify(checker.read_input(args.request),checker.read_input(args.package))
         except (checker.InputError,OSError) as exc:

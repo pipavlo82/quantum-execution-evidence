@@ -3,16 +3,16 @@
   "format": "quantum-execution-evidence.sources.v0",
   "local_files": [
     {
-      "git_blob_sha1": "43c95b0bfa90e49daf4dd5cc947640c83f7cb2c4",
+      "git_blob_sha1": "940262bbe0d1e4c95af4402b74e16f8b8d16fc2a",
       "path": ".gitattributes",
-      "sha256": "6c35ec476a70d5840e4663c2737e06b0f639f58563fc4d023941c16db478c1cf",
-      "size_bytes": 315
+      "sha256": "0727e0fd5c27d034ceb202fc81ec776f070c6aa2493a6cddc945eea16d3efd7b",
+      "size_bytes": 350
     },
     {
-      "git_blob_sha1": "0df13187ebd4b1d5b7fb8eac7ab9b3220420732e",
+      "git_blob_sha1": "63a2934b48add5397f5d54f04444f9741798ab8f",
       "path": ".github/workflows/ci.yml",
-      "sha256": "fb83720e591379056d901b8796a31af0ffa288c33d215def02459847e2e5ed5c",
-      "size_bytes": 1269
+      "sha256": "26d817c6c6ddc19f5d6243e551d1430d7dd49d48c1ea0bb2d94e24e14b450514",
+      "size_bytes": 1369
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
@@ -21,10 +21,10 @@
       "size_bytes": 131
     },
     {
-      "git_blob_sha1": "b9f0f59950a727d11c59ca1ec6a2e830fb528856",
+      "git_blob_sha1": "6d2bcb244097c996cdde322dac4528e83e7d6515",
       "path": "LICENSING.md",
-      "sha256": "c6fdd0b1d8efd29009f1bfb870849cc23159e9fac5838e9a08375c4d6d4d2072",
-      "size_bytes": 1896
+      "sha256": "8e6e5ab9719c9a6226e8236ebd2d303b31cd75e49cccc1a4cb6139b3361d1615",
+      "size_bytes": 2388
     },
     {
       "git_blob_sha1": "29a5c09d8c46f48604ad154e3ab625c2a7ecd3b6",
@@ -67,6 +67,12 @@
       "path": "docs/RVR_QEV_PROFILE_V0.md",
       "sha256": "ee17d3ab38b262f53af19205e26ba6a08247292e3fc3a27a18d0d38772ec6697",
       "size_bytes": 3719
+    },
+    {
+      "git_blob_sha1": "35c1e4db34e2b58a5d04fe89c8a62ec440c30b23",
+      "path": "docs/TSEI_QEV_PROFILE_V0.md",
+      "sha256": "86ca89cb75380438c10acfe949dc39f8f197063371ce75358925a818e672bb87",
+      "size_bytes": 2594
     },
     {
       "git_blob_sha1": "463b1a59250ef9badb73d7004a85a5015cfbda2c",
@@ -657,10 +663,10 @@
       "size_bytes": 81
     },
     {
-      "git_blob_sha1": "5a056cc9d26866435f36b34ec4bb6bc6ef501b04",
+      "git_blob_sha1": "7be49bdd82142df053c42a6c01f6f5681aff4e4e",
       "path": "qev/__main__.py",
-      "sha256": "2f39a16643645b61721b26abbed0df843f13e145a5bc05269b7e19a47476e15c",
-      "size_bytes": 2555
+      "sha256": "cb03fc9e36689c891be8c2716c2c05dbedf28c782ab5a4de8e8cfd4ae9b852a4",
+      "size_bytes": 2756
     },
     {
       "git_blob_sha1": "012d1065cad9e9adb6b36d7c25fcefdc89e103da",
@@ -729,10 +735,10 @@
       "size_bytes": 521
     },
     {
-      "git_blob_sha1": "bd4b205902e21b173d5806246719aeffdc479082",
+      "git_blob_sha1": "0629da1f64b55f2a1a37fc28983f7bd41fdbc892",
       "path": "qev/source_inventory.py",
-      "sha256": "fa66953fa4b41e471d26328178e0e02cd01e7cfe8f2d1cffbb0455cbcaf311af",
-      "size_bytes": 13429
+      "sha256": "4c6c3ddf3334f507ac4161f96158d658a90fbf0b978eb871afcf82ce45dedaa6",
+      "size_bytes": 17612
     },
     {
       "git_blob_sha1": "968084343b159c1f048b291a6509d42ab2297a8a",
@@ -745,6 +751,18 @@
       "path": "qev/sources.py",
       "sha256": "f4aeba870302e6207d9c4de0c56fdecebc4c93e47d4dcd08a55db45ca9b64f01",
       "size_bytes": 3816
+    },
+    {
+      "git_blob_sha1": "808937efe9d3ba6a358b5e7f316324d32398e979",
+      "path": "qev/tsei_bridge.ts",
+      "sha256": "5e20ea12c52cae0d549d28e5871a6a306f7027dff2a906b64058d054da756577",
+      "size_bytes": 3492
+    },
+    {
+      "git_blob_sha1": "1f556b71b20c8a4361f02f886880dbfa79b5d2f2",
+      "path": "qev/tsei_native.py",
+      "sha256": "b01d1f8388d4a6cd4285c66336e8444d66e74f06e5806d1423692f23cb5eddb0",
+      "size_bytes": 3731
     },
     {
       "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
@@ -781,6 +799,12 @@
       "path": "tests/test_standalone.py",
       "sha256": "317f37cc7242c883c0421e384ffba608825812713ec0633988587595b6f1313a",
       "size_bytes": 2638
+    },
+    {
+      "git_blob_sha1": "18e955a59abf554c5d408099f0da7363bde4c456",
+      "path": "tests/test_tsei_native.py",
+      "sha256": "81e15c55f4c6b7f786db74dd45b4be6a18a252d401e5a051e385dfb5bb37f128",
+      "size_bytes": 2611
     },
     {
       "git_blob_sha1": "644281a57d25b3f1bb9970b7e437246a6d6c200d",
@@ -979,6 +1003,87 @@
       "sha256": "f8b8c44bffa4d7cb827564cfa663ffe60396b4aa39991762c855a24765c1d159",
       "size_bytes": 3890,
       "source_path": "schemas/evidence-capsule.v0.schema.json"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "9b85a39db99de06afeaf7ccae22a25fb2ac8f19f",
+      "path": "vendor/tsei-v0/LICENSE",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
+      "size_bytes": 10377,
+      "source_path": "LICENSE"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "f28bc2dab72005c9c03a1fadceca5ff2c1d4c005",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/canonical-identity-json.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "6f141a1814949392b7d253ae392ddb4dca11cd2866bfbcd02619ee821698b6eb",
+      "size_bytes": 4112,
+      "source_path": "src/receiptos/challenge/canonical-identity-json.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "2d25f3c8ff9cd8ddca777421f58fc9436695d86a",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "9346436b6413eeb3d96a4d5208d3fb73e3ba532a80028cfd8a0252a6522286ea",
+      "size_bytes": 9919,
+      "source_path": "src/receiptos/challenge/transformation-stability.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "be736f3e74f8a7711981cef195ee60415103c74e",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-cycle.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "67c9e9cc2877ef3df42994cad1e300cb7d075593204beb77ef08f858e89f09df",
+      "size_bytes": 18769,
+      "source_path": "src/receiptos/challenge/transformation-stability-cycle.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "83ade20c54a0367f51f629ff7553fdefd28a68e1",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-coverage.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "8f518979d503157545d6319cb9be9caff59f975ebbae760af477b13d8b69c757",
+      "size_bytes": 29348,
+      "source_path": "src/receiptos/challenge/transformation-stability-coverage.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "84750abb43c5d0f67ea9e6c06b3fe6d68f460734",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-coverage-normalizer-authority.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "3271829c394e88ed4169aba5054c0fdd533dab8ab136f9ec79853d3bf1c582cd",
+      "size_bytes": 5766,
+      "source_path": "src/receiptos/challenge/transformation-stability-coverage-normalizer-authority.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "c5f740476607e8af9ff5f86d3c35f52dab70543e",
+      "path": "vendor/tsei-v0/conformance/canonical-identity-json-conformance-v0/vectors.json",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "5c5a38837778d63b554cde168394b65c484ec8246a2a0175a13d0723d15f6e6c",
+      "size_bytes": 10975,
+      "source_path": "conformance/canonical-identity-json-conformance-v0/vectors.json"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "4a06de00c221f4d55a2c30c868281e0fd47a4eff",
+      "path": "vendor/tsei-v0/conformance/observed-leaf-paths-conformance-v0/vectors.json",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "a0221f80457e80d6087493cbb0934b7625ef8a51d75cac05eefe52c0213aa95d",
+      "size_bytes": 10388,
+      "source_path": "conformance/observed-leaf-paths-conformance-v0/vectors.json"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "cb501a4a10080f2a9b89d155f1e5a8e2fd711431",
+      "path": "vendor/tsei-v0/docs/TRANSFORMATION_STABLE_EVIDENCE_INTEROPERABILITY_V0.md",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "03f5b72afb3291e39534a880667fb4f48ff9a60145122beaca2896c2be7b020d",
+      "size_bytes": 42405,
+      "source_path": "docs/TRANSFORMATION_STABLE_EVIDENCE_INTEROPERABILITY_V0.md"
     }
   ]
 }
