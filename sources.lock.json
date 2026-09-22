@@ -9,10 +9,10 @@
       "size_bytes": 315
     },
     {
-      "git_blob_sha1": "655c4ab36404d466e442412e558a578cbc3d5535",
+      "git_blob_sha1": "0df13187ebd4b1d5b7fb8eac7ab9b3220420732e",
       "path": ".github/workflows/ci.yml",
-      "sha256": "17b5f798853f73dea6bcbffe00d343ea554b90627aa0b5a049524ea801eb5d83",
-      "size_bytes": 1188
+      "sha256": "fb83720e591379056d901b8796a31af0ffa288c33d215def02459847e2e5ed5c",
+      "size_bytes": 1269
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
