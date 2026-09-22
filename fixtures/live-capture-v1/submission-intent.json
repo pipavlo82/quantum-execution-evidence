@@ -1,0 +1,70 @@
+{
+  "active_physical_qubits": [
+    0,
+    1
+  ],
+  "artifacts": {
+    "isa-submitted.json": "96fafda1dcd74e9b34d0ccc014e283e0f7ccddfd8670f380eb3604dc753f6aab",
+    "isa-submitted.qasm3": "cdc753cf1429842c5b376efd921b11728e2d657c84faedccc56636c3f28ec343",
+    "isa-submitted.qpy": "1c939fb481311d82d2e36fc6f390b7570f88c21db2baa645f11a8b5ed8f3ee8d",
+    "logical.json": "2d01283e9cff4287c1d0b03556d5980a9359ccb8a5565d222e28ef9d0e202634",
+    "logical.qasm3": "6e2952c6bcba84ebd0444296d712ec7790f163a665948d1200cab1315be539f1",
+    "logical.qpy": "002c4ee29c7ac3b08ba0d5db4520558208632a9eccaac23e142a5e08b3f6e3da"
+  },
+  "authorized_jobs": 1,
+  "backend": "ibm_fez",
+  "bitstring_order": "c1 c0",
+  "capture_kind": "LIVE_IBM_RUNTIME_API",
+  "classical_register": "meas",
+  "logical_qubits": 2,
+  "measurement_mapping": [
+    {
+      "classical_bit": 0,
+      "physical_qubit": 0
+    },
+    {
+      "classical_bit": 1,
+      "physical_qubit": 1
+    }
+  ],
+  "options": {
+    "default_shots": 256,
+    "dynamical_decoupling": false,
+    "gate_twirling": false,
+    "job_tag": "qev-first-live-20260922",
+    "max_execution_time": 60,
+    "measurement_twirling": false
+  },
+  "plan": "open",
+  "qiskit": "2.5.2",
+  "recorded_at": "2026-09-22T19:30:26.667723+00:00",
+  "runtime": "0.49.0",
+  "schema": "qev.live-capture.intent.v0",
+  "shots": 256,
+  "transpiler": {
+    "basis_gates": [
+      "cz",
+      "delay",
+      "id",
+      "if_else",
+      "measure",
+      "measure_2",
+      "measure_reset",
+      "measure_reset_2",
+      "reset",
+      "reset_2",
+      "rz",
+      "sx",
+      "x",
+      "xslow"
+    ],
+    "optimization_level": 0,
+    "seed": 20260922
+  },
+  "unitary_preflight": {
+    "method": "compact_two_active_qubits_Operator_equiv_up_to_global_phase",
+    "pass": true,
+    "scope": "numeric_classical_check_not_native_TSEI_proof",
+    "tolerance": 1e-10
+  }
+}

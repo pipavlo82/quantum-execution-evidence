@@ -1,0 +1,398 @@
+{
+  "$defs": {
+    "axis": {
+      "enum": [
+        "SATISFIED",
+        "REFUTED",
+        "CANNOT_ESTABLISH"
+      ]
+    },
+    "canonicalResult": {
+      "additionalProperties": false,
+      "properties": {
+        "axes": {
+          "additionalProperties": false,
+          "properties": {
+            "authenticationLabelConsistency": {
+              "$ref": "#/$defs/axis"
+            },
+            "bitOrder": {
+              "$ref": "#/$defs/axis"
+            },
+            "byteIdentity": {
+              "$ref": "#/$defs/axis"
+            },
+            "completedObservation": {
+              "$ref": "#/$defs/axis"
+            },
+            "declaredCaptureOrigin": {
+              "$ref": "#/$defs/axis"
+            },
+            "histogramRecomputation": {
+              "$ref": "#/$defs/axis"
+            },
+            "isaRelation": {
+              "$ref": "#/$defs/axis"
+            },
+            "jobRequestBinding": {
+              "$ref": "#/$defs/axis"
+            },
+            "measurementIntent": {
+              "$ref": "#/$defs/axis"
+            },
+            "orderedRecordAgreement": {
+              "$ref": "#/$defs/axis"
+            },
+            "providerArtifactConsistency": {
+              "$ref": "#/$defs/axis"
+            },
+            "rawCommitment": {
+              "$ref": "#/$defs/axis"
+            }
+          },
+          "required": [
+            "byteIdentity",
+            "declaredCaptureOrigin",
+            "jobRequestBinding",
+            "providerArtifactConsistency",
+            "rawCommitment",
+            "orderedRecordAgreement",
+            "histogramRecomputation",
+            "bitOrder",
+            "completedObservation",
+            "isaRelation",
+            "measurementIntent",
+            "authenticationLabelConsistency"
+          ],
+          "type": "object"
+        },
+        "nativeTsei": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "allowed_variant_changed": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "classification": {
+                  "type": "string"
+                },
+                "comparison_rule_id": {
+                  "type": "string"
+                },
+                "evaluation_state": {
+                  "type": "string"
+                },
+                "forbidden_variant_match": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "normative_match": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "out_of_domain_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "recompute_procedure_id": {
+                  "type": "string"
+                },
+                "schema": {
+                  "type": "string"
+                },
+                "source_object_kind": {
+                  "type": "string"
+                },
+                "stability_match": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "target_object_kind": {
+                  "type": "string"
+                },
+                "transformation_claim": {
+                  "type": "string"
+                },
+                "transformation_family": {
+                  "type": "string"
+                },
+                "transformation_profile_id": {
+                  "type": "string"
+                },
+                "unresolved_reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "schema",
+                "transformation_claim",
+                "transformation_profile_id",
+                "transformation_family",
+                "source_object_kind",
+                "target_object_kind",
+                "recompute_procedure_id",
+                "comparison_rule_id",
+                "evaluation_state",
+                "classification",
+                "out_of_domain_reason",
+                "unresolved_reason",
+                "normative_match",
+                "stability_match",
+                "forbidden_variant_match",
+                "allowed_variant_changed"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "physicalNoiselessBehavior": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "providerAuthentication": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "reasonCode": {
+          "$ref": "#/$defs/verificationReasonCode"
+        },
+        "schema": {
+          "const": "rvr.qev.live-result.v1"
+        }
+      },
+      "required": [
+        "schema",
+        "outcome",
+        "reasonCode",
+        "axes",
+        "nativeTsei",
+        "providerAuthentication",
+        "physicalNoiselessBehavior"
+      ],
+      "type": "object"
+    },
+    "claim": {
+      "additionalProperties": false,
+      "properties": {
+        "anchors": {
+          "additionalProperties": false,
+          "properties": {
+            "isa-submitted.json": {
+              "$ref": "#/$defs/digest"
+            },
+            "job-receipt.json": {
+              "$ref": "#/$defs/digest"
+            },
+            "logical.json": {
+              "$ref": "#/$defs/digest"
+            },
+            "measurements-ordered.c1c0.txt": {
+              "$ref": "#/$defs/digest"
+            },
+            "submission-intent.json": {
+              "$ref": "#/$defs/digest"
+            }
+          },
+          "required": [
+            "submission-intent.json",
+            "job-receipt.json",
+            "logical.json",
+            "isa-submitted.json",
+            "measurements-ordered.c1c0.txt"
+          ],
+          "type": "object"
+        },
+        "angleMap": {
+          "const": "qev-ideal-angle-literals-v1"
+        },
+        "backend": {
+          "type": "string"
+        },
+        "captureOrigin": {
+          "const": "LIVE_IBM_RUNTIME_API"
+        },
+        "jobId": {
+          "type": "string"
+        },
+        "providerAuthentication": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "requestId": {
+          "type": "string"
+        },
+        "schema": {
+          "const": "qev.live-claim.v1"
+        },
+        "shots": {
+          "pattern": "^[1-9][0-9]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema",
+        "jobId",
+        "backend",
+        "requestId",
+        "shots",
+        "anchors",
+        "captureOrigin",
+        "providerAuthentication",
+        "angleMap"
+      ],
+      "type": "object"
+    },
+    "decimalLength": {
+      "pattern": "^(0|[1-9][0-9]*)$",
+      "type": "string"
+    },
+    "digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "evidenceSet": {
+      "additionalProperties": false,
+      "properties": {
+        "members": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/presentEvidenceMember"
+              },
+              {
+                "$ref": "#/$defs/unavailableEvidenceMember"
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "schema": {
+          "const": "rvr.evidence-set.v0"
+        }
+      },
+      "required": [
+        "schema",
+        "members"
+      ],
+      "type": "object"
+    },
+    "identifier": {
+      "pattern": "^[a-z][a-z0-9._-]*$",
+      "type": "string"
+    },
+    "outcome": {
+      "enum": [
+        "VERIFIED",
+        "REFUTED",
+        "UNVERIFIABLE"
+      ]
+    },
+    "presentEvidenceMember": {
+      "additionalProperties": false,
+      "properties": {
+        "byteLength": {
+          "$ref": "#/$defs/decimalLength"
+        },
+        "digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "status": {
+          "const": "PRESENT"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "mediaType",
+        "byteLength",
+        "digest"
+      ],
+      "type": "object"
+    },
+    "unavailableEvidenceMember": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "reasonCode": {
+          "const": "qev.live.v1.evidence_unavailable"
+        },
+        "status": {
+          "const": "UNAVAILABLE"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "reasonCode"
+      ],
+      "type": "object"
+    },
+    "verificationReasonCode": {
+      "enum": [
+        "qev.live.v1.verified",
+        "qev.live.v1.refuted",
+        "qev.live.v1.unverifiable"
+      ]
+    }
+  },
+  "$id": "urn:qev:rvr-live-capture-replay-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claimDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "evidenceSetDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "outcome": {
+      "$ref": "#/$defs/outcome"
+    },
+    "reasonCode": {
+      "$ref": "#/$defs/verificationReasonCode"
+    },
+    "resultDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "verificationProfileDigest": {
+      "$ref": "#/$defs/digest"
+    }
+  },
+  "required": [
+    "claimDigest",
+    "evidenceSetDigest",
+    "verificationProfileDigest",
+    "outcome",
+    "reasonCode",
+    "resultDigest"
+  ],
+  "title": "Native RVR live capture replay v1",
+  "type": "object"
+}

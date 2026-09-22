@@ -19,10 +19,15 @@ def main():
     sub=parser.add_subparsers(dest='command',required=True)
     sub.add_parser('demo'); sub.add_parser('mutation-check'); sub.add_parser('sources')
     sub.add_parser('rvr-demo'); sub.add_parser('rvr-mutation-check'); sub.add_parser('receiptos-demo'); sub.add_parser('tsei-demo'); sub.add_parser('quantum-transpile-demo'); sub.add_parser('provider-binding-demo'); sub.add_parser('ibm-runtime-demo')
+    sub.add_parser('live-demo'); sub.add_parser('live-mutation-check')
+    live_replay=sub.add_parser('live-replay'); live_replay.add_argument('artifact'); live_replay.add_argument('--claim')
     for name in ('verify','check'):
         p=sub.add_parser(name); p.add_argument('--request',required=True); p.add_argument('package')
     args=parser.parse_args()
-    if args.command=='demo':
+    if args.command in ('live-demo','live-replay','live-mutation-check'):
+        from .live_cli import dispatch
+        out,code=dispatch(args)
+    elif args.command=='demo':
         from .corpus import report, successful
         out=report(); code=0 if successful(out) else 1
     elif args.command=='mutation-check':

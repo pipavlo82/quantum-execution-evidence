@@ -1,0 +1,266 @@
+{
+  "submission-intent.json": {
+    "active_physical_qubits": [
+      "int"
+    ],
+    "artifacts": {
+      "isa-submitted.json": "str",
+      "isa-submitted.qasm3": "str",
+      "isa-submitted.qpy": "str",
+      "logical.json": "str",
+      "logical.qasm3": "str",
+      "logical.qpy": "str"
+    },
+    "authorized_jobs": "int",
+    "backend": "str",
+    "bitstring_order": "str",
+    "capture_kind": "str",
+    "classical_register": "str",
+    "logical_qubits": "int",
+    "measurement_mapping": [
+      {
+        "classical_bit": "int",
+        "physical_qubit": "int"
+      }
+    ],
+    "options": {
+      "default_shots": "int",
+      "dynamical_decoupling": "bool",
+      "gate_twirling": "bool",
+      "job_tag": "str",
+      "max_execution_time": "int",
+      "measurement_twirling": "bool"
+    },
+    "plan": "str",
+    "qiskit": "str",
+    "recorded_at": "str",
+    "runtime": "str",
+    "schema": "str",
+    "shots": "int",
+    "transpiler": {
+      "basis_gates": [
+        "str"
+      ],
+      "optimization_level": "int",
+      "seed": "int"
+    },
+    "unitary_preflight": {
+      "method": "str",
+      "pass": "bool",
+      "scope": "str",
+      "tolerance": "float"
+    }
+  },
+  "job-receipt.json": {
+    "backend_requested": "str",
+    "instance_identity_sha256": "str",
+    "intent_sha256": "str",
+    "job_id": "str",
+    "shots_requested": "int",
+    "submission_calls": "int",
+    "submitted_at_observed": "str"
+  },
+  "logical.json": {
+    "cregs": [
+      {
+        "name": "str",
+        "size": "int"
+      }
+    ],
+    "global_phase": "str",
+    "name": "str",
+    "num_clbits": "int",
+    "num_qubits": "int",
+    "operations": [
+      {
+        "clbits": [
+          "int"
+        ],
+        "qubits": [
+          "int"
+        ],
+        "name": "str",
+        "params": [
+          "str"
+        ]
+      }
+    ]
+  },
+  "isa-submitted.json": {
+    "cregs": [
+      {
+        "name": "str",
+        "size": "int"
+      }
+    ],
+    "global_phase": "str",
+    "name": "str",
+    "num_clbits": "int",
+    "num_qubits": "int",
+    "operations": [
+      {
+        "clbits": [
+          "int"
+        ],
+        "qubits": [
+          "int"
+        ],
+        "name": "str",
+        "params": [
+          "str"
+        ]
+      }
+    ]
+  },
+  "isa-returned.json": {
+    "cregs": [
+      {
+        "name": "str",
+        "size": "int"
+      }
+    ],
+    "global_phase": "str",
+    "name": "str",
+    "num_clbits": "int",
+    "num_qubits": "int",
+    "operations": [
+      {
+        "clbits": [
+          "int"
+        ],
+        "qubits": [
+          "int"
+        ],
+        "name": "str",
+        "params": [
+          "str"
+        ]
+      }
+    ]
+  },
+  "provider-submission.normalized.json": {
+    "backend": "str",
+    "physicalCircuitDigest": "str",
+    "provider": "str",
+    "request_id": "str",
+    "requested_job": "str",
+    "schema": "str",
+    "shots": "int",
+    "transpiler": {
+      "name": "str",
+      "profile": "str",
+      "version": "str"
+    }
+  },
+  "ibm-live-record.normalized.json": {
+    "capture_kind": "str",
+    "isa_circuit": {
+      "physicalCircuitDigest": "str",
+      "representation": "str",
+      "transpiler": {
+        "name": "str",
+        "profile": "str",
+        "version": "str"
+      }
+    },
+    "job": {
+      "backend": "str",
+      "job_id": "str",
+      "provider": "str",
+      "request_id": "str",
+      "status": "str"
+    },
+    "result": {
+      "bitstrings": [
+        "str"
+      ],
+      "metadata": {
+        "bit_order": "str",
+        "capture": "str",
+        "pub_index": "int"
+      },
+      "register": "str",
+      "shots": "int"
+    },
+    "runtime": {
+      "primitive": "str",
+      "primitive_version": "int"
+    },
+    "schema": "str",
+    "sdk": {
+      "qiskit": "str",
+      "qiskit_ibm_runtime": "str",
+      "source": "str"
+    }
+  },
+  "measurement-counts.json": {
+    "*": "int"
+  },
+  "measurement-metadata.json": {
+    "backend": "str",
+    "canonical_raw_sha256": "str",
+    "capture": "str",
+    "job_id": "str",
+    "job_status": "str",
+    "num_pubs": "int",
+    "observed_at": "str",
+    "raw_bytes": "int",
+    "raw_order": "str",
+    "register": "str",
+    "shape": [],
+    "shots": "int",
+    "width": "int"
+  },
+  "normalization-provenance.json": {
+    "digest_surface": "str",
+    "expected_job_id": "str",
+    "expected_job_id_origin": "str",
+    "live_record_sha256": "str",
+    "physical_circuit_origin": "str",
+    "precommit_intent_sha256": "str",
+    "provider_signature": "str",
+    "raw_origin": "str",
+    "request_and_transpiler_origin": "str",
+    "schema": "str",
+    "scope": "str"
+  },
+  "provider-input-comparison.json": {
+    "comparison_surface": "str",
+    "independent_provider_signature": "str",
+    "input_acquisition": "str",
+    "input_circuit_snapshot_equal": "bool",
+    "job_id": "str",
+    "job_id_matches": "bool",
+    "open_instance_matches": "bool",
+    "provider_backend": "str",
+    "pub_count": "int",
+    "schema": "str",
+    "shots_returned_in_job_inputs": "int"
+  },
+  "job-metrics.json": {
+    "caller": "str",
+    "circuits_execution_time_ns": "int",
+    "qiskit_version": "str",
+    "timestamps": {
+      "created": "str",
+      "finished": "str",
+      "running": "str"
+    },
+    "usage": {
+      "details": [
+        {
+          "metric": {
+            "id": "str",
+            "value": "int"
+          },
+          "unit": "str",
+          "value": "float"
+        }
+      ],
+      "qpu_charge_time_seconds": "int",
+      "status": "str",
+      "unit": "str",
+      "value": "float"
+    }
+  }
+}

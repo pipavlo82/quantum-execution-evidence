@@ -1,0 +1,17 @@
+{
+  "submission-intent.json": "929718b4909842bef584371cabeb461b2112b5df265a64ab859b05e7920e6c69",
+  "job-receipt.json": "0e71e5ef0abcf648505f0268fdc6f016ff6c289b3037e37864ae6248599e359d",
+  "logical.json": "2d01283e9cff4287c1d0b03556d5980a9359ccb8a5565d222e28ef9d0e202634",
+  "isa-submitted.json": "96fafda1dcd74e9b34d0ccc014e283e0f7ccddfd8670f380eb3604dc753f6aab",
+  "isa-returned.json": "96fafda1dcd74e9b34d0ccc014e283e0f7ccddfd8670f380eb3604dc753f6aab",
+  "provider-submission.normalized.json": "694c53a4ca214e2c878aae4d33aa380e316b1a2523e556637dcd932fa0c59372",
+  "ibm-live-record.normalized.json": "403b1410d687c0b3099b05ed7e1340f491b79c8f3f586f6a68bf48d7cb7fb512",
+  "measurements-ordered.c1c0.txt": "2d3a5d289662f4c8bebd20654f3a975e82efb795d58ba2a5d552f907927ad324",
+  "measurement-counts.json": "064b4047b87d86b52a9959cb3ad4ac13b145a8abdfcdd66c311f82efe86438e2",
+  "measurement-metadata.json": "986f445e325a2292a398759d9ecf99bb40ef20bd40914f41e9e1e4e20d915a08",
+  "normalization-provenance.json": "aa3758785ac330d5447db7919922f2382fa91e96fdde2f73a4a58bd131daa946",
+  "provider-input-comparison.json": "3d3754021f2deb445a352e38354c4f6e3936211036f14d32c3d00817d3f7d254",
+  "job-metrics.json": "6d577ecded2133ac2aa9555eaa4ec149e699b12c62e1d851dc74ca5fcc0cbf2c",
+  "isa-submitted.qasm3": "cdc753cf1429842c5b376efd921b11728e2d657c84faedccc56636c3f28ec343",
+  "logical.qasm3": "6e2952c6bcba84ebd0444296d712ec7790f163a665948d1200cab1315be539f1"
+}

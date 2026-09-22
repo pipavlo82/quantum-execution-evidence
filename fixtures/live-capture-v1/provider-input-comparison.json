@@ -1,0 +1,13 @@
+{
+  "comparison_surface": "name,width,classical_registers,global_phase,ordered_instructions,qubits,clbits,parameter_strings; SDK-decoded values",
+  "independent_provider_signature": "NOT_ESTABLISHED",
+  "input_acquisition": "fresh service.job(job_id).inputs",
+  "input_circuit_snapshot_equal": true,
+  "job_id": "dapdeqcak42c73cid5qg",
+  "job_id_matches": true,
+  "open_instance_matches": true,
+  "provider_backend": "ibm_fez",
+  "pub_count": 1,
+  "schema": "qev.live-capture.input-comparison.v0",
+  "shots_returned_in_job_inputs": 256
+}

@@ -11,3 +11,5 @@ vendor/semantic-abi/schema/LICENSE-CC0.txt -text -diff
 vendor/rvr-v0/LICENSE -text -diff
 vendor/receiptos-v0/LICENSE -text -diff
 vendor/tsei-v0/LICENSE -text -diff
+fixtures/live-capture-v1/isa-submitted.qasm3 -text whitespace=-blank-at-eof
+fixtures/live-capture-v1/logical.qasm3 -text whitespace=-blank-at-eof

@@ -1,0 +1,15 @@
+{
+  "backend": "ibm_fez",
+  "canonical_raw_sha256": "2d3a5d289662f4c8bebd20654f3a975e82efb795d58ba2a5d552f907927ad324",
+  "capture": "DECODED_FROM_IBM_RUNTIME_SERVICE_NOT_WIRE_CAPTURE",
+  "job_id": "dapdeqcak42c73cid5qg",
+  "job_status": "DONE",
+  "num_pubs": 1,
+  "observed_at": "2026-09-22T19:31:45.012802+00:00",
+  "raw_bytes": 768,
+  "raw_order": "c1c0 returned by BitArray.get_bitstrings, no reordering",
+  "register": "meas",
+  "shape": [],
+  "shots": 256,
+  "width": 2
+}

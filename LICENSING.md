@@ -31,3 +31,8 @@ Files under `vendor/receiptos-v0/` originate from pinned commit `45b46bf7df3a60b
 Files under `vendor/tsei-v0/` originate from pinned commit `45b46bf7df3a60b32583291f577a36bf19d22f00` of `pipavlo82/crystal-receipt`.
 
 `vendor/tsei-v0/LICENSE` preserves the upstream Apache-2.0 license bytes. The vendored generic transformation-stability core, comparator, conformance vectors, and standalone TSEI v0 specification are used as the native preservation mechanism. QEV-specific profile and bridge files remain under the root-license status described above.
+# Additive live replay scope
+
+New live replay modules, profile, documentation and tests follow this repository's
+existing newly authored-code licensing status. No vendor license or source bytes
+are changed. The 15 copied capture files retain their historical bytes and labels.

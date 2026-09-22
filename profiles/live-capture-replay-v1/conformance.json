@@ -1,0 +1,59 @@
+{
+  "controls": [
+    "original",
+    "payload-order",
+    "historical-booleans"
+  ],
+  "mutants": [
+    {
+      "after": "True",
+      "axis": "jobRequestBinding",
+      "before": "record['job']['job_id'] == claim['jobId']",
+      "id": "assigned-job",
+      "source": "qev/live_relation.py"
+    },
+    {
+      "after": "True",
+      "axis": "orderedRecordAgreement",
+      "before": "lines == record['result']['bitstrings']",
+      "id": "ordered-raw",
+      "source": "qev/live_relation.py"
+    },
+    {
+      "after": "True",
+      "axis": "histogramRecomputation",
+      "before": "dict(Counter(lines)) == counts",
+      "id": "histogram",
+      "source": "qev/live_relation.py"
+    },
+    {
+      "after": "True",
+      "axis": "rawCommitment",
+      "before": "sha(raw) == claim['anchors'][raw_name]",
+      "id": "raw-anchor",
+      "source": "qev/live_relation.py"
+    },
+    {
+      "after": "True",
+      "axis": "declaredCaptureOrigin",
+      "before": "record['sdk']['source'] == 'LIVE_IBM_RUNTIME_API'",
+      "id": "live-origin",
+      "source": "qev/live_relation.py"
+    },
+    {
+      "after": "True",
+      "axis": "authenticationLabelConsistency",
+      "before": "provenance['provider_signature'] == 'NOT_ESTABLISHED'",
+      "id": "auth-label",
+      "source": "qev/live_relation.py"
+    },
+    {
+      "after": "True",
+      "axis": "providerArtifactConsistency",
+      "before": "submitted == returned",
+      "id": "submitted-returned",
+      "source": "qev/live_relation.py"
+    }
+  ],
+  "schema": "qev.live-falsification.v1"
+}

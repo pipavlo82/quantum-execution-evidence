@@ -51,3 +51,11 @@ python -m qev rvr-mutation-check
 The profile demonstrates the stochastic boundary directly: a different valid preserved sample can be **VERIFIED + DIVERGED**. `DIVERGED` records receipt-identity divergence; it is not itself a semantic refutation.
 
 This RVR profile remains scoped to request binding, byte integrity, and deterministic post-processing over preserved QEV observations. It does not establish physical QPU execution, entropy, distribution correctness, or provider authenticity. ReceiptOS/TSEI/RSI/PRF/Chronicle/PQ remain separate integrations.
+# Additive offline live capture replay v1
+
+The new `python -B -m qev live-demo`, `live-replay <artifact>` and
+`live-mutation-check` commands replay preserved live IBM capture bytes offline.
+See [the live profile specification](docs/LIVE_CAPTURE_REPLAY_V1.md) for independent
+claim commitments, exact idealized ISA math, native RVR/TSEI/ReceiptOS execution,
+saved-artifact verification and limits. No SDK or service is needed. Existing
+synthetic admission and all earlier profile behavior remain unchanged.

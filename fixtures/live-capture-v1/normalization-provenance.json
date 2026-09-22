@@ -1,0 +1,13 @@
+{
+  "digest_surface": "sha256 of qev.provider_binding.canonical(operation snapshot); distinct from QPY/QASM identity",
+  "expected_job_id": "dapdeqcak42c73cid5qg",
+  "expected_job_id_origin": "locally persisted immediate submit response; supplementary comparison, not enforced by legacy adapter",
+  "live_record_sha256": "403b1410d687c0b3099b05ed7e1340f491b79c8f3f586f6a68bf48d7cb7fb512",
+  "physical_circuit_origin": "fresh service.job(job_id).inputs[pubs][0][0] decoded QuantumCircuit",
+  "precommit_intent_sha256": "929718b4909842bef584371cabeb461b2112b5df265a64ab859b05e7920e6c69",
+  "provider_signature": "NOT_ESTABLISHED",
+  "raw_origin": "fresh service.job(job_id).result()[0].data.meas.get_bitstrings()",
+  "request_and_transpiler_origin": "LOCAL_SUBMISSION_INTENT_NOT_PROVIDER_ATTESTED",
+  "schema": "qev.live-capture.normalization.v0",
+  "scope": "Live authenticated SDK acquisition plus offline byte consistency; no hardware attestation or entropy qualification"
+}

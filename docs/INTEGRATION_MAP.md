@@ -28,3 +28,13 @@ The exact vendored file identities are hard-coded in `qev/source_inventory.py` a
 The result of the QEV deterministic relation may be locally established over supplied bytes even when a Semantic ABI edge is rejected, malformed, or unavailable. Conversely, a compatible Semantic ABI edge cannot establish provider honesty, authentic QPU execution, entropy, distribution equality, or device certification.
 
 A future composition should preserve the native outcome vocabulary of each layer instead of projecting everything into one boolean.
+# Additive live capture replay v1
+
+`rvr-qev-live-capture-replay-v1` adds native RVR primitives for separately admitted
+live evidence. `qev-live-ideal-two-qubit-isa-v1` recomputes full exact ideal
+operators and measurement mappings inside the actual native TSEI evaluator.
+The new ReceiptOS bridge directly calls vendored root, verifier, summary and
+portable object functions and includes exact RVR/capture bytes in its export.
+See [LIVE_CAPTURE_REPLAY_V1.md](LIVE_CAPTURE_REPLAY_V1.md). These additions do not
+change or extend claims over older synthetic artifacts or layout-only profiles.
+Live capture is not signed provider attestation; root validity is not RVR VERIFIED.
