@@ -16,7 +16,7 @@ The reviewed pre-extraction experiment source-lock SHA-256 was:
 
 This provenance statement does **not** claim that every standalone file is byte-identical to the former lane. Corpus request/package bytes and their manifest semantics were preserved; standalone code and documentation were deliberately adapted for independent execution.
 
-The only copied executable upstream dependency is the minimal byte-pinned Semantic ABI linker surface under `vendor/semantic-abi/`. Its original license files are retained.No QPU, provider API, private key, paid compute, external runtime service, RVR adapter, ReceiptOS capsule producer, TSEI engine, RSI adapter, Chronicle admission, RE4CTOR entropy source, or PQ verifier is embedded or invoked by this provenance boundary.
+The only copied executable upstream dependency is the minimal byte-pinned Semantic ABI linker surface under `vendor/semantic-abi/`. Its original license files are retained.No QPU, provider API, private key, paid compute, external runtime service, RVR adapter, ReceiptOS capsule producer, TSEI engine, RSI adapter, Chronicle admission, or PQ verifier is embedded or invoked by this provenance boundary.
 
 Expectation authorship remains `SAME_TASK_AUTHOR_NOT_INDEPENDENT`. Source hashes prove byte identity, not authorship independence or semantic correctness.
 

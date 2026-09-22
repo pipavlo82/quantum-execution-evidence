@@ -13,7 +13,6 @@ This map records **evidence status**, not product marketing. Repository existenc
 | RSI / RBCF | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | No RSI admission/profile/adapter execution |
 | Chronicle | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | No Chronicle admission or history claim |
 | PQ receipt profile | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | Signature/key attribution is separate from QPU provenance |
-| RE4CTOR | **REFERENCE / NOT_INTEGRATED** | No entropy or randomness input is accepted from QEV v0 |
 ## Exact reference pins
 
 `docs/reference-pins.json` contains the 16 inherited source identities used to map the next seams. Those referenced bytes are **not vendored and not executed** by this repository.

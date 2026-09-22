@@ -24,7 +24,7 @@
   "verificationSpecification": {
     "id": "verification-specification",
     "path": "docs/RVR_QEV_PROFILE_V0.md",
-    "sha256": "ee17d3ab38b262f53af19205e26ba6a08247292e3fc3a27a18d0d38772ec6697",
+    "sha256": "967118d0d8d5af8ed9fee86858f7587f22f382b58764f6fb2227202b13a6614b",
     "requiredForRecomputation": true
   },
   "conformanceVectorSet": {
