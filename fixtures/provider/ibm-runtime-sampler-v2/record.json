@@ -1,0 +1,46 @@
+{
+  "schema": "qev.ibm-runtime-sampler-v2-record.v0",
+  "capture_kind": "RECORDED_PROVIDER_API_ARTIFACT",
+  "sdk": {
+    "qiskit": "2.x",
+    "qiskit_ibm_runtime": "0.47.x",
+    "source": "offline-conformance-fixture-not-live-IBM"
+  },
+  "runtime": {
+    "primitive": "SamplerV2",
+    "primitive_version": 2
+  },
+  "job": {
+    "job_id": "fixture-job-ibm-0001",
+    "provider": "synthetic-provider",
+    "backend": "offline-sample-table",
+    "request_id": "local-request-1",
+    "status": "DONE"
+  },
+  "result": {
+    "register": "meas",
+    "shots": 8,
+    "bitstrings": [
+      "00",
+      "11",
+      "00",
+      "11",
+      "11",
+      "00",
+      "00",
+      "11"
+    ],
+    "metadata": {
+      "fixture": true
+    }
+  },
+  "isa_circuit": {
+    "physicalCircuitDigest": "d651280dee68d5f493a49f337f519e6c57878905fa1b0f16c7e5e0b03a6fb9dc",
+    "transpiler": {
+      "name": "qiskit-preset-pass-manager",
+      "version": "recorded-fixture",
+      "profile": "ibm-isa-layout-v0"
+    },
+    "representation": "qev.physical-circuit.v0-fixture"
+  }
+}

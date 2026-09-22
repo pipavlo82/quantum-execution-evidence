@@ -9,10 +9,10 @@
       "size_bytes": 350
     },
     {
-      "git_blob_sha1": "91646c269daf089462b5f87d20a154e61c53dce8",
+      "git_blob_sha1": "0d56df2712af080ee91069cddf21351307d7674c",
       "path": ".github/workflows/ci.yml",
-      "sha256": "bb511ef1948fac91670b25d99c58585093bc57856f5d44ba3659f62858814413",
-      "size_bytes": 1619
+      "sha256": "a8b6960974e8c3fd79b6d26e5acfd0c87b59cd3e444a5eebe8042190c140a705",
+      "size_bytes": 1724
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
@@ -37,6 +37,12 @@
       "path": "docs/CONTRACT.md",
       "sha256": "d4c4ccf3d05a0c8e6fbd0da33fc309ffe0b7bc412464d68d5b2f1f733af5e0e9",
       "size_bytes": 9887
+    },
+    {
+      "git_blob_sha1": "e106f850f552123aba10e0b88a42f0f909e1bc20",
+      "path": "docs/IBM_QUANTUM_RUNTIME_ADAPTER_V0.md",
+      "sha256": "fccf4e05d1c8dd3bdc4251a08bd1d9066890a05bcef3d6239dd2bfb3e7801693",
+      "size_bytes": 1844
     },
     {
       "git_blob_sha1": "63ff3953aadaf1c36556a404c049dd15d5ee8eeb",
@@ -627,6 +633,18 @@
       "size_bytes": 27931
     },
     {
+      "git_blob_sha1": "5a0a41e3b06ba803cec6d9118491ec4a21a4ae4e",
+      "path": "fixtures/provider/ibm-runtime-sampler-v2/record.json",
+      "sha256": "92464cb2afb11e59524cafda7aa2450d50459da8089692b165c37ee071757526",
+      "size_bytes": 1052
+    },
+    {
+      "git_blob_sha1": "adac744bd4a6e4edbc150974f45e1221cbc0d8a9",
+      "path": "fixtures/provider/ibm-runtime-sampler-v2/submission.json",
+      "sha256": "f79756c87fe7fc0bc5fa0c06532defb636bb6cb7b621dcfb4401acbea8979c93",
+      "size_bytes": 431
+    },
+    {
       "git_blob_sha1": "5a3667eedeed0c32900ba3d2a3c42f1de4b2a9c7",
       "path": "profiles/qev-preserved-observation-v0/expected.json",
       "sha256": "0e5ac2c4675dfc0cee3fabff6064a0c6659c6ef4fa4adf10758d82b45bfd7d53",
@@ -675,10 +693,10 @@
       "size_bytes": 81
     },
     {
-      "git_blob_sha1": "f9bde1f254e049f40f02932bdeffe49f2f8ae5d4",
+      "git_blob_sha1": "5c9765347c799658239a14e34046339136711176",
       "path": "qev/__main__.py",
-      "sha256": "f479dfce4ea92945b3e4410734da0b3d9467319a385a80b63c69a58a0c09ac8c",
-      "size_bytes": 3251
+      "sha256": "f0fbd547c2d51928961df93f26b0eb2626ee8d03eff955690943d8ee29059591",
+      "size_bytes": 3471
     },
     {
       "git_blob_sha1": "012d1065cad9e9adb6b36d7c25fcefdc89e103da",
@@ -703,6 +721,18 @@
       "path": "qev/corpus.py",
       "sha256": "5d21dad4c4dbec52fe5d6c6db2345971ec7c48e0f20ece9e69cf08617016fad0",
       "size_bytes": 3626
+    },
+    {
+      "git_blob_sha1": "c41cd5a547b5576c039f13ad30c8a4b77bde155a",
+      "path": "qev/ibm_runtime_adapter.py",
+      "sha256": "fd8d08e9a14317fec5f60b48902148db3a632be219c0c5c3f7ffee4f9110afad",
+      "size_bytes": 3281
+    },
+    {
+      "git_blob_sha1": "4cae0f3ad205e694d94b91b07db89ca7265cdc2d",
+      "path": "qev/ibm_runtime_native.py",
+      "sha256": "92f62aeae1b6337ef04e730cfa5738ebe6dd34196c656b069642c23c0b7d3e44",
+      "size_bytes": 2584
     },
     {
       "git_blob_sha1": "9d9ab49e423df1f293551bc219581886516e08fe",
@@ -777,10 +807,10 @@
       "size_bytes": 521
     },
     {
-      "git_blob_sha1": "fa91bcc771033cdb53c632b8f5633cc743fa1517",
+      "git_blob_sha1": "22740222b3d6c971ffe77c15f0cfb4bd546054c4",
       "path": "qev/source_inventory.py",
-      "sha256": "cd613270023414a0dfcfc9d70d46af5da4ca300ad5143396d6450f4242765be6",
-      "size_bytes": 17935
+      "sha256": "5859ed6b840e6a1cb57d8f08d09589bf8cc5dbd98cbb9c135390e285e85b65ee",
+      "size_bytes": 18225
     },
     {
       "git_blob_sha1": "968084343b159c1f048b291a6509d42ab2297a8a",
@@ -817,6 +847,12 @@
       "path": "tests/test_admission.py",
       "sha256": "977393a1446ca38df3d62c8040d54a5073ebcede13c6932b460fc5846928ee69",
       "size_bytes": 16954
+    },
+    {
+      "git_blob_sha1": "8d2c97c342a274d5814979ed467a24dd9cf8be93",
+      "path": "tests/test_ibm_runtime_adapter.py",
+      "sha256": "6e9a132a67ec38fb3cf67652c76f4eccdf7e3aaaa55719a51a0d247b700faf1b",
+      "size_bytes": 1345
     },
     {
       "git_blob_sha1": "5fbd0e4cac1d069ac3b4ccee000a3c6f861aa02a",
@@ -877,6 +913,12 @@
       "path": "tools/build_rvr_profile.py",
       "sha256": "f70aa88400d86c96a7cebb3f0ecffcdd25dc4e3ec24e2fcc5b7a797be1f6bc69",
       "size_bytes": 4570
+    },
+    {
+      "git_blob_sha1": "c8119c5dfdd674688dfdd09fbb6c4aad64a10faa",
+      "path": "tools/capture_ibm_runtime_job.py",
+      "sha256": "3742872bc06fff57f5c6d6978b1e976a6005eae9fab87edcab8607d58da1b720",
+      "size_bytes": 2790
     },
     {
       "git_blob_sha1": "2d3e4fa57c92bea8328c9f6c1d45f860a3f9f43c",

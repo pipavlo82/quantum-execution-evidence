@@ -42,6 +42,8 @@ jobs:
         run: python -B -m qev quantum-transpile-demo > quantum-transpile-demo.json
       - name: Provider execution binding
         run: python -B -m qev provider-binding-demo > provider-binding-demo.json
+      - name: IBM Runtime adapter
+        run: python -B -m qev ibm-runtime-demo > ibm-runtime-demo.json
       - name: Source lock
         run: python -B -m qev sources > sources.json
       - name: Diff hygiene

@@ -1,0 +1,14 @@
+{
+  "schema": "qev.provider-submission.v0",
+  "provider": "synthetic-provider",
+  "backend": "offline-sample-table",
+  "requested_job": "local-job-1",
+  "request_id": "local-request-1",
+  "shots": 8,
+  "physicalCircuitDigest": "d651280dee68d5f493a49f337f519e6c57878905fa1b0f16c7e5e0b03a6fb9dc",
+  "transpiler": {
+    "name": "qiskit-preset-pass-manager",
+    "version": "recorded-fixture",
+    "profile": "ibm-isa-layout-v0"
+  }
+}
