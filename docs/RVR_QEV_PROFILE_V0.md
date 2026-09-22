@@ -20,7 +20,7 @@ A semantic result is:
 - `UNVERIFIABLE / rvr.qev.v0.required_evidence_unavailable` when either decisive RVR evidence member is committed as `UNAVAILABLE`.
 Malformed or unsupported QEV inputs are gate rejections, not verification outcomes.
 
-The RVR canonical result records only the profile-scoped deterministic axes. Semantic ABI compatibility, provider authenticity, physical QPU execution, distribution equality, entropy, device certification, ReceiptOS packaging, TSEI, RSI, PRF, Chronicle, RE4CTOR and PQ signatures are outside this profile's verification outcome.
+The RVR canonical result records only the profile-scoped deterministic axes. Semantic ABI compatibility, provider authenticity, physical QPU execution, distribution equality, entropy, device certification, ReceiptOS packaging, TSEI, RSI, PRF, Chronicle and PQ signatures are outside this profile's verification outcome.
 
 ## Stochastic recomputation boundary
 
