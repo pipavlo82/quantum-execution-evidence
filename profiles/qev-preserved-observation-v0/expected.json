@@ -1,0 +1,81 @@
+{
+  "schema": "rvr.qev.expected.v0",
+  "cases": {
+    "REPRODUCED": {
+      "verificationOutcome": "VERIFIED",
+      "verificationReasonCode": "rvr.qev.v0.relation_satisfied",
+      "recomputationStatus": "REPRODUCED",
+      "evaluationPerformed": true
+    },
+    "ALTERNATE_VALID_SAMPLE": {
+      "verificationOutcome": "VERIFIED",
+      "verificationReasonCode": "rvr.qev.v0.relation_satisfied",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    },
+    "SHOT_ORDER": {
+      "verificationOutcome": "VERIFIED",
+      "verificationReasonCode": "rvr.qev.v0.relation_satisfied",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    },
+    "REFUTED_COUNTS": {
+      "verificationOutcome": "REFUTED",
+      "verificationReasonCode": "rvr.qev.v0.relation_refuted",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    },
+    "REFUTED_REQUEST_BINDING": {
+      "verificationOutcome": "REFUTED",
+      "verificationReasonCode": "rvr.qev.v0.relation_refuted",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    },
+    "RAW_UNAVAILABLE": {
+      "verificationOutcome": "UNVERIFIABLE",
+      "verificationReasonCode": "rvr.qev.v0.raw_evidence_unavailable",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    },
+    "PACKAGE_UNAVAILABLE": {
+      "verificationOutcome": "UNVERIFIABLE",
+      "verificationReasonCode": "rvr.qev.v0.required_evidence_unavailable",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    },
+    "CANNOT_RECOMPUTE": {
+      "recomputationStatus": "CANNOT_RECOMPUTE",
+      "reasonCode": "rvr.recompute.normative_dependency_unavailable",
+      "dependencyId": "verification-specification",
+      "dependencyFailureKind": "UNRESOLVED",
+      "evaluationPerformed": false
+    },
+    "PRESENT_PAYLOAD_UNRESOLVED": {
+      "recomputationStatus": "CANNOT_RECOMPUTE",
+      "reasonCode": "rvr.recompute.committed_evidence_unavailable",
+      "unavailableEvidenceMemberId": "package",
+      "evidenceFailureKind": "UNRESOLVED_COMMITTED_PRESENT",
+      "evaluationPerformed": false
+    },
+    "RESOLVED_PAYLOAD_IDENTITY_MISMATCH": {
+      "gateStatus": "REJECTED",
+      "reasonCode": "rvr.gate.identity_mismatch",
+      "evaluationPerformed": false
+    },
+    "PROJECTION_NEGATIVE_CONTROL": {
+      "gateStatus": "REJECTED",
+      "reasonCode": "rvr.gate.result_projection_mismatch"
+    },
+    "HIDDEN_STATE_NEGATIVE_CONTROL": {
+      "gateStatus": "REJECTED",
+      "reasonCode": "rvr.gate.evidence_closure_incomplete",
+      "evaluationPerformed": false
+    },
+    "REFUTED_INTEGRITY": {
+      "verificationOutcome": "REFUTED",
+      "verificationReasonCode": "rvr.qev.v0.relation_refuted",
+      "recomputationStatus": "DIVERGED",
+      "evaluationPerformed": true
+    }
+  }
+}

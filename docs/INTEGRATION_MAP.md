@@ -6,7 +6,7 @@ This map records **evidence status**, not product marketing. Repository existenc
 |---|---|---|
 | QEV finite verifier | **EXECUTED** | Request binding, byte integrity, raw observations -> counts -> integer result |
 | Semantic ABI | **EXECUTED** | Exact vendored linker; declaration compatibility only |
-| RVR / ERC-8404 | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | Requires its own reviewed quantum Verification Profile and native adapter execution |
+| RVR / ERC-8404 | **EXECUTED — native profile rvr-qev-preserved-observation-v0** | Exact vendored RVR v0 primitives + QEV profile; implementation diversity remains NOT_ESTABLISHED |
 | ReceiptOS / Crystal Receipt | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | QEV JSON is not an Evidence Capsule or native receipt |
 | TSEI | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | Bit-permutation controls here are not a native TSEI evaluation |
 | Protected Relation Fixtures | **SOURCE_PINNED_REFERENCE / NOT_INTEGRATED** | PRF ideas inform adversarial fixtures; no PRF adapter runs |

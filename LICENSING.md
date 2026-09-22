@@ -12,3 +12,9 @@ Files under `vendor/semantic-abi/` originate from the pinned `trustless-ai/seman
 The exact byte identities and upstream commit are recorded in `qev/source_inventory.py` and `sources.lock.json`.
 
 Source-pinned references in `docs/reference-pins.json` are references only; their bytes are not copied into this repository.
+
+## Vendored RVR v0
+
+Files under `vendor/rvr-v0/` originate from pinned commit `549a7e150ddc75df88dc90ee93f331fea7464567` of `pipavlo82/recomputable-verification-receipts`.
+
+`vendor/rvr-v0/LICENSE` preserves the upstream license bytes. The vendored adapter and generic Verification Profile Manifest schema are used as native RVR v0 primitives; repository-authored QEV profile files remain under the root-license status described above.

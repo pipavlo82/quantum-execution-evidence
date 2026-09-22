@@ -19,3 +19,9 @@ This provenance statement does **not** claim that every standalone file is byte-
 The only copied executable upstream dependency is the minimal byte-pinned Semantic ABI linker surface under `vendor/semantic-abi/`. Its original license files are retained.No QPU, provider API, private key, paid compute, external runtime service, RVR adapter, ReceiptOS capsule producer, TSEI engine, RSI adapter, Chronicle admission, RE4CTOR entropy source, or PQ verifier is embedded or invoked by this provenance boundary.
 
 Expectation authorship remains `SAME_TASK_AUTHOR_NOT_INDEPENDENT`. Source hashes prove byte identity, not authorship independence or semantic correctness.
+
+## RVR v0 primitive vendoring
+
+Native RVR profile work vendors three exact files from RVR commit `549a7e150ddc75df88dc90ee93f331fea7464567`: the upstream license, independent Python adapter, and generic Verification Profile Manifest schema. The adapter SHA-256 is `03505efc8ee993f118fad2c71f706870d25de0da61a393a1f18f7b310bded235`.
+
+The QEV-specific Verification Profile, schema, vectors, expected results, and mutation witnesses are authored in this repository. They do not alter the vendored RVR bytes.
