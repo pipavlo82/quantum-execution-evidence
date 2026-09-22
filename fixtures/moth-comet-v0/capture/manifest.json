@@ -1,0 +1,80 @@
+{
+  "files": {
+    "SUBMIT_ATTEMPTED.json": {
+      "bytes": 74,
+      "sha256": "14c8c60c74f80650d6ef4c2d5633cf7feaf23d6152bd2b812d158c43fef13c80"
+    },
+    "job-20260922T2328006744863Z.body.json": {
+      "bytes": 305,
+      "sha256": "64d76c935c91690d2542ef968374ccbf8d80d2d2b410bf1b26fd5c345075b245"
+    },
+    "job-20260922T2328006744863Z.http.json": {
+      "bytes": 594,
+      "sha256": "e828e028992367ba43dec34e79e3e073e2c8516c8ed436731df65aceb588ee6e"
+    },
+    "job-reference.json": {
+      "bytes": 162,
+      "sha256": "e0d3e161438c7afda25c35ab12af14d372e82cc044f28ea173c707726b2dcfbe"
+    },
+    "request.body.json": {
+      "bytes": 136,
+      "sha256": "f4716aec7faa42522de44d8db4e9daa7c260b4629c0a30a4d214c6ed103cb248"
+    },
+    "result-20260922T2328006744863Z.body.json": {
+      "bytes": 69609,
+      "sha256": "4a76c9aea407c2e8a7bc5756ecdd1caee8642b8c1eabf3366dfc3b538399331c"
+    },
+    "result-20260922T2328006744863Z.http.json": {
+      "bytes": 606,
+      "sha256": "9899a5f365536572c3deeab493188f437c159da9ed6e4dc27b42afbd0a10593b"
+    },
+    "status-20260922T2326204143474Z.body.json": {
+      "bytes": 1132,
+      "sha256": "42848bce5a71eaa9f0e14c47fd85ad7bac03e89d581007d924000fc8063a0a81"
+    },
+    "status-20260922T2326204143474Z.http.json": {
+      "bytes": 605,
+      "sha256": "640b22fc845d93b7c4a9aceb953b2a4c0f995565920e0ed58414e40e75dcf2ea"
+    },
+    "status-20260922T2326503636962Z.body.json": {
+      "bytes": 1132,
+      "sha256": "7004f228639501b753d93466eb3ec11d227c6c935cc5918f756f88acaa1d1539"
+    },
+    "status-20260922T2326503636962Z.http.json": {
+      "bytes": 605,
+      "sha256": "077a68d0c2b97775548e43e73fda4359b29bd8681a05de978a58258b92dd98d7"
+    },
+    "status-20260922T2328006744863Z.body.json": {
+      "bytes": 70644,
+      "sha256": "64b8a1a15d151588212e9295a8517806569cc4eba07be3b03754451d20c58140"
+    },
+    "status-20260922T2328006744863Z.http.json": {
+      "bytes": 606,
+      "sha256": "752985bdc7987873f8eda67904628f66513bab9afd453686cf69bcb42141b3b6"
+    },
+    "submit.body.json": {
+      "bytes": 179,
+      "sha256": "894c593918513d5b4472bdecd4c971407ada70cfc433a78b47d4a5d81fdc2e73"
+    },
+    "submit.http.json": {
+      "bytes": 562,
+      "sha256": "777dba4ead9bfa72c5603a9c61039d184c258fd792b9547d1c42dfcf060635e1"
+    },
+    "terminal-observation.json": {
+      "bytes": 167,
+      "sha256": "6b896032e76b102ad13fd6c2be5a03d0c5e72a828225201dfb0c312209e3c236"
+    }
+  },
+  "roles": {
+    "job": "job-20260922T2328006744863Z.body.json",
+    "request": "request.body.json",
+    "result": "result-20260922T2328006744863Z.body.json",
+    "statuses": [
+      "status-20260922T2326204143474Z.body.json",
+      "status-20260922T2326503636962Z.body.json",
+      "status-20260922T2328006744863Z.body.json"
+    ],
+    "submit": "submit.body.json"
+  },
+  "schema": "qev.moth-http-capture.v0"
+}

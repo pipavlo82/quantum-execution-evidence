@@ -65,3 +65,15 @@ jobs:
           cmp live-mutations.json live-mutations-optimized.json
       - name: Diff hygiene
         run: git diff --check
+      - name: Offline Moth capture replay and semantic mutations
+        run: |
+          python -B -m qev.moth_replay > moth-replay.json
+          python -B -m qev.moth_replay > moth-replay-repeat.json
+          python -B -O -m qev.moth_replay > moth-replay-optimized.json
+          cmp moth-replay.json moth-replay-repeat.json
+          cmp moth-replay.json moth-replay-optimized.json
+          python -B -m qev.moth_mutations > moth-mutations.json
+          python -B -m qev.moth_mutations > moth-mutations-repeat.json
+          python -B -O -m qev.moth_mutations > moth-mutations-optimized.json
+          cmp moth-mutations.json moth-mutations-repeat.json
+          cmp moth-mutations.json moth-mutations-optimized.json

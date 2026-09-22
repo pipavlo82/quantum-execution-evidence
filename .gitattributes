@@ -13,3 +13,5 @@ vendor/receiptos-v0/LICENSE -text -diff
 vendor/tsei-v0/LICENSE -text -diff
 fixtures/live-capture-v1/isa-submitted.qasm3 -text whitespace=-blank-at-eof
 fixtures/live-capture-v1/logical.qasm3 -text whitespace=-blank-at-eof
+fixtures/moth-comet-v0/capture/*.body.json -text
+docs/moth-comet-v0/openapi.raw.json -text

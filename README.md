@@ -59,3 +59,13 @@ See [the live profile specification](docs/LIVE_CAPTURE_REPLAY_V1.md) for indepen
 claim commitments, exact idealized ISA math, native RVR/TSEI/ReceiptOS execution,
 saved-artifact verification and limits. No SDK or service is needed. Existing
 synthetic admission and all earlier profile behavior remain unchanged.
+
+## Moth Comet counts capture
+
+`python -B -m qev.moth_replay` checks one preserved live Moth capture offline.
+The requested 12 randomness qubits, 8 witness qubits and 2048 shots returned
+consistent counts and a budget-limited **zero-byte** output (32 requested).
+`python -B -m qev.moth_mutations` runs seven semantic mutation controls.
+See [the Moth profile](docs/MOTH_COMET_COUNTS_V0.md) for exact evidence and limits.
+Counts consistency does not establish hardware authenticity, entropy, ordered
+measurements or prior publication of the returned commitment.

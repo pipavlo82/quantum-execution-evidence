@@ -3,16 +3,16 @@
   "format": "quantum-execution-evidence.sources.v0",
   "local_files": [
     {
-      "git_blob_sha1": "c322ec97af500bf36252ecd715c5487cf1f10d42",
+      "git_blob_sha1": "11cb3e022cd98b7a49df902c01c8bc0452e40c8a",
       "path": ".gitattributes",
-      "sha256": "00ae8164f5e92b2fc0b5dd1a21fa8ee5c27cd89e609805177e2cd6621b7b1ad5",
-      "size_bytes": 496
+      "sha256": "92a1fae24875b0efc08e63000361f06ea0361b28233c808699d85c92da6f1945",
+      "size_bytes": 587
     },
     {
-      "git_blob_sha1": "8d8c5fa5f05d2b97c9936127946d9450ec102a20",
+      "git_blob_sha1": "9e4e880d21951f13fbec055722307ee9593ac6e9",
       "path": ".github/workflows/ci.yml",
-      "sha256": "1572d6332232aa1f90599ab70dceb3eab78eb5c2c15332991b86d2971def8770",
-      "size_bytes": 2813
+      "sha256": "88049b64ebdfcd08dfc346d83b33fbaac03f9ad18bd957984ae7805eee2a2f46",
+      "size_bytes": 3537
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
@@ -27,10 +27,10 @@
       "size_bytes": 2665
     },
     {
-      "git_blob_sha1": "5c101bcb1b26722c055a320670b44faf7de77e27",
+      "git_blob_sha1": "bb54d3e1f4328e5caf27a67c722d1bb0435ce9a6",
       "path": "README.md",
-      "sha256": "7e1ed471ce3d33cfee50609761dc9f37a5d6e0d168151bbe13f911dd01b059bd",
-      "size_bytes": 3909
+      "sha256": "684e26ab8ad04f98b3984be48b1ccdf3e7a05cc09ce61f0fc6e827c9f8c08277",
+      "size_bytes": 4469
     },
     {
       "git_blob_sha1": "628ad1a29595d288a1ac2cdb77c29a2530a1f10a",
@@ -807,10 +807,10 @@
       "size_bytes": 521
     },
     {
-      "git_blob_sha1": "e1aed86367a1fe819005e35c8233ade5d697ced0",
+      "git_blob_sha1": "4e07de9da89e465c4e8a4f49951e8eac287c748c",
       "path": "qev/source_inventory.py",
-      "sha256": "31bb18d87f533cf9484d75d5382931b05d895b9270f9151e211dbf51b417b361",
-      "size_bytes": 19868
+      "sha256": "1fe1e86435513e040ad26d10d1ba7997a1df984d7fd5af3a3a7fe748f0a73478",
+      "size_bytes": 21442
     },
     {
       "git_blob_sha1": "968084343b159c1f048b291a6509d42ab2297a8a",
@@ -1059,9 +1059,9 @@
       "size_bytes": 9984
     },
     {
-      "git_blob_sha1": "c43637bd83d3a6974c4a2d1c340452ebb086e75d",
+      "git_blob_sha1": "cdd4fd9efaff30bbf6f1ef18860d3b8a507e12c8",
       "path": "profiles/live-capture-replay-v1/verification-profile.json",
-      "sha256": "13652510065eb1ccdfdd27994eb444ab7cd8078d2c7585be2609c3ee0e62ecd2",
+      "sha256": "f1d79319bda3c0d63ca53517a0bb2703edb6e373997da626e10cbc2b3873ac1d",
       "size_bytes": 13544
     },
     {
@@ -1129,6 +1129,162 @@
       "path": "tools/pin_live_profile.py",
       "sha256": "2e9e78a94916c1994902c51c5f12e20509aac184dfbf5d2c4a08e90c1da39cfd",
       "size_bytes": 5970
+    },
+    {
+      "git_blob_sha1": "bbc37e698c1f26e5318f46c1b9eb0b4ea0519a84",
+      "path": "docs/MOTH_COMET_COUNTS_V0.md",
+      "sha256": "4049e57d4fd22023d5bf89cd89ba6b01ceb0eafb14aae7ec3c224a237b6a436f",
+      "size_bytes": 6968
+    },
+    {
+      "git_blob_sha1": "11d312d8975075fbe3ee5bea89b06d2df89f2903",
+      "path": "docs/moth-comet-v0/openapi.raw.json",
+      "sha256": "b0695071d500e28457a7d18fc4ef2e94cb60989761eeafff2cdd90f9bf553e39",
+      "size_bytes": 359392
+    },
+    {
+      "git_blob_sha1": "fdf68013bfa7d4cf569806bf04a3db60d01e0591",
+      "path": "docs/moth-comet-v0/source.json",
+      "sha256": "b45ef7ac81f07b65c835a616e1b76a60b866c91adc1646ebab1140517a389d71",
+      "size_bytes": 366
+    },
+    {
+      "git_blob_sha1": "bde03c258601cc09c84666b483fca388ad14f39d",
+      "path": "fixtures/moth-comet-v0/capture/SUBMIT_ATTEMPTED.json",
+      "sha256": "14c8c60c74f80650d6ef4c2d5633cf7feaf23d6152bd2b812d158c43fef13c80",
+      "size_bytes": 74
+    },
+    {
+      "git_blob_sha1": "d8573a5f02b2e7a6857af125cf892ffd9172b5b8",
+      "path": "fixtures/moth-comet-v0/capture/job-20260922T2328006744863Z.body.json",
+      "sha256": "64d76c935c91690d2542ef968374ccbf8d80d2d2b410bf1b26fd5c345075b245",
+      "size_bytes": 305
+    },
+    {
+      "git_blob_sha1": "9d6d882644f92e3586cf4f21eda4853964e16357",
+      "path": "fixtures/moth-comet-v0/capture/job-20260922T2328006744863Z.http.json",
+      "sha256": "e828e028992367ba43dec34e79e3e073e2c8516c8ed436731df65aceb588ee6e",
+      "size_bytes": 594
+    },
+    {
+      "git_blob_sha1": "3e364d56350fa078fe4aa11df6f7aaf0b4cd39ee",
+      "path": "fixtures/moth-comet-v0/capture/job-reference.json",
+      "sha256": "e0d3e161438c7afda25c35ab12af14d372e82cc044f28ea173c707726b2dcfbe",
+      "size_bytes": 162
+    },
+    {
+      "git_blob_sha1": "4d11cbebdab55ae5c603228513ec673501a2e178",
+      "path": "fixtures/moth-comet-v0/capture/manifest.json",
+      "sha256": "63d48c9e8e9d8a3ed90bd267e18e76002dcdd18caede5b1bbff0c301da9f9caf",
+      "size_bytes": 2863
+    },
+    {
+      "git_blob_sha1": "3ff47356ec2ed1cc164a646a8d4d1e12652c80fc",
+      "path": "fixtures/moth-comet-v0/capture/request.body.json",
+      "sha256": "f4716aec7faa42522de44d8db4e9daa7c260b4629c0a30a4d214c6ed103cb248",
+      "size_bytes": 136
+    },
+    {
+      "git_blob_sha1": "c2db022fcf1a31cae2be2ffe99a82387b64a68ba",
+      "path": "fixtures/moth-comet-v0/capture/result-20260922T2328006744863Z.body.json",
+      "sha256": "4a76c9aea407c2e8a7bc5756ecdd1caee8642b8c1eabf3366dfc3b538399331c",
+      "size_bytes": 69609
+    },
+    {
+      "git_blob_sha1": "e9ffb7e2fc333d150b0c045b30cdbc3b6edd4dfe",
+      "path": "fixtures/moth-comet-v0/capture/result-20260922T2328006744863Z.http.json",
+      "sha256": "9899a5f365536572c3deeab493188f437c159da9ed6e4dc27b42afbd0a10593b",
+      "size_bytes": 606
+    },
+    {
+      "git_blob_sha1": "5cc7f974a4a86f5049451e4aca67c6b062c4a9f1",
+      "path": "fixtures/moth-comet-v0/capture/status-20260922T2326204143474Z.body.json",
+      "sha256": "42848bce5a71eaa9f0e14c47fd85ad7bac03e89d581007d924000fc8063a0a81",
+      "size_bytes": 1132
+    },
+    {
+      "git_blob_sha1": "dd2889c086ff882ceffe9baeea3e92babc8a4d7c",
+      "path": "fixtures/moth-comet-v0/capture/status-20260922T2326204143474Z.http.json",
+      "sha256": "640b22fc845d93b7c4a9aceb953b2a4c0f995565920e0ed58414e40e75dcf2ea",
+      "size_bytes": 605
+    },
+    {
+      "git_blob_sha1": "5aaf05278ecf0d5b56f427bc01ebd327cd56ab60",
+      "path": "fixtures/moth-comet-v0/capture/status-20260922T2326503636962Z.body.json",
+      "sha256": "7004f228639501b753d93466eb3ec11d227c6c935cc5918f756f88acaa1d1539",
+      "size_bytes": 1132
+    },
+    {
+      "git_blob_sha1": "a8ecb112bf9e08ea755450ae8365d75a7f28c29e",
+      "path": "fixtures/moth-comet-v0/capture/status-20260922T2326503636962Z.http.json",
+      "sha256": "077a68d0c2b97775548e43e73fda4359b29bd8681a05de978a58258b92dd98d7",
+      "size_bytes": 605
+    },
+    {
+      "git_blob_sha1": "5a685191a4aff9eaca9dd1ffd252a6980b6a9022",
+      "path": "fixtures/moth-comet-v0/capture/status-20260922T2328006744863Z.body.json",
+      "sha256": "64b8a1a15d151588212e9295a8517806569cc4eba07be3b03754451d20c58140",
+      "size_bytes": 70644
+    },
+    {
+      "git_blob_sha1": "6bfad365da61f5aad38baba6da13754e3350a02a",
+      "path": "fixtures/moth-comet-v0/capture/status-20260922T2328006744863Z.http.json",
+      "sha256": "752985bdc7987873f8eda67904628f66513bab9afd453686cf69bcb42141b3b6",
+      "size_bytes": 606
+    },
+    {
+      "git_blob_sha1": "27ff1d483405d4e8a45f933ba1ff81b110bb4443",
+      "path": "fixtures/moth-comet-v0/capture/submit.body.json",
+      "sha256": "894c593918513d5b4472bdecd4c971407ada70cfc433a78b47d4a5d81fdc2e73",
+      "size_bytes": 179
+    },
+    {
+      "git_blob_sha1": "dfb6a1316e7970afa4ab6ed9e55b6ceb8531c984",
+      "path": "fixtures/moth-comet-v0/capture/submit.http.json",
+      "sha256": "777dba4ead9bfa72c5603a9c61039d184c258fd792b9547d1c42dfcf060635e1",
+      "size_bytes": 562
+    },
+    {
+      "git_blob_sha1": "7a54e7c82be3eee42988af603fe8d9eef2f8d84f",
+      "path": "fixtures/moth-comet-v0/capture/terminal-observation.json",
+      "sha256": "6b896032e76b102ad13fd6c2be5a03d0c5e72a828225201dfb0c312209e3c236",
+      "size_bytes": 167
+    },
+    {
+      "git_blob_sha1": "60ab2a156cca9929ca5fe46e370345bb731301ef",
+      "path": "fixtures/moth-comet-v0/claim.json",
+      "sha256": "2b9b07f343c6ba17cfcacdf943ce89e4171555cce73216fda4797c4d940d616e",
+      "size_bytes": 398
+    },
+    {
+      "git_blob_sha1": "8824dd5111c451476b11dc0dbd9a32ab801f0523",
+      "path": "profiles/moth-comet-counts-v0/profile.json",
+      "sha256": "c2a5b177687fe10fd51026538ed6ec28fae6b90f447116e1c846c2957231f889",
+      "size_bytes": 1193
+    },
+    {
+      "git_blob_sha1": "757d379e0fafcfa992a495ff895f8858e19a8794",
+      "path": "qev/moth_comet.py",
+      "sha256": "76c51c23fb0c56799674a6e93c1e02bf8243e563bdbfa039f98f8798f13d815f",
+      "size_bytes": 15732
+    },
+    {
+      "git_blob_sha1": "6e738acd4923bd1772fd1fa7133072ec61bf4ca0",
+      "path": "qev/moth_mutations.py",
+      "sha256": "51f452508822204ffdc4348e586e5c2a2379860fb5171ab409216191e60c285f",
+      "size_bytes": 5191
+    },
+    {
+      "git_blob_sha1": "ed446ef72a44d6c1257686ee35016f2977f25213",
+      "path": "qev/moth_replay.py",
+      "sha256": "1bd74334b37da8f982b4eb5c7566ab594fdc6a1410ef80f5966fcf713a91a9f1",
+      "size_bytes": 6473
+    },
+    {
+      "git_blob_sha1": "e6f238eb3180d106552ced655f2019055dacc1da",
+      "path": "tests/test_moth_comet.py",
+      "sha256": "c169c8b5ec33884e2014ea10d5038d07749eb51a973e8523ece163bb0e717674",
+      "size_bytes": 9257
     }
   ],
   "self_digest": "EXCLUDED_TO_AVOID_CIRCULARITY",

@@ -1,0 +1,1 @@
+{"mode":"qpu","params":{"num_qubits":12,"shots":2048,"output_bytes":32,"bell_witness":true,"include_raw_counts":true,"epsilon_log2":64}}
