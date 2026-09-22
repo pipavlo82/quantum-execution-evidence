@@ -3,22 +3,34 @@
   "format": "quantum-execution-evidence.sources.v0",
   "local_files": [
     {
-      "git_blob_sha1": "9fda1b10a213784d657a7c6380a9a7ea194b4c30",
+      "git_blob_sha1": "43c95b0bfa90e49daf4dd5cc947640c83f7cb2c4",
       "path": ".gitattributes",
-      "sha256": "280a1c92b947962af698c0bad5ada94cc2c6efe95280a410844fb26b63e6e62b",
-      "size_bytes": 275
+      "sha256": "6c35ec476a70d5840e4663c2737e06b0f639f58563fc4d023941c16db478c1cf",
+      "size_bytes": 315
     },
     {
-      "git_blob_sha1": "05690349603f673135be67773528fb70a5d6f2f6",
+      "git_blob_sha1": "0df13187ebd4b1d5b7fb8eac7ab9b3220420732e",
       "path": ".github/workflows/ci.yml",
-      "sha256": "1a9affde54f7955fdf6104cc62df8be1fb50d9677404d01f6569244421144ff1",
-      "size_bytes": 1078
+      "sha256": "fb83720e591379056d901b8796a31af0ffa288c33d215def02459847e2e5ed5c",
+      "size_bytes": 1269
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
       "path": ".gitignore",
       "sha256": "9aafd075170ab2dd40fd70d5d8408e5ef3b7d6dc535fbe764f203e45dd00fd90",
       "size_bytes": 131
+    },
+    {
+      "git_blob_sha1": "b9f0f59950a727d11c59ca1ec6a2e830fb528856",
+      "path": "LICENSING.md",
+      "sha256": "c6fdd0b1d8efd29009f1bfb870849cc23159e9fac5838e9a08375c4d6d4d2072",
+      "size_bytes": 1896
+    },
+    {
+      "git_blob_sha1": "29a5c09d8c46f48604ad154e3ab625c2a7ecd3b6",
+      "path": "README.md",
+      "sha256": "88f755a6c96ac8e6175fed2f3de20d055e442a4f65c240cf4c65cdb52e688fef",
+      "size_bytes": 3420
     },
     {
       "git_blob_sha1": "628ad1a29595d288a1ac2cdb77c29a2530a1f10a",
@@ -45,16 +57,22 @@
       "size_bytes": 2275
     },
     {
-      "git_blob_sha1": "463b1a59250ef9badb73d7004a85a5015cfbda2c",
-      "path": "docs/reference-pins.json",
-      "sha256": "a85d0824e1b40ffe554e8ec2618fb4fb58b2d1cdc83c251c49364e820c845bbf",
-      "size_bytes": 6526
+      "git_blob_sha1": "b000cf0005cc28c78c9328177a629f1a16a83e74",
+      "path": "docs/RECEIPTOS_QEV_CAPSULE_V0.md",
+      "sha256": "31feb9724b66ed3ad68d80162eb39b77340209c707c4c7ba4c811dedcb80dfac",
+      "size_bytes": 3081
     },
     {
       "git_blob_sha1": "95fa231abd83cd07e279bf442ed01afa1e39085b",
       "path": "docs/RVR_QEV_PROFILE_V0.md",
       "sha256": "ee17d3ab38b262f53af19205e26ba6a08247292e3fc3a27a18d0d38772ec6697",
       "size_bytes": 3719
+    },
+    {
+      "git_blob_sha1": "463b1a59250ef9badb73d7004a85a5015cfbda2c",
+      "path": "docs/reference-pins.json",
+      "sha256": "a85d0824e1b40ffe554e8ec2618fb4fb58b2d1cdc83c251c49364e820c845bbf",
+      "size_bytes": 6526
     },
     {
       "git_blob_sha1": "d515af4381d1576723ee1b8bba6eaa1b486b28ae",
@@ -591,12 +609,6 @@
       "size_bytes": 27931
     },
     {
-      "git_blob_sha1": "3d70854bfec563b7ac36f2de7243d23350c44965",
-      "path": "LICENSING.md",
-      "sha256": "689df123c1dd38461bc21048141e6cb4c794c5eb49c0f39f224817353b49ded2",
-      "size_bytes": 1393
-    },
-    {
       "git_blob_sha1": "5a3667eedeed0c32900ba3d2a3c42f1de4b2a9c7",
       "path": "profiles/qev-preserved-observation-v0/expected.json",
       "sha256": "0e5ac2c4675dfc0cee3fabff6064a0c6659c6ef4fa4adf10758d82b45bfd7d53",
@@ -645,10 +657,10 @@
       "size_bytes": 81
     },
     {
-      "git_blob_sha1": "30022211fb10ec6a321cf9ebe9b667859e982b5d",
+      "git_blob_sha1": "5a056cc9d26866435f36b34ec4bb6bc6ef501b04",
       "path": "qev/__main__.py",
-      "sha256": "9cefc3e397b4f6366fd689a33c8252b65006941f14261f9d506f23d0cf79a9fc",
-      "size_bytes": 2339
+      "sha256": "2f39a16643645b61721b26abbed0df843f13e145a5bc05269b7e19a47476e15c",
+      "size_bytes": 2555
     },
     {
       "git_blob_sha1": "012d1065cad9e9adb6b36d7c25fcefdc89e103da",
@@ -687,6 +699,18 @@
       "size_bytes": 5299
     },
     {
+      "git_blob_sha1": "1bde78f1b8a8d1008345196f5bfa8d26ae02674a",
+      "path": "qev/receiptos_bridge.ts",
+      "sha256": "7f41355b8d3eb5ba39fcc0d37a194788893c110b0f5c71ff07350aa0fdfd79e7",
+      "size_bytes": 8948
+    },
+    {
+      "git_blob_sha1": "2c48a84318cda54482aca50bb98adc1968598c28",
+      "path": "qev/receiptos_native.py",
+      "sha256": "277cd1dc22b15abd0ad767b0e330053615f47129d6bff92a596f9bf52ec50694",
+      "size_bytes": 4606
+    },
+    {
       "git_blob_sha1": "670e73422c992e11418cbbcb32259be10836c15f",
       "path": "qev/rvr_mutations.py",
       "sha256": "a99aceafc2670b6d5b953ff40c5df1fd9c1a0b0b58f161163ea4681a23338591",
@@ -705,10 +729,10 @@
       "size_bytes": 521
     },
     {
-      "git_blob_sha1": "a59654d1f51dd42d2fff6edce6c5b7eaa20c98b0",
+      "git_blob_sha1": "bd4b205902e21b173d5806246719aeffdc479082",
       "path": "qev/source_inventory.py",
-      "sha256": "6fc2147825651cbec18cab070f0a0c5c707adaf28b70cf1ae5ee78f16b5896a1",
-      "size_bytes": 8385
+      "sha256": "fa66953fa4b41e471d26328178e0e02cd01e7cfe8f2d1cffbb0455cbcaf311af",
+      "size_bytes": 13429
     },
     {
       "git_blob_sha1": "968084343b159c1f048b291a6509d42ab2297a8a",
@@ -721,12 +745,6 @@
       "path": "qev/sources.py",
       "sha256": "f4aeba870302e6207d9c4de0c56fdecebc4c93e47d4dcd08a55db45ca9b64f01",
       "size_bytes": 3816
-    },
-    {
-      "git_blob_sha1": "29a5c09d8c46f48604ad154e3ab625c2a7ecd3b6",
-      "path": "README.md",
-      "sha256": "88f755a6c96ac8e6175fed2f3de20d055e442a4f65c240cf4c65cdb52e688fef",
-      "size_bytes": 3420
     },
     {
       "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
@@ -745,6 +763,12 @@
       "path": "tests/test_profile.py",
       "sha256": "03281fbe6b3dd7338de37bdc8a189ddf2cad27c6087e9bc0e6fa8f8e5a648d7b",
       "size_bytes": 10711
+    },
+    {
+      "git_blob_sha1": "17796333624013c69d70f750cb66532987f3f216",
+      "path": "tests/test_receiptos_native.py",
+      "sha256": "484be91c4c83c328e82c17d1b43634bf712a25247a2026ef78e8c63450afce37",
+      "size_bytes": 4155
     },
     {
       "git_blob_sha1": "62ad40b4438b288633a2fa7530128b74ef51345b",
@@ -847,6 +871,114 @@
       "sha256": "148afeb484d3866c1caae82e574182c1b748dd461dfaeb1d8095ecf4905690c1",
       "size_bytes": 6479,
       "source_path": "conformance/rvr-v0/verification-profile-manifest.schema.json"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "9b85a39db99de06afeaf7ccae22a25fb2ac8f19f",
+      "path": "vendor/receiptos-v0/LICENSE",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
+      "size_bytes": 10377,
+      "source_path": "LICENSE"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "fb4a037a6dedad4c8d1555db649bb9fce529e01e",
+      "path": "vendor/receiptos-v0/src/receiptos/canon/canonicalize.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "fca18d1642e6fe47d26ae2eb9f4bf15cf305653d6a7a08a5a0a09e2d6a716c81",
+      "size_bytes": 491,
+      "source_path": "src/receiptos/canon/canonicalize.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "4dddf737b824cae91281a93eb563c9134cdc1bb0",
+      "path": "vendor/receiptos-v0/src/receiptos/canon/receipt-root.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "519e532b155f3c1f4720337d09bc2a8503e4546682695e798b8597ad8d187bf0",
+      "size_bytes": 803,
+      "source_path": "src/receiptos/canon/receipt-root.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "2e2e45bf30529de93eac58a04465f17ef81edeaa",
+      "path": "vendor/receiptos-v0/src/receiptos/verify/verify-receipt.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "70dad3a005e0d09af6d3b4def8ab4c98e24d3ee9f19839d88894c42c5ac9da04",
+      "size_bytes": 1110,
+      "source_path": "src/receiptos/verify/verify-receipt.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "c352a702a8ae55b953b740dcb3c37b99cac31cf3",
+      "path": "vendor/receiptos-v0/src/receiptos/schema/types.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "0ceead0ed3c1ee307ee409b44542640fc89ed5a532e45f8f67abcf7fcbe491df",
+      "size_bytes": 3570,
+      "source_path": "src/receiptos/schema/types.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "4167afb1f1ee92379f95d46616fabdce224d9937",
+      "path": "vendor/receiptos-v0/src/receiptos/merkle/local-merkle.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "4024972dd240b9e6d266b792db45fbfe622ee5fa8ee3425ff6b79a69acad7ba0",
+      "size_bytes": 2111,
+      "source_path": "src/receiptos/merkle/local-merkle.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "79f8214ad13b545fae42c3a82c4b3be9cadd0028",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/evidence-capsule.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "d8d7174f5f2491fffe755b7b81dff44c15dfab55d7bfbf9c1cc752b654dd25ca",
+      "size_bytes": 11077,
+      "source_path": "src/receiptos/capsule/evidence-capsule.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "20b789e2992ab4363bcc361467551d27d5e23183",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/evidence-capsule-v0.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "c024ec49d2a9c58caf5df811e7f89b5e81b9a75b93428c12bcdd39d6656dc6e9",
+      "size_bytes": 8898,
+      "source_path": "src/receiptos/capsule/evidence-capsule-v0.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "734df63bb397cf223eb5363a4f941e86fda021b8",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/portable-proof-object-v0.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "ac316f865b60fca90339e402545c1d88bc8735ab542b879137ec31948d01d09b",
+      "size_bytes": 4232,
+      "source_path": "src/receiptos/capsule/portable-proof-object-v0.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "64223eac0425dd36edae7bf94a6373389eb0b5e1",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/crystal-mapping.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "9a3f949160d2132778d71fd825d14d4fe96a24b037d80d5bc93fa9b4e34f0d24",
+      "size_bytes": 1315,
+      "source_path": "src/receiptos/capsule/crystal-mapping.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "ae7b47f4e3545cb30ae8f517db8f37cddb5b5a49",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/render-plan.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "31152a759230998aca3130abbcb48a1dc1c88ee8323a3ce3cc7bedd6e728addf",
+      "size_bytes": 4497,
+      "source_path": "src/receiptos/capsule/render-plan.ts"
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "b560e2bfd04a39fc0f70ca749e7336e933679169",
+      "path": "vendor/receiptos-v0/schemas/evidence-capsule.v0.schema.json",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "f8b8c44bffa4d7cb827564cfa663ffe60396b4aa39991762c855a24765c1d159",
+      "size_bytes": 3890,
+      "source_path": "schemas/evidence-capsule.v0.schema.json"
     }
   ]
 }

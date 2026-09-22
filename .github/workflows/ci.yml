@@ -16,6 +16,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.3.14'
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -31,6 +34,8 @@ jobs:
         run: python -B -m qev rvr-demo > rvr-demo.json
       - name: Native RVR mutation gate
         run: python -B -m qev rvr-mutation-check > rvr-mutations.json
+      - name: Native ReceiptOS QEV capsule
+        run: python -B -m qev receiptos-demo > receiptos-demo.json
       - name: Source lock
         run: python -B -m qev sources > sources.json
       - name: Diff hygiene
