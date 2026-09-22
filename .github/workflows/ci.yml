@@ -38,6 +38,8 @@ jobs:
         run: python -B -m qev receiptos-demo > receiptos-demo.json
       - name: Native TSEI QEV preservation
         run: python -B -m qev tsei-demo > tsei-demo.json
+      - name: Quantum transpilation boundary
+        run: python -B -m qev quantum-transpile-demo > quantum-transpile-demo.json
       - name: Source lock
         run: python -B -m qev sources > sources.json
       - name: Diff hygiene
