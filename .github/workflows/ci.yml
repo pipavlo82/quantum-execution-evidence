@@ -1,0 +1,33 @@
+name: ci
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit tests
+        run: python -B -m unittest discover -s tests -v
+      - name: Optimized tests
+        run: python -B -O -m unittest discover -s tests -v
+      - name: Demo
+        run: python -B -m qev demo > demo.json
+      - name: Mutation gate
+        run: python -B -m qev mutation-check > mutations.json
+      - name: Source lock
+        run: python -B -m qev sources > sources.json
+      - name: Diff hygiene
+        run: git diff --check

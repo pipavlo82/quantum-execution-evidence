@@ -1,0 +1,1 @@
+{"backend":"offline-sample-table","endianness":"source-index-ascending","job":"local-job-1","marker":"SYNTHETIC","parameters":{"theta_quarters":1},"program":{"codec":"qev-lines.v0","source":"H 0\nCX 0 1\nRZ 1 theta_quarters\nMEASURE_ALL\n"},"provider":"synthetic-provider","request_id":"local-request-1","shots":9,"source_to_output":[0,1],"width":2}

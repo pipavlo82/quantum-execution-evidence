@@ -1,0 +1,10 @@
+[project]
+name = "quantum-execution-evidence"
+version = "0.1.0"
+description = "Offline synthetic evidence verifier for stochastic execution pipelines"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.qev]
+profile = "quantum-evidence.v0"
+license-status = "pending"

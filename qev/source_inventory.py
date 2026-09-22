@@ -1,0 +1,32 @@
+"""Trusted finite source inventory; byte pins are not authentication."""
+
+VENDOR_FILES = ({'commit': 'd15c666dfccff17f7350fe97d2fc7b71cb2cbaee',
+  'git_blob_sha1': '57bc88a15a0ee8266c259b2667e64608d3f7e292',
+  'path': 'vendor/semantic-abi/LICENSE',
+  'repository': 'https://github.com/trustless-ai/semantic-abi.git',
+  'sha256': 'c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c',
+  'size_bytes': 11358,
+  'source_path': 'LICENSE'},
+ {'commit': 'd15c666dfccff17f7350fe97d2fc7b71cb2cbaee',
+  'git_blob_sha1': '6ca207ef004cb69d03041e7e5c288a2be4968045',
+  'path': 'vendor/semantic-abi/schema/LICENSE-CC0.txt',
+  'repository': 'https://github.com/trustless-ai/semantic-abi.git',
+  'sha256': '7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309',
+  'size_bytes': 7049,
+  'source_path': 'schema/LICENSE-CC0.txt'},
+ {'commit': 'd15c666dfccff17f7350fe97d2fc7b71cb2cbaee',
+  'git_blob_sha1': 'c292a23ef0f3c283e600522f7a13a42fdceee1d8',
+  'path': 'vendor/semantic-abi/runner/src/linker.mjs',
+  'repository': 'https://github.com/trustless-ai/semantic-abi.git',
+  'sha256': 'bae8e519361989bfadbb5d226cb9940255cd954c60b40ba42136a2b11161d391',
+  'size_bytes': 4044,
+  'source_path': 'runner/src/linker.mjs'},
+ {'commit': 'd15c666dfccff17f7350fe97d2fc7b71cb2cbaee',
+  'git_blob_sha1': '647fc36d7d34756119a757d10b94b4473db44aa0',
+  'path': 'vendor/semantic-abi/schema/manifest.schema.json',
+  'repository': 'https://github.com/trustless-ai/semantic-abi.git',
+  'sha256': '3219f51c7929ff915b71e5931a5d10edc5e15e73809fc2c47107592490bbe397',
+  'size_bytes': 3842,
+  'source_path': 'schema/manifest.schema.json'})
+
+LOCAL_FILES = ('.gitattributes', '.github/workflows/ci.yml', '.gitignore', 'docs/CONTRACT.md', 'docs/INTEGRATION_MAP.md', 'docs/NEXT_NATIVE_RVR.md', 'docs/PROVENANCE.md', 'docs/reference-pins.json', 'fixtures/corpus/backend-swap.package.json', 'fixtures/corpus/backend-swap.request.json', 'fixtures/corpus/bit-permutation.package.json', 'fixtures/corpus/bit-permutation.request.json', 'fixtures/corpus/boolean-count.package.json', 'fixtures/corpus/boolean-count.request.json', 'fixtures/corpus/codec.package.json', 'fixtures/corpus/codec.request.json', 'fixtures/corpus/counts-corrupt.package.json', 'fixtures/corpus/counts-corrupt.request.json', 'fixtures/corpus/duplicate-key.package.json', 'fixtures/corpus/duplicate-key.request.json', 'fixtures/corpus/elevate-authentic_qpu_execution.package.json', 'fixtures/corpus/elevate-authentic_qpu_execution.request.json', 'fixtures/corpus/elevate-cryptographic_rng.package.json', 'fixtures/corpus/elevate-cryptographic_rng.request.json', 'fixtures/corpus/elevate-device_certification.package.json', 'fixtures/corpus/elevate-device_certification.request.json', 'fixtures/corpus/elevate-distribution_equality.package.json', 'fixtures/corpus/elevate-distribution_equality.request.json', 'fixtures/corpus/elevate-min_entropy.package.json', 'fixtures/corpus/elevate-min_entropy.request.json', 'fixtures/corpus/elevate-sampler_independence.package.json', 'fixtures/corpus/elevate-sampler_independence.request.json', 'fixtures/corpus/endianness.package.json', 'fixtures/corpus/endianness.request.json', 'fixtures/corpus/expected-injection.package.json', 'fixtures/corpus/expected-injection.request.json', 'fixtures/corpus/expression.package.json', 'fixtures/corpus/expression.request.json', 'fixtures/corpus/float-count.package.json', 'fixtures/corpus/float-count.request.json', 'fixtures/corpus/job-swap.package.json', 'fixtures/corpus/job-swap.request.json', 'fixtures/corpus/key-order.package.json', 'fixtures/corpus/key-order.request.json', 'fixtures/corpus/label-qpu.package.json', 'fixtures/corpus/label-qpu.request.json', 'fixtures/corpus/label-simulator.package.json', 'fixtures/corpus/label-simulator.request.json', 'fixtures/corpus/mapping-corrupt.package.json', 'fixtures/corpus/mapping-corrupt.request.json', 'fixtures/corpus/mapping-swap.package.json', 'fixtures/corpus/mapping-swap.request.json', 'fixtures/corpus/missing-raw.package.json', 'fixtures/corpus/missing-raw.request.json', 'fixtures/corpus/negative-count.package.json', 'fixtures/corpus/negative-count.request.json', 'fixtures/corpus/nonfinite.package.json', 'fixtures/corpus/nonfinite.request.json', 'fixtures/corpus/out-of-range-bits.package.json', 'fixtures/corpus/out-of-range-bits.request.json', 'fixtures/corpus/package-digest.package.json', 'fixtures/corpus/package-digest.request.json', 'fixtures/corpus/parameters-swap.package.json', 'fixtures/corpus/parameters-swap.request.json', 'fixtures/corpus/path-reference.package.json', 'fixtures/corpus/path-reference.request.json', 'fixtures/corpus/postprocessor.package.json', 'fixtures/corpus/postprocessor.request.json', 'fixtures/corpus/provider-swap.package.json', 'fixtures/corpus/provider-swap.request.json', 'fixtures/corpus/raw-corrupt.package.json', 'fixtures/corpus/raw-corrupt.request.json', 'fixtures/corpus/raw-digest.package.json', 'fixtures/corpus/raw-digest.request.json', 'fixtures/corpus/request-digest.package.json', 'fixtures/corpus/request-digest.request.json', 'fixtures/corpus/request-id-swap.package.json', 'fixtures/corpus/request-id-swap.request.json', 'fixtures/corpus/result-corrupt.package.json', 'fixtures/corpus/result-corrupt.request.json', 'fixtures/corpus/sample-a.package.json', 'fixtures/corpus/sample-a.request.json', 'fixtures/corpus/sample-b.package.json', 'fixtures/corpus/sample-b.request.json', 'fixtures/corpus/shot-order.package.json', 'fixtures/corpus/shot-order.request.json', 'fixtures/corpus/shots-mismatch.package.json', 'fixtures/corpus/shots-mismatch.request.json', 'fixtures/corpus/source-swap.package.json', 'fixtures/corpus/source-swap.request.json', 'fixtures/corpus/unverified-provider.package.json', 'fixtures/corpus/unverified-provider.request.json', 'fixtures/corpus/weak-projection.package.json', 'fixtures/corpus/weak-projection.request.json', 'fixtures/corpus/width-swap.package.json', 'fixtures/corpus/width-swap.request.json', 'fixtures/manifest.json', 'LICENSING.md', 'pyproject.toml', 'qev/__init__.py', 'qev/__main__.py', 'qev/adapters.py', 'qev/admission.py', 'qev/checker.py', 'qev/corpus.py', 'qev/inventory.py', 'qev/mutations.py', 'qev/semantic_link.mjs', 'qev/source_inventory.py', 'qev/source_lock.py', 'qev/sources.py', 'README.md', 'tests/__init__.py', 'tests/test_admission.py', 'tests/test_profile.py', 'tests/test_standalone.py', 'tools/__init__.py', 'tools/build_corpus.py', 'tools/pin_lock.py')

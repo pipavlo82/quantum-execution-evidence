@@ -1,0 +1,41 @@
+import argparse
+import json
+import sys
+from . import checker
+
+def verification_exit(out):
+    # Evidence contradictions, link rejection and availability stay separate axes.
+    if out['input_status']!='VALID': return 2
+    if 'REFUTED' in (out['integrity'],out['request_binding'],out['deterministic_verification']): return 1
+    link=out['native_link']
+    if link['status']=='MALFORMED': return 5
+    if link['status']=='REJECTED' or link.get('result',{}).get('valid') is False: return 4
+    if link['status']!='EXECUTED' or link.get('result',{}).get('valid') is not True: return 3
+    if out['deterministic_verification']=='CANNOT_ESTABLISH': return 3
+    return 0
+
+def main():
+    parser=argparse.ArgumentParser(description='OFFLINE SYNTHETIC quantum evidence experiment')
+    sub=parser.add_subparsers(dest='command',required=True)
+    sub.add_parser('demo'); sub.add_parser('mutation-check'); sub.add_parser('sources')
+    for name in ('verify','check'):
+        p=sub.add_parser(name); p.add_argument('--request',required=True); p.add_argument('package')
+    args=parser.parse_args()
+    if args.command=='demo':
+        from .corpus import report, successful
+        out=report(); code=0 if successful(out) else 1
+    elif args.command=='mutation-check':
+        from .mutations import run, successful
+        out=run(); code=0 if successful(out) else 1
+    elif args.command=='sources':
+        from .sources import validate, successful
+        out=validate(); code=0 if successful(out) else 1
+    else:
+        try: out=checker.verify(checker.read_input(args.request),checker.read_input(args.package))
+        except (checker.InputError,OSError) as exc:
+            out=checker.empty_result(); out['input_status']='INVALID'; out['reasons']=[str(exc)]
+        code=verification_exit(out)
+    sys.stdout.buffer.write((json.dumps(out,sort_keys=True,indent=2,ensure_ascii=True)+'\n').encode())
+    return code
+
+if __name__=='__main__': sys.exit(main())

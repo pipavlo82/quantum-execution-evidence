@@ -1,0 +1,721 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "sample-a",
+      "marker": "SYNTHETIC",
+      "package": "sample-a.package.json",
+      "package_sha256": "2d4fd5c1034bd371744cdf31078e3d92e01e370689051003f0cbdac481027613",
+      "request": "sample-a.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "sample-b",
+      "marker": "SYNTHETIC",
+      "package": "sample-b.package.json",
+      "package_sha256": "04d2dd4d2dafcf964f7ef93c1770a428e2c9a403287768910d8e496782b8a9c9",
+      "request": "sample-b.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "shot-order",
+      "marker": "SYNTHETIC",
+      "package": "shot-order.package.json",
+      "package_sha256": "27c1017ce2b508302322363a530f3209a896d6d7d575e2ebb4fa073f63d72577",
+      "request": "shot-order.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "bit-permutation",
+      "marker": "SYNTHETIC",
+      "package": "bit-permutation.package.json",
+      "package_sha256": "6b16e2ec135b8dda4a4e3c8bd88960b267fec2ee33376b01be5353eb381afbd2",
+      "request": "bit-permutation.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "key-order",
+      "marker": "SYNTHETIC",
+      "package": "key-order.package.json",
+      "package_sha256": "33fd89c9866a0f4b51748004888be096da2e4db7c9c555b02eb95eb1b0f76c8e",
+      "request": "key-order.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "source-swap",
+      "marker": "SYNTHETIC",
+      "package": "source-swap.package.json",
+      "package_sha256": "cf718c713c82fc2f7d1e83f7589945d85e0083f862ee72acf6cf6d0e6329129a",
+      "request": "source-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "parameters-swap",
+      "marker": "SYNTHETIC",
+      "package": "parameters-swap.package.json",
+      "package_sha256": "8205fd701a3f063a41747f02e475134db3cee11ff362424d5ea2d0581da19fa8",
+      "request": "parameters-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "REFUTED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "mapping-swap",
+      "marker": "SYNTHETIC",
+      "package": "mapping-swap.package.json",
+      "package_sha256": "ceae51dfa5c463bfdce0d24e9cd46f9364a88d76e438f361e01c09cd48b2d67c",
+      "request": "mapping-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "provider-swap",
+      "marker": "SYNTHETIC",
+      "package": "provider-swap.package.json",
+      "package_sha256": "0c5c4a32ea11358098d13be002201077e0ef25d9d69f93dfdfaf29d664b13662",
+      "request": "provider-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "backend-swap",
+      "marker": "SYNTHETIC",
+      "package": "backend-swap.package.json",
+      "package_sha256": "2417e75291a4ea8fc19ca1bc0892fa81dac2de8f17311e65681b5bd9caf906d0",
+      "request": "backend-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "job-swap",
+      "marker": "SYNTHETIC",
+      "package": "job-swap.package.json",
+      "package_sha256": "2c649770bd0d5a01e38787f7e4de388d9aafe4e517e0db4e6081201b2cd36f11",
+      "request": "job-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "request-id-swap",
+      "marker": "SYNTHETIC",
+      "package": "request-id-swap.package.json",
+      "package_sha256": "b806485d6fa51c540307307d4a1020081a2e5495ee9d53d8019cc6f344e4489a",
+      "request": "request-id-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "weak-projection",
+      "marker": "SYNTHETIC",
+      "package": "weak-projection.package.json",
+      "package_sha256": "5a8e6e0f9247494cc4f21df64623b64118830bac13605f5bc95793891b9ab5c4",
+      "request": "weak-projection.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "REFUTED"
+      },
+      "id": "width-swap",
+      "marker": "SYNTHETIC",
+      "package": "width-swap.package.json",
+      "package_sha256": "1d4f1425c838a4d3431256dad32e2e168f707cec1bda419e65f9598483c0d086",
+      "request": "width-swap.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "REFUTED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "shots-mismatch",
+      "marker": "SYNTHETIC",
+      "package": "shots-mismatch.package.json",
+      "package_sha256": "e3d7166cfa60f3ca2c4b2e19912c68cce8c68b55e2748996052eb1b859b2f6fe",
+      "request": "shots-mismatch.request.json",
+      "request_sha256": "e480adfbd751a72a25d1f7dda71653c83dce820959f1793bab1bab5f23391d3c"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "REFUTED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "counts-corrupt",
+      "marker": "SYNTHETIC",
+      "package": "counts-corrupt.package.json",
+      "package_sha256": "914c93c67bceb37d119d78f43a6bd9d75785af1290876242088b3b709cbc3b83",
+      "request": "counts-corrupt.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "REFUTED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "result-corrupt",
+      "marker": "SYNTHETIC",
+      "package": "result-corrupt.package.json",
+      "package_sha256": "3ea31f37abb9229ff151d5fb98b89cffc6838818865eff716fd6970bd0fdc2c2",
+      "request": "result-corrupt.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "REFUTED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "mapping-corrupt",
+      "marker": "SYNTHETIC",
+      "package": "mapping-corrupt.package.json",
+      "package_sha256": "f73fe4acc2800185e24c668ac33d2d6183c53cc365a513927934d150b0ce02db",
+      "request": "mapping-corrupt.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "REFUTED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "raw-digest",
+      "marker": "SYNTHETIC",
+      "package": "raw-digest.package.json",
+      "package_sha256": "07301f19d97bea030fa2d2c61906a9a790150e2d0cd07870c575024bddfbd757",
+      "request": "raw-digest.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "REFUTED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "request-digest",
+      "marker": "SYNTHETIC",
+      "package": "request-digest.package.json",
+      "package_sha256": "20ce59b16367f158926b211a7ab9a9c53314180ef55e8bc06c37684a1a3b000e",
+      "request": "request-digest.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "REFUTED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "package-digest",
+      "marker": "SYNTHETIC",
+      "package": "package-digest.package.json",
+      "package_sha256": "b1a56fe9f6499d7974ba44601adc1ec38489e74875dde3bbcb7b1e9d8c760e8e",
+      "request": "package-digest.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "REFUTED",
+        "input_status": "VALID",
+        "integrity": "REFUTED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "raw-corrupt",
+      "marker": "SYNTHETIC",
+      "package": "raw-corrupt.package.json",
+      "package_sha256": "d837fa17e79bd351e9eb5b1ddb0da35671dcee2158aa16890282f45541fef6d1",
+      "request": "raw-corrupt.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "missing-raw",
+      "marker": "SYNTHETIC",
+      "package": "missing-raw.package.json",
+      "package_sha256": "10e48393270111b208b6d3f5ef89f00302aa091d5997ff0d2308391fa79c5bac",
+      "request": "missing-raw.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "label-simulator",
+      "marker": "SYNTHETIC",
+      "package": "label-simulator.package.json",
+      "package_sha256": "ccc867da1f6efdb5c3fe73c5933a538ead21051636c3841b25a0bfd2b229b1d8",
+      "request": "label-simulator.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "label-qpu",
+      "marker": "SYNTHETIC",
+      "package": "label-qpu.package.json",
+      "package_sha256": "dd7398fa209abd3d67e5555b1208e4a60bde399074b98ed11dd3175c40592d48",
+      "request": "label-qpu.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "ESTABLISHED_OVER_SUPPLIED_BYTES",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "VALID",
+        "integrity": "SATISFIED",
+        "native_link_valid": true,
+        "request_binding": "SATISFIED"
+      },
+      "id": "unverified-provider",
+      "marker": "SYNTHETIC",
+      "package": "unverified-provider.package.json",
+      "package_sha256": "d49c88f5c7867be55eb86738c2a874e9f63787ecb70e6f7090ef8d0be2d3aa52",
+      "request": "unverified-provider.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "UNSUPPORTED",
+        "integrity": "SATISFIED",
+        "native_link_valid": false,
+        "request_binding": "SATISFIED"
+      },
+      "id": "elevate-authentic_qpu_execution",
+      "marker": "SYNTHETIC",
+      "package": "elevate-authentic_qpu_execution.package.json",
+      "package_sha256": "f2bdd754e56afde5b671dddacfd013a938856c67e571c15432ae46456abb93e7",
+      "request": "elevate-authentic_qpu_execution.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "UNSUPPORTED",
+        "integrity": "SATISFIED",
+        "native_link_valid": false,
+        "request_binding": "SATISFIED"
+      },
+      "id": "elevate-sampler_independence",
+      "marker": "SYNTHETIC",
+      "package": "elevate-sampler_independence.package.json",
+      "package_sha256": "767ddeaad2452a79ace23953b648e0fadf54466b1a29c1993263dbc765be95da",
+      "request": "elevate-sampler_independence.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "UNSUPPORTED",
+        "integrity": "SATISFIED",
+        "native_link_valid": false,
+        "request_binding": "SATISFIED"
+      },
+      "id": "elevate-distribution_equality",
+      "marker": "SYNTHETIC",
+      "package": "elevate-distribution_equality.package.json",
+      "package_sha256": "3fcccf3b007ca7d24766f29058134b647dd74b724a2bff63116b8636fbe3c489",
+      "request": "elevate-distribution_equality.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "UNSUPPORTED",
+        "integrity": "SATISFIED",
+        "native_link_valid": false,
+        "request_binding": "SATISFIED"
+      },
+      "id": "elevate-min_entropy",
+      "marker": "SYNTHETIC",
+      "package": "elevate-min_entropy.package.json",
+      "package_sha256": "c60b957d7a5cfe931624b6ba28072417153c1a37803f942294311081abdc74ee",
+      "request": "elevate-min_entropy.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "UNSUPPORTED",
+        "integrity": "SATISFIED",
+        "native_link_valid": false,
+        "request_binding": "SATISFIED"
+      },
+      "id": "elevate-cryptographic_rng",
+      "marker": "SYNTHETIC",
+      "package": "elevate-cryptographic_rng.package.json",
+      "package_sha256": "005f742edce90760758b19acc533f11eed3302370e72cb1921812d2bf9e8a2d3",
+      "request": "elevate-cryptographic_rng.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "SATISFIED",
+        "input_status": "UNSUPPORTED",
+        "integrity": "SATISFIED",
+        "native_link_valid": false,
+        "request_binding": "SATISFIED"
+      },
+      "id": "elevate-device_certification",
+      "marker": "SYNTHETIC",
+      "package": "elevate-device_certification.package.json",
+      "package_sha256": "8ea446ca584e454b4c2d54fdbf1a3d8dd54ede00b8f59b34b692f18ba4b0aff5",
+      "request": "elevate-device_certification.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "boolean-count",
+      "marker": "SYNTHETIC",
+      "package": "boolean-count.package.json",
+      "package_sha256": "86d3373e8622d47f0cfbf6367302ee7f53fd6859fc2b7234fef831a57fbbd3f8",
+      "request": "boolean-count.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "negative-count",
+      "marker": "SYNTHETIC",
+      "package": "negative-count.package.json",
+      "package_sha256": "4baa47d33a55baa0ff4644c109e970354c94dba20b41afdf531347daf8cc8ec4",
+      "request": "negative-count.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "float-count",
+      "marker": "SYNTHETIC",
+      "package": "float-count.package.json",
+      "package_sha256": "394532dc6e222a6d21539cb0adffd92f657c7838c4039783e7012fb29a44cf10",
+      "request": "float-count.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "out-of-range-bits",
+      "marker": "SYNTHETIC",
+      "package": "out-of-range-bits.package.json",
+      "package_sha256": "9ad4702c79577b4c7a285860a84f61ba7ac9ed7a696703fb4ce5712d21c9e19a",
+      "request": "out-of-range-bits.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "UNSUPPORTED",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "postprocessor",
+      "marker": "SYNTHETIC",
+      "package": "postprocessor.package.json",
+      "package_sha256": "5a1ec9760efb34df499205e1b2d5af183363f6c2f784c0ccad66e163ad69d7b7",
+      "request": "postprocessor.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "UNSUPPORTED",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "codec",
+      "marker": "SYNTHETIC",
+      "package": "codec.package.json",
+      "package_sha256": "7b490fa8a0ad18c0ad1363ab759575c831d614c0110087233f8934cab320a2b7",
+      "request": "codec.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "UNSUPPORTED",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "endianness",
+      "marker": "SYNTHETIC",
+      "package": "endianness.package.json",
+      "package_sha256": "3e34882a653807a0848eecc1aaa5a01d223c1789561a7a4868c06b9ac4345188",
+      "request": "endianness.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "UNSUPPORTED",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "expression",
+      "marker": "SYNTHETIC",
+      "package": "expression.package.json",
+      "package_sha256": "3178fbfb873dd90215d0d6c5e9fe683d2a1d3194b38cd59d39d2aaa3643ee5f1",
+      "request": "expression.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "path-reference",
+      "marker": "SYNTHETIC",
+      "package": "path-reference.package.json",
+      "package_sha256": "faf83f6524694d70122a55a3b71955c505ea42c2b7f82c4e12ef332fe631410d",
+      "request": "path-reference.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "expected-injection",
+      "marker": "SYNTHETIC",
+      "package": "expected-injection.package.json",
+      "package_sha256": "85041d30ecc1054569b3a96772f65cac07e37ba71cf4f8832c6612f7bb4bccb5",
+      "request": "expected-injection.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "duplicate-key",
+      "marker": "SYNTHETIC",
+      "package": "duplicate-key.package.json",
+      "package_sha256": "428401a4d64d72e9c2ad3163a86a036a19081624102770b9779693dc5760dfa5",
+      "request": "duplicate-key.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    },
+    {
+      "expected": {
+        "claim_support": "NOT_ESTABLISHED",
+        "deterministic_verification": "CANNOT_ESTABLISH",
+        "input_status": "INVALID",
+        "integrity": "CANNOT_ESTABLISH",
+        "native_link_valid": null,
+        "request_binding": "CANNOT_ESTABLISH"
+      },
+      "id": "nonfinite",
+      "marker": "SYNTHETIC",
+      "package": "nonfinite.package.json",
+      "package_sha256": "12f0cb3947f988a4742beba2d1a222b16056d0796259d8882c22427444e61a49",
+      "request": "nonfinite.request.json",
+      "request_sha256": "391a0311f161fbd98d3cc8c27cb21943ed621a82ca82857c61e896c6226d6857"
+    }
+  ],
+  "controls": [
+    "sample-a",
+    "sample-b",
+    "shot-order",
+    "bit-permutation",
+    "key-order"
+  ],
+  "expectation_authorship": "SAME_TASK_AUTHOR_NOT_INDEPENDENT",
+  "manual_arithmetic": {
+    "sample-a": "2*0+3*2+1*1+2*3=13; odd parity 3+1=4",
+    "sample-b": "1*0+1*2+4*1+2*3=12; odd parity 1+4=5"
+  },
+  "marker": "SYNTHETIC"
+}

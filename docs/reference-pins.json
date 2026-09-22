@@ -1,0 +1,150 @@
+{
+  "evidence": "Inherited seed metadata; reference source bytes are not vendored or executed here.",
+  "records": [
+    {
+      "commit": "549a7e150ddc75df88dc90ee93f331fea7464567",
+      "git_blob_sha1": "22354802a17f2ebddc9ecba785b4443cb93710fb",
+      "id": "rvr",
+      "path": "README.md",
+      "repository": "https://github.com/pipavlo82/recomputable-verification-receipts.git",
+      "sha256": "c3292b9877143da1a127d1c9534c22975208b6fd1ec0658ccf7d6f16edc04193",
+      "size_bytes": 3235
+    },
+    {
+      "commit": "549a7e150ddc75df88dc90ee93f331fea7464567",
+      "git_blob_sha1": "9b85a39db99de06afeaf7ccae22a25fb2ac8f19f",
+      "id": "rvr",
+      "path": "LICENSE",
+      "repository": "https://github.com/pipavlo82/recomputable-verification-receipts.git",
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
+      "size_bytes": 10377
+    },
+    {
+      "commit": "e9ee4153d7ad8348fd2773770a3dd25804c54d90",
+      "git_blob_sha1": "23d99028e900ba551799569d4b44afbca37c4635",
+      "id": "pq",
+      "path": "README.md",
+      "repository": "https://github.com/pipavlo82/pq-receipt-profile.git",
+      "sha256": "d65fb590e080ddbb30a3467a473101962ba2bf287fc4ddfeef2554a5671e5010",
+      "size_bytes": 9829
+    },
+    {
+      "commit": "906e327734981178d384009c72ecd02e591625ef",
+      "git_blob_sha1": "7a18050637897324525d979a5123cea89bb68493",
+      "id": "prf",
+      "path": "docs/core-claim.md",
+      "repository": "https://github.com/pipavlo82/protected-relation-fixtures.git",
+      "sha256": "fbf81cffb6fb025077108638f898a78569e2bbf1929ee916ea212ce61b62bcc7",
+      "size_bytes": 822
+    },
+    {
+      "commit": "906e327734981178d384009c72ecd02e591625ef",
+      "git_blob_sha1": "ef8ac78d033ebe78170eb257e37c6cebc6bb486b",
+      "id": "prf",
+      "path": "spec/outcome-model.md",
+      "repository": "https://github.com/pipavlo82/protected-relation-fixtures.git",
+      "sha256": "2da70a526ed34a57b992752b3190f3bb58e20ed248cfeb7c23c93101d375c8a8",
+      "size_bytes": 4762
+    },
+    {
+      "commit": "e8fb81904af2ffe19e974383cf78d9d18d259b98",
+      "git_blob_sha1": "2ca196716ed8e5536a9b042d7e301562117acb13",
+      "id": "rsi",
+      "path": "spec/integration-boundary.md",
+      "repository": "https://github.com/pipavlo82/relational-security-invariants.git",
+      "sha256": "c7e7dd274b7f36ce3a782982fd73a6e3024a0c28fce079e5db203ab57bbdcaaa",
+      "size_bytes": 1508
+    },
+    {
+      "commit": "e8fb81904af2ffe19e974383cf78d9d18d259b98",
+      "git_blob_sha1": "9e93beb9ebb7df94badf4612a91522aaab87c766",
+      "id": "rsi",
+      "path": "spec/relation-profile-contract-v0.md",
+      "repository": "https://github.com/pipavlo82/relational-security-invariants.git",
+      "sha256": "1cddd6d2c668c12bdb66566ad9e76fd5108b46f2d0e3e995136b7d50ae62118b",
+      "size_bytes": 12162
+    },
+    {
+      "commit": "549a7e150ddc75df88dc90ee93f331fea7464567",
+      "git_blob_sha1": "6ee92d50ef2ed50bb9508c5ddc15d7950fbdb852",
+      "id": "rvr",
+      "path": "conformance/rvr-v0/rvr.schema.json",
+      "repository": "https://github.com/pipavlo82/recomputable-verification-receipts.git",
+      "sha256": "97799403d8eb96c046930396c39e0f1c3e76d6c35fd0435937446ce844bd4dae",
+      "size_bytes": 3883
+    },
+    {
+      "commit": "549a7e150ddc75df88dc90ee93f331fea7464567",
+      "git_blob_sha1": "85aa57b928d35fa969fa23676b85716a763ee66b",
+      "id": "rvr",
+      "path": "conformance/rvr-v0/verification-profile.json",
+      "repository": "https://github.com/pipavlo82/recomputable-verification-receipts.git",
+      "sha256": "23cac7eb86aca7a8cc0422985f598b67dd3fe758bd2321f6bcbc5ab2f1c2d8ab",
+      "size_bytes": 4484
+    },
+    {
+      "commit": "549a7e150ddc75df88dc90ee93f331fea7464567",
+      "git_blob_sha1": "9172393f524e0e117a4bba2c6d5cb58c44622382",
+      "id": "rvr",
+      "path": "conformance/rvr-v0/README.md",
+      "repository": "https://github.com/pipavlo82/recomputable-verification-receipts.git",
+      "sha256": "d963e6126d066c621865e8b86f6fda3fd89a4c6c31c0f7afa495aca3d01c56ad",
+      "size_bytes": 1731
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "190d52516df3880a6388a59185e492b2faeac7b3",
+      "id": "receiptos",
+      "path": "docs/PRODUCER_PROOF_CONTRACT_V0.md",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "212bf2a45de963b3a21eaf75b251eaa3f5f7cb92d762d98da22a83b5f517e2be",
+      "size_bytes": 10026
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "cb501a4a10080f2a9b89d155f1e5a8e2fd711431",
+      "id": "receiptos",
+      "path": "docs/TRANSFORMATION_STABLE_EVIDENCE_INTEROPERABILITY_V0.md",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "03f5b72afb3291e39534a880667fb4f48ff9a60145122beaca2896c2be7b020d",
+      "size_bytes": 42405
+    },
+    {
+      "commit": "aaa61269fec23508bf3c64be1befabd5b89db14d",
+      "git_blob_sha1": "8c72b84c4d6ff71028ca9090495f86e409ff1051",
+      "id": "chronicle",
+      "path": "docs/verification-before-history.md",
+      "repository": "https://github.com/pipavlo82/Chronicle.git",
+      "sha256": "cc1319f2a65c489509437b4bd1e59aaaec0c476b13c40e58c77fc5cf1877cf05",
+      "size_bytes": 3031
+    },
+    {
+      "commit": "aaa61269fec23508bf3c64be1befabd5b89db14d",
+      "git_blob_sha1": "e18c1c7af3e5286026b89c49e175dffea6c48c75",
+      "id": "chronicle",
+      "path": "src/chronicle_receiptos_admission.mjs",
+      "repository": "https://github.com/pipavlo82/Chronicle.git",
+      "sha256": "3a8a44f4334f2a9a3ccdc91f0ae586908f10de430f2a10e4ca5abcbed7a80a25",
+      "size_bytes": 8011
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "e73847a24b76e2288c6f977f359a1b7d12e29b9d",
+      "id": "receiptos",
+      "path": "scripts/receiptos-verify.ts",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "165a2d182889adee43a5ab6d1e358029bbce6fe2eb87ac0f5e4d654efc02595e",
+      "size_bytes": 2609
+    },
+    {
+      "commit": "45b46bf7df3a60b32583291f577a36bf19d22f00",
+      "git_blob_sha1": "913eaa90bc1770297a676aacf4bb51bf098c66e5",
+      "id": "receiptos",
+      "path": "docs/EVIDENCE_CAPSULE_SCHEMA_V0.md",
+      "repository": "https://github.com/pipavlo82/crystal-receipt.git",
+      "sha256": "34266597f73750e6f99df314eb265d8b689cd38ebaa983d6b9c12307e0c7480d",
+      "size_bytes": 3504
+    }
+  ],
+  "status": "SOURCE_PINNED_REFERENCE"
+}
