@@ -1,0 +1,369 @@
+{
+  "canonicalByteContract": {
+    "arrayOrder": "preserved-with-duplicates",
+    "domain": "null-boolean-unicode-scalar-string-array-object",
+    "encoding": "UTF-8",
+    "id": "rvr-canonical-json-v0",
+    "lineSeparators": "U+2028-and-U+2029-literal",
+    "numbers": "forbidden",
+    "objectKeyOrder": "unicode-scalar-value-ascending",
+    "solidus": "literal",
+    "stringEscaping": "rvr-json-string-escaping-v0",
+    "unicode": "scalar-values-only-no-normalization",
+    "whitespace": "none"
+  },
+  "canonicalResultContract": {
+    "outcomeProjection": "/outcome",
+    "reasonCodeProjection": "/reasonCode",
+    "schemaPath": "profiles/live-capture-replay-v1/rvr-live.schema.json",
+    "schemaPointer": "#/$defs/canonicalResult",
+    "schemaSha256": "f13051ebdddc3404da3b848ab1e7f29300ea95aab209ff6626741c65a62b71b7"
+  },
+  "conformanceVectorSet": {
+    "digest": "faa51176c739bb1e2dba2df3b9208943b915bd9bf019ef83b973a749da23c958",
+    "digestRule": "sha256-utf8-sorted-path-tab-file-sha256-lf-rows",
+    "id": "qev-live-finite-falsification-v1",
+    "members": [
+      {
+        "id": "conformance-0",
+        "path": "profiles/live-capture-replay-v1/conformance.json",
+        "requiredForRecomputation": false,
+        "sha256": "3350d6e1930cea6609f72100ff58925a695f0c553c04141a6ae6fcd54baeaacb"
+      },
+      {
+        "id": "conformance-1",
+        "path": "qev/live_mutations.py",
+        "requiredForRecomputation": false,
+        "sha256": "be321c3497034b6b1b8090ef9f50564b94075e38fc4c96d36d04bdd7172f00e2"
+      },
+      {
+        "id": "conformance-2",
+        "path": "tests/test_live_replay.py",
+        "requiredForRecomputation": false,
+        "sha256": "1dc7180c378d1c627cca4747343139520cac2848244d107b40327ed7ec736a0b"
+      }
+    ]
+  },
+  "dependencyResolution": {
+    "base": "SUPPLIED_PROFILE_PACKAGE_ROOT",
+    "locatorRole": "NORMATIVE_PACKAGE_RELATIVE_PATH",
+    "pathFormat": "relative-posix-no-empty-dot-dotdot-or-colon-segments",
+    "verificationOrder": "resolve-read-sha256-match-use"
+  },
+  "evidenceSetContract": {
+    "digestRule": "sha256-utf8-rvr-canonical-json-v0-normalized-member-order",
+    "schemaPath": "profiles/live-capture-replay-v1/rvr-live.schema.json",
+    "schemaPointer": "#/$defs/evidenceSet",
+    "schemaSha256": "f13051ebdddc3404da3b848ab1e7f29300ea95aab209ff6626741c65a62b71b7"
+  },
+  "externalContextPolicy": {
+    "ambientInputs": "FORBIDDEN",
+    "immutableCommitments": [
+      "claim.anchors",
+      "claim.jobId",
+      "claim.backend",
+      "claim.requestId",
+      "claim.shots"
+    ],
+    "mode": "COMMITTED_SNAPSHOTS_ONLY"
+  },
+  "profileId": "rvr-qev-live-capture-replay-v1",
+  "profileSchemaContract": {
+    "constraints": {
+      "id": "live-profile-schema",
+      "path": "profiles/live-capture-replay-v1/profile.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "d6cea8c33fc90e02c531abe9bccd530b72e4fd2f83a022e8d0fc903534092984"
+    },
+    "manifest": {
+      "id": "verification-profile-manifest-schema",
+      "path": "vendor/rvr-v0/verification-profile-manifest.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "148afeb484d3866c1caae82e574182c1b748dd461dfaeb1d8095ecf4905690c1"
+    }
+  },
+  "reasonCodeNamespace": {
+    "gateRejections": [
+      "qev.live.v1.rejected"
+    ],
+    "recomputation": [
+      "rvr.recompute.identical",
+      "rvr.recompute.canonical_result_diverged",
+      "rvr.recompute.normative_dependency_unavailable",
+      "rvr.recompute.normative_dependency_identity_mismatch",
+      "rvr.recompute.committed_evidence_unavailable"
+    ],
+    "verification": [
+      "qev.live.v1.verified",
+      "qev.live.v1.refuted",
+      "qev.live.v1.unverifiable"
+    ]
+  },
+  "resultHashRules": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8-exactly-once",
+    "input": "rvr-canonical-json-v0(canonicalResult)",
+    "output": "lowercase-hex-no-prefix"
+  },
+  "schema": "rvr.verification-profile.v0",
+  "schemaContracts": [
+    {
+      "id": "rvr-schema",
+      "path": "profiles/live-capture-replay-v1/rvr-live.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "f13051ebdddc3404da3b848ab1e7f29300ea95aab209ff6626741c65a62b71b7"
+    },
+    {
+      "id": "runtime-0",
+      "path": "qev/live_common.py",
+      "requiredForRecomputation": true,
+      "sha256": "5b7a551784dbfedb91c1c94a75003cc2cf66be8167e6761cd26751fffd5a6071"
+    },
+    {
+      "id": "runtime-1",
+      "path": "qev/live_math.py",
+      "requiredForRecomputation": true,
+      "sha256": "2a343a28987bd8f22d314156fb103770fa8c71eeb4146b639cff246e86ba4c59"
+    },
+    {
+      "id": "runtime-2",
+      "path": "qev/live_relation.py",
+      "requiredForRecomputation": true,
+      "sha256": "953f375d553fe694e2981fbc78f14a5ac1cdcca1d2bb55932311b5f1148d40c4"
+    },
+    {
+      "id": "runtime-3",
+      "path": "qev/live_native.py",
+      "requiredForRecomputation": true,
+      "sha256": "1fb672a16ec4496116547c53133c12325e832971124068b7353bdc062270aeef"
+    },
+    {
+      "id": "runtime-4",
+      "path": "qev/live_portable.py",
+      "requiredForRecomputation": true,
+      "sha256": "a9d93e07601d2d13a124b02eb8a0062d9ac8d5e7f74b34a1429bcd9ba769653b"
+    },
+    {
+      "id": "runtime-5",
+      "path": "qev/live_cli.py",
+      "requiredForRecomputation": true,
+      "sha256": "7b4c6154f28b1ffb998644b3cd5d37c72b03399b36521dc977e3a633eec86f4c"
+    },
+    {
+      "id": "runtime-6",
+      "path": "qev/live_tsei_bridge.ts",
+      "requiredForRecomputation": true,
+      "sha256": "fea9e3ad2c4b94f841c934e6de5d52441137228f9d008a7b66f38e79bf27a847"
+    },
+    {
+      "id": "runtime-7",
+      "path": "qev/live_receiptos_bridge.ts",
+      "requiredForRecomputation": true,
+      "sha256": "a500408593488e5db9e7395ea128b0dd339d35da94eb97866c72e1dfbe9b555e"
+    },
+    {
+      "id": "runtime-8",
+      "path": "qev/source_inventory.py",
+      "requiredForRecomputation": true,
+      "sha256": "31bb18d87f533cf9484d75d5382931b05d895b9270f9151e211dbf51b417b361"
+    },
+    {
+      "id": "runtime-9",
+      "path": "qev/__init__.py",
+      "requiredForRecomputation": true,
+      "sha256": "92b1dfb8965a5b874587727aaf58da03e130b3d861b93ab08292d5ca126908c7"
+    },
+    {
+      "id": "runtime-10",
+      "path": "qev/__main__.py",
+      "requiredForRecomputation": true,
+      "sha256": "a77c60bfde33acfb8191b45e5e05abb95e317fff5ea104dd50165f1737bdd05e"
+    },
+    {
+      "id": "runtime-11",
+      "path": "qev/checker.py",
+      "requiredForRecomputation": true,
+      "sha256": "933da623da9c6ae5534da243f8e4299dd8595f759c1b971d6467c3cce0e63a25"
+    },
+    {
+      "id": "runtime-12",
+      "path": "qev/adapters.py",
+      "requiredForRecomputation": true,
+      "sha256": "b5a881dee92d1b1e880ed38a966fde4784efe09295cf4010d4f859c31edd2802"
+    },
+    {
+      "id": "runtime-13",
+      "path": "profiles/live-capture-replay-v1/capture-shapes.json",
+      "requiredForRecomputation": true,
+      "sha256": "2350135ccfb36953c0c513a7775a4353a27bc8bac2a5af52cc99d6e8c48ed1d8"
+    },
+    {
+      "id": "vendor-0",
+      "path": "vendor/semantic-abi/LICENSE",
+      "requiredForRecomputation": true,
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c"
+    },
+    {
+      "id": "vendor-1",
+      "path": "vendor/semantic-abi/schema/LICENSE-CC0.txt",
+      "requiredForRecomputation": true,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    {
+      "id": "vendor-2",
+      "path": "vendor/semantic-abi/runner/src/linker.mjs",
+      "requiredForRecomputation": true,
+      "sha256": "bae8e519361989bfadbb5d226cb9940255cd954c60b40ba42136a2b11161d391"
+    },
+    {
+      "id": "vendor-3",
+      "path": "vendor/semantic-abi/schema/manifest.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "3219f51c7929ff915b71e5931a5d10edc5e15e73809fc2c47107592490bbe397"
+    },
+    {
+      "id": "vendor-4",
+      "path": "vendor/rvr-v0/LICENSE",
+      "requiredForRecomputation": true,
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251"
+    },
+    {
+      "id": "vendor-5",
+      "path": "vendor/rvr-v0/adapter.py",
+      "requiredForRecomputation": true,
+      "sha256": "03505efc8ee993f118fad2c71f706870d25de0da61a393a1f18f7b310bded235"
+    },
+    {
+      "id": "vendor-7",
+      "path": "vendor/receiptos-v0/LICENSE",
+      "requiredForRecomputation": true,
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251"
+    },
+    {
+      "id": "vendor-8",
+      "path": "vendor/receiptos-v0/src/receiptos/canon/canonicalize.ts",
+      "requiredForRecomputation": true,
+      "sha256": "fca18d1642e6fe47d26ae2eb9f4bf15cf305653d6a7a08a5a0a09e2d6a716c81"
+    },
+    {
+      "id": "vendor-9",
+      "path": "vendor/receiptos-v0/src/receiptos/canon/receipt-root.ts",
+      "requiredForRecomputation": true,
+      "sha256": "519e532b155f3c1f4720337d09bc2a8503e4546682695e798b8597ad8d187bf0"
+    },
+    {
+      "id": "vendor-10",
+      "path": "vendor/receiptos-v0/src/receiptos/verify/verify-receipt.ts",
+      "requiredForRecomputation": true,
+      "sha256": "70dad3a005e0d09af6d3b4def8ab4c98e24d3ee9f19839d88894c42c5ac9da04"
+    },
+    {
+      "id": "vendor-11",
+      "path": "vendor/receiptos-v0/src/receiptos/schema/types.ts",
+      "requiredForRecomputation": true,
+      "sha256": "0ceead0ed3c1ee307ee409b44542640fc89ed5a532e45f8f67abcf7fcbe491df"
+    },
+    {
+      "id": "vendor-12",
+      "path": "vendor/receiptos-v0/src/receiptos/merkle/local-merkle.ts",
+      "requiredForRecomputation": true,
+      "sha256": "4024972dd240b9e6d266b792db45fbfe622ee5fa8ee3425ff6b79a69acad7ba0"
+    },
+    {
+      "id": "vendor-13",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/evidence-capsule.ts",
+      "requiredForRecomputation": true,
+      "sha256": "d8d7174f5f2491fffe755b7b81dff44c15dfab55d7bfbf9c1cc752b654dd25ca"
+    },
+    {
+      "id": "vendor-14",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/evidence-capsule-v0.ts",
+      "requiredForRecomputation": true,
+      "sha256": "c024ec49d2a9c58caf5df811e7f89b5e81b9a75b93428c12bcdd39d6656dc6e9"
+    },
+    {
+      "id": "vendor-15",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/portable-proof-object-v0.ts",
+      "requiredForRecomputation": true,
+      "sha256": "ac316f865b60fca90339e402545c1d88bc8735ab542b879137ec31948d01d09b"
+    },
+    {
+      "id": "vendor-16",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/crystal-mapping.ts",
+      "requiredForRecomputation": true,
+      "sha256": "9a3f949160d2132778d71fd825d14d4fe96a24b037d80d5bc93fa9b4e34f0d24"
+    },
+    {
+      "id": "vendor-17",
+      "path": "vendor/receiptos-v0/src/receiptos/capsule/render-plan.ts",
+      "requiredForRecomputation": true,
+      "sha256": "31152a759230998aca3130abbcb48a1dc1c88ee8323a3ce3cc7bedd6e728addf"
+    },
+    {
+      "id": "vendor-18",
+      "path": "vendor/receiptos-v0/schemas/evidence-capsule.v0.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "f8b8c44bffa4d7cb827564cfa663ffe60396b4aa39991762c855a24765c1d159"
+    },
+    {
+      "id": "vendor-19",
+      "path": "vendor/tsei-v0/LICENSE",
+      "requiredForRecomputation": true,
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251"
+    },
+    {
+      "id": "vendor-20",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/canonical-identity-json.ts",
+      "requiredForRecomputation": true,
+      "sha256": "6f141a1814949392b7d253ae392ddb4dca11cd2866bfbcd02619ee821698b6eb"
+    },
+    {
+      "id": "vendor-21",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability.ts",
+      "requiredForRecomputation": true,
+      "sha256": "9346436b6413eeb3d96a4d5208d3fb73e3ba532a80028cfd8a0252a6522286ea"
+    },
+    {
+      "id": "vendor-22",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-cycle.ts",
+      "requiredForRecomputation": true,
+      "sha256": "67c9e9cc2877ef3df42994cad1e300cb7d075593204beb77ef08f858e89f09df"
+    },
+    {
+      "id": "vendor-23",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-coverage.ts",
+      "requiredForRecomputation": true,
+      "sha256": "8f518979d503157545d6319cb9be9caff59f975ebbae760af477b13d8b69c757"
+    },
+    {
+      "id": "vendor-24",
+      "path": "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-coverage-normalizer-authority.ts",
+      "requiredForRecomputation": true,
+      "sha256": "3271829c394e88ed4169aba5054c0fdd533dab8ab136f9ec79853d3bf1c582cd"
+    },
+    {
+      "id": "vendor-25",
+      "path": "vendor/tsei-v0/conformance/canonical-identity-json-conformance-v0/vectors.json",
+      "requiredForRecomputation": true,
+      "sha256": "5c5a38837778d63b554cde168394b65c484ec8246a2a0175a13d0723d15f6e6c"
+    },
+    {
+      "id": "vendor-26",
+      "path": "vendor/tsei-v0/conformance/observed-leaf-paths-conformance-v0/vectors.json",
+      "requiredForRecomputation": true,
+      "sha256": "a0221f80457e80d6087493cbb0934b7625ef8a51d75cac05eefe52c0213aa95d"
+    },
+    {
+      "id": "vendor-27",
+      "path": "vendor/tsei-v0/docs/TRANSFORMATION_STABLE_EVIDENCE_INTEROPERABILITY_V0.md",
+      "requiredForRecomputation": true,
+      "sha256": "03f5b72afb3291e39534a880667fb4f48ff9a60145122beaca2896c2be7b020d"
+    }
+  ],
+  "verificationSpecification": {
+    "id": "live-specification",
+    "path": "docs/LIVE_CAPTURE_REPLAY_V1.md",
+    "requiredForRecomputation": true,
+    "sha256": "e1a2e6419c32ec71050c5bc88a38dcd12f92fe16412deacad84a947c2948639f"
+  }
+}

@@ -46,5 +46,22 @@ jobs:
         run: python -B -m qev ibm-runtime-demo > ibm-runtime-demo.json
       - name: Source lock
         run: python -B -m qev sources > sources.json
+      - name: Offline live capture replay and source mutations
+        run: |
+          python -B -m qev live-demo > live-export.json
+          python -B -m qev live-demo > live-export-repeat.json
+          python -B -O -m qev live-demo > live-export-optimized.json
+          cmp live-export.json live-export-repeat.json
+          cmp live-export.json live-export-optimized.json
+          python -B -m qev live-replay live-export.json > live-replay.json
+          python -B -m qev live-replay live-export.json > live-replay-repeat.json
+          python -B -O -m qev live-replay live-export.json > live-replay-optimized.json
+          cmp live-replay.json live-replay-repeat.json
+          cmp live-replay.json live-replay-optimized.json
+          python -B -m qev live-mutation-check > live-mutations.json
+          python -B -m qev live-mutation-check > live-mutations-repeat.json
+          python -B -O -m qev live-mutation-check > live-mutations-optimized.json
+          cmp live-mutations.json live-mutations-repeat.json
+          cmp live-mutations.json live-mutations-optimized.json
       - name: Diff hygiene
         run: git diff --check

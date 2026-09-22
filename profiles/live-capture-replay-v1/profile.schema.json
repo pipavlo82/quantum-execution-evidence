@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "profileId": {
+      "const": "rvr-qev-live-capture-replay-v1"
+    }
+  },
+  "required": [
+    "profileId"
+  ],
+  "type": "object"
+}

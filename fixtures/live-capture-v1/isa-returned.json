@@ -1,0 +1,136 @@
+{
+  "cregs": [
+    {
+      "name": "meas",
+      "size": 2
+    }
+  ],
+  "global_phase": "2.3561944901923475",
+  "name": "qev_first_live_bell_256",
+  "num_clbits": 2,
+  "num_qubits": 156,
+  "operations": [
+    {
+      "clbits": [],
+      "name": "rz",
+      "params": [
+        "1.5707963267948966"
+      ],
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "sx",
+      "params": [],
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "rz",
+      "params": [
+        "1.5707963267948966"
+      ],
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "rz",
+      "params": [
+        "1.5707963267948966"
+      ],
+      "qubits": [
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "sx",
+      "params": [],
+      "qubits": [
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "rz",
+      "params": [
+        "1.5707963267948966"
+      ],
+      "qubits": [
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "cz",
+      "params": [],
+      "qubits": [
+        0,
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "rz",
+      "params": [
+        "1.5707963267948966"
+      ],
+      "qubits": [
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "sx",
+      "params": [],
+      "qubits": [
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "rz",
+      "params": [
+        "1.5707963267948966"
+      ],
+      "qubits": [
+        1
+      ]
+    },
+    {
+      "clbits": [],
+      "name": "barrier",
+      "params": [],
+      "qubits": [
+        0,
+        1
+      ]
+    },
+    {
+      "clbits": [
+        0
+      ],
+      "name": "measure",
+      "params": [],
+      "qubits": [
+        0
+      ]
+    },
+    {
+      "clbits": [
+        1
+      ],
+      "name": "measure",
+      "params": [],
+      "qubits": [
+        1
+      ]
+    }
+  ]
+}

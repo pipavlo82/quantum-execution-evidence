@@ -1,0 +1,14 @@
+{
+  "backend": "ibm_fez",
+  "physicalCircuitDigest": "1d8599740690fd1a5a96903c4de4222b258d508f7b6978a1b5e8f01d438990bd",
+  "provider": "ibm-quantum",
+  "request_id": "qev-first-live-20260922",
+  "requested_job": "qev-first-live-20260922",
+  "schema": "qev.provider-submission.v0",
+  "shots": 256,
+  "transpiler": {
+    "name": "qiskit-preset-pass-manager",
+    "profile": "qev-first-live-bell-level0-layout01",
+    "version": "2.5.2"
+  }
+}

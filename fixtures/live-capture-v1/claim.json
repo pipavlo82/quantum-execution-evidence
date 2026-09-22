@@ -1,0 +1,17 @@
+{
+  "schema": "qev.live-claim.v1",
+  "jobId": "dapdeqcak42c73cid5qg",
+  "backend": "ibm_fez",
+  "requestId": "qev-first-live-20260922",
+  "shots": "256",
+  "anchors": {
+    "submission-intent.json": "929718b4909842bef584371cabeb461b2112b5df265a64ab859b05e7920e6c69",
+    "job-receipt.json": "0e71e5ef0abcf648505f0268fdc6f016ff6c289b3037e37864ae6248599e359d",
+    "logical.json": "2d01283e9cff4287c1d0b03556d5980a9359ccb8a5565d222e28ef9d0e202634",
+    "isa-submitted.json": "96fafda1dcd74e9b34d0ccc014e283e0f7ccddfd8670f380eb3604dc753f6aab",
+    "measurements-ordered.c1c0.txt": "2d3a5d289662f4c8bebd20654f3a975e82efb795d58ba2a5d552f907927ad324"
+  },
+  "captureOrigin": "LIVE_IBM_RUNTIME_API",
+  "providerAuthentication": "NOT_ESTABLISHED",
+  "angleMap": "qev-ideal-angle-literals-v1"
+}
