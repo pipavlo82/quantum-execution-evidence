@@ -95,7 +95,7 @@ def successful(report):
         and report.get("admission", {}).get("status") == "ADMITTED"
         and report.get("evidence_status") == "ADMITTED"
         and report.get("local_files") == len(pins.LOCAL_FILES)
-        and report.get("vendor_files") == len(pins.VENDOR_FILES)
-        and len(rows) == len(pins.LOCAL_FILES) + len(pins.VENDOR_FILES)
+        and report.get("vendor_files") == len(pins.ALL_VENDOR_FILES)
+        and len(rows) == len(pins.LOCAL_FILES) + len(pins.ALL_VENDOR_FILES)
         and all(row.get("status") == "MATCH" for row in rows)
     )

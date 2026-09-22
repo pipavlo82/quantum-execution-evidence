@@ -41,7 +41,7 @@ class StandaloneTests(unittest.TestCase):
         result=sources.validate()
         self.assertTrue(sources.successful(result), result)
         self.assertEqual(result["local_files"], len(pins.LOCAL_FILES))
-        self.assertEqual(result["vendor_files"], len(pins.VENDOR_FILES))
+        self.assertEqual(result["vendor_files"], len(pins.ALL_VENDOR_FILES))
 
     def test_reference_pins_are_reference_only_and_portable(self):
         data=json.loads((ROOT/"docs/reference-pins.json").read_bytes())

@@ -32,6 +32,22 @@ The verifier keeps request binding, integrity, deterministic verification, sourc
 
 It does **not** establish authentic QPU execution, honest provider identity, sampler independence, distribution equality, min-entropy, cryptographic RNG, device certification, independent authorship, production security, or correctness of an arbitrary quantum compiler.
 
-RVR, ReceiptOS, TSEI, PRF, RSI, Chronicle, RE4CTOR and PQ components are source-pinned integration references only. They are not executed by this repository. See [docs/INTEGRATION_MAP.md](docs/INTEGRATION_MAP.md).
+ReceiptOS, TSEI, PRF, RSI, Chronicle, RE4CTOR and PQ remain source-pinned integration references only. Native RVR is executed through the separate QEV profile described below. See [docs/INTEGRATION_MAP.md](docs/INTEGRATION_MAP.md).
 
 The root license for newly authored repository code is intentionally **pending**. Vendored upstream license boundaries are preserved; see [LICENSING.md](LICENSING.md).
+
+## Native RVR QEV profile
+
+The repository now includes the experimental native RVR profile `rvr-qev-preserved-observation-v0`.
+It uses exact vendored RVR v0 canonicalization, profile-audit, evidence-closure, receipt-envelope, and recomputation primitives pinned to RVR commit `549a7e150ddc75df88dc90ee93f331fea7464567`.
+
+Run:
+
+```bash
+python -m qev rvr-demo
+python -m qev rvr-mutation-check
+```
+
+The profile demonstrates the stochastic boundary directly: a different valid preserved sample can be **VERIFIED + DIVERGED**. `DIVERGED` records receipt-identity divergence; it is not itself a semantic refutation.
+
+This RVR profile remains scoped to request binding, byte integrity, and deterministic post-processing over preserved QEV observations. It does not establish physical QPU execution, entropy, distribution correctness, or provider authenticity. ReceiptOS/TSEI/RSI/PRF/Chronicle/RE4CTOR/PQ remain separate integrations.

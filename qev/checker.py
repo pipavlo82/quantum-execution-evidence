@@ -166,7 +166,7 @@ def empty_result():
             'deterministic_verification': 'CANNOT_ESTABLISH', 'claim_support': 'NOT_ESTABLISHED',
             'native_link': {'status': 'NOT_EVALUATED'}, 'provider_authenticity': 'NOT_ESTABLISHED',
             'physical': {k: ('NOT_EVALUATED' if k == 'DISTRIBUTION_EQUALITY' else 'NOT_ESTABLISHED') for k in ELEVATIONS},
-            'native_rvr': 'NATIVE_RVR_NOT_INTEGRATED', 'author_independence': 'NOT_ESTABLISHED',
+            'native_rvr': 'SEPARATE_RVR_QEV_PROFILE_AVAILABLE_NOT_INLINE', 'author_independence': 'NOT_ESTABLISHED',
             'identities': {}, 'recomputed': None}
 
 def native_result_status(result, producer, consumer):

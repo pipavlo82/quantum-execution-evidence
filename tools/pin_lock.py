@@ -18,7 +18,7 @@ def generate():
         "boundary": "Byte identity only; no authentication, execution provenance, entropy, or hardware claim.",
         "self_digest": "EXCLUDED_TO_AVOID_CIRCULARITY",
         "local_files": rows,
-        "vendor_files": [dict(row) for row in pins.VENDOR_FILES],
+        "vendor_files": [dict(row) for row in pins.ALL_VENDOR_FILES],
     }
     admission.validate_lock(lock)
     return (json.dumps(lock, sort_keys=True, indent=2, ensure_ascii=True) + "\n").encode("utf-8")
@@ -27,7 +27,7 @@ def main():
     target = ROOT / "sources.lock.json"
     data = generate()
     target.write_bytes(data)
-    print(json.dumps({"local_files": len(pins.LOCAL_FILES), "vendor_files": len(pins.VENDOR_FILES),
+    print(json.dumps({"local_files": len(pins.LOCAL_FILES), "vendor_files": len(pins.ALL_VENDOR_FILES),
                       "sha256": identity(data)["sha256"], "procedure": "fixed qev.source_inventory.LOCAL_FILES"}))
 
 if __name__ == "__main__":

@@ -36,7 +36,7 @@ def validate_lock(lock):
     need(len(local_paths) == len(pins.LOCAL_FILES), "LOCAL_FILES_COMPLETE_UNIQUE")
     need(len(set(local_paths)) == len(local_paths) and set(local_paths) == set(pins.LOCAL_FILES), "LOCAL_FILES_COMPLETE_UNIQUE")
 
-    expected = {(row["path"], row["commit"]): row for row in pins.VENDOR_FILES}
+    expected = {(row["path"], row["commit"]): row for row in pins.ALL_VENDOR_FILES}
     keys = []
     for row in lock["vendor_files"]:
         _fields(row, ("path", "source_path", "repository", "commit", "sha256", "git_blob_sha1", "size_bytes"))

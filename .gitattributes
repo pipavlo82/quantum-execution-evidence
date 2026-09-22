@@ -8,3 +8,4 @@
 *.toml text eol=lf
 vendor/semantic-abi/LICENSE -text -diff
 vendor/semantic-abi/schema/LICENSE-CC0.txt -text -diff
+vendor/rvr-v0/LICENSE -text -diff

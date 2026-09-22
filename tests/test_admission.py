@@ -190,7 +190,7 @@ class AdmissionTests(unittest.TestCase):
             with self.assertRaises(a.AdmissionError): a.validate_lock(bad)
         self.reject_lock(lambda l:l['local_files'].pop())
     def test_each_vendor_source_required(self):
-        for i in range(len(pins.VENDOR_FILES)): self.reject_lock(lambda l,i=i:l['vendor_files'].pop(i))
+        for i in range(len(pins.ALL_VENDOR_FILES)): self.reject_lock(lambda l,i=i:l['vendor_files'].pop(i))
     def test_duplicate_local_and_external_records(self):
         for key in ('local_files','vendor_files'):
             self.reject_lock(lambda l,k=key:l[k].__setitem__(1,deepcopy(l[k][0])))

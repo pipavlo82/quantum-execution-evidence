@@ -1,0 +1,33 @@
+{
+  "schema": "rvr.qev.mutants.v0",
+  "mutants": [
+    {
+      "id": "ignore_request_binding",
+      "requiredWitness": "refutedRequestBinding"
+    },
+    {
+      "id": "ignore_integrity",
+      "requiredWitness": "refutedIntegrity"
+    },
+    {
+      "id": "ignore_deterministic_verification",
+      "requiredWitness": "refutedCounts"
+    },
+    {
+      "id": "missing_raw_as_verified",
+      "requiredWitness": "rawUnavailable"
+    },
+    {
+      "id": "same_result_means_reproduced",
+      "requiredWitness": "alternateValidSample"
+    },
+    {
+      "id": "diverged_verified_as_refuted",
+      "requiredWitness": "alternateValidSample"
+    },
+    {
+      "id": "trust_original_result",
+      "requiredWitness": "refutedCounts"
+    }
+  ]
+}

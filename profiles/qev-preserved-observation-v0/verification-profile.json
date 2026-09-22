@@ -1,0 +1,122 @@
+{
+  "schema": "rvr.verification-profile.v0",
+  "profileId": "rvr-qev-preserved-observation-v0",
+  "profileSchemaContract": {
+    "manifest": {
+      "id": "verification-profile-manifest-schema",
+      "path": "vendor/rvr-v0/verification-profile-manifest.schema.json",
+      "sha256": "148afeb484d3866c1caae82e574182c1b748dd461dfaeb1d8095ecf4905690c1",
+      "requiredForRecomputation": true
+    },
+    "constraints": {
+      "id": "rvr-qev-profile-schema",
+      "path": "profiles/qev-preserved-observation-v0/profile.schema.json",
+      "sha256": "09fad7e1e5f1735a488098a668202049eaf83ef57b074370b65168b2b66676f9",
+      "requiredForRecomputation": true
+    }
+  },
+  "dependencyResolution": {
+    "base": "SUPPLIED_PROFILE_PACKAGE_ROOT",
+    "pathFormat": "relative-posix-no-empty-dot-dotdot-or-colon-segments",
+    "locatorRole": "NORMATIVE_PACKAGE_RELATIVE_PATH",
+    "verificationOrder": "resolve-read-sha256-match-use"
+  },
+  "verificationSpecification": {
+    "id": "verification-specification",
+    "path": "docs/RVR_QEV_PROFILE_V0.md",
+    "sha256": "ee17d3ab38b262f53af19205e26ba6a08247292e3fc3a27a18d0d38772ec6697",
+    "requiredForRecomputation": true
+  },
+  "conformanceVectorSet": {
+    "id": "rvr-qev-v0-falsification-set",
+    "members": [
+      {
+        "id": "expected-results",
+        "path": "profiles/qev-preserved-observation-v0/expected.json",
+        "sha256": "0e5ac2c4675dfc0cee3fabff6064a0c6659c6ef4fa4adf10758d82b45bfd7d53",
+        "requiredForRecomputation": false
+      },
+      {
+        "id": "adversarial-mutants",
+        "path": "profiles/qev-preserved-observation-v0/mutants.json",
+        "sha256": "353b7091cf3fc1e4c4bbf0dcd68a673989dc7c15a1e9a8b9927a4df435445cd0",
+        "requiredForRecomputation": false
+      },
+      {
+        "id": "verification-vectors",
+        "path": "profiles/qev-preserved-observation-v0/vectors.json",
+        "sha256": "88dcd905b4e8e376fc53510779bf070d66812444bdd97b129870be66b7c26fd5",
+        "requiredForRecomputation": false
+      }
+    ],
+    "digest": "9be473963803df3a23f659c20876c16141d504d5fdf81bfe185aa7151aee9845",
+    "digestRule": "sha256-utf8-sorted-path-tab-file-sha256-lf-rows"
+  },
+  "canonicalByteContract": {
+    "id": "rvr-canonical-json-v0",
+    "encoding": "UTF-8",
+    "domain": "null-boolean-unicode-scalar-string-array-object",
+    "objectKeyOrder": "unicode-scalar-value-ascending",
+    "arrayOrder": "preserved-with-duplicates",
+    "unicode": "scalar-values-only-no-normalization",
+    "numbers": "forbidden",
+    "stringEscaping": "rvr-json-string-escaping-v0",
+    "solidus": "literal",
+    "lineSeparators": "U+2028-and-U+2029-literal",
+    "whitespace": "none"
+  },
+  "schemaContracts": [
+    {
+      "id": "rvr-schema",
+      "path": "profiles/qev-preserved-observation-v0/rvr-qev.schema.json",
+      "sha256": "0e89bf683e53757683748584913e86cd76c1c01bd7111032cfb63b6a8276a3a2",
+      "requiredForRecomputation": true
+    }
+  ],
+  "evidenceSetContract": {
+    "schemaPath": "profiles/qev-preserved-observation-v0/rvr-qev.schema.json",
+    "schemaSha256": "0e89bf683e53757683748584913e86cd76c1c01bd7111032cfb63b6a8276a3a2",
+    "schemaPointer": "#/$defs/evidenceSet",
+    "digestRule": "sha256-utf8-rvr-canonical-json-v0-normalized-member-order"
+  },
+  "canonicalResultContract": {
+    "schemaPath": "profiles/qev-preserved-observation-v0/rvr-qev.schema.json",
+    "schemaSha256": "0e89bf683e53757683748584913e86cd76c1c01bd7111032cfb63b6a8276a3a2",
+    "schemaPointer": "#/$defs/canonicalResult",
+    "outcomeProjection": "/outcome",
+    "reasonCodeProjection": "/reasonCode"
+  },
+  "resultHashRules": {
+    "algorithm": "SHA-256",
+    "input": "rvr-canonical-json-v0(canonicalResult)",
+    "encoding": "UTF-8-exactly-once",
+    "output": "lowercase-hex-no-prefix"
+  },
+  "reasonCodeNamespace": {
+    "verification": [
+      "rvr.qev.v0.relation_satisfied",
+      "rvr.qev.v0.relation_refuted",
+      "rvr.qev.v0.raw_evidence_unavailable",
+      "rvr.qev.v0.required_evidence_unavailable"
+    ],
+    "recomputation": [
+      "rvr.recompute.identical",
+      "rvr.recompute.canonical_result_diverged",
+      "rvr.recompute.normative_dependency_unavailable",
+      "rvr.recompute.normative_dependency_identity_mismatch",
+      "rvr.recompute.committed_evidence_unavailable"
+    ],
+    "gateRejections": [
+      "rvr.gate.schema_invalid",
+      "rvr.gate.identity_mismatch",
+      "rvr.gate.result_projection_mismatch",
+      "rvr.gate.evidence_closure_incomplete",
+      "rvr.qev.gate.unsupported_input"
+    ]
+  },
+  "externalContextPolicy": {
+    "mode": "FORBIDDEN_UNLESS_COMMITTED",
+    "ambientInputs": "FORBIDDEN",
+    "immutableCommitments": []
+  }
+}

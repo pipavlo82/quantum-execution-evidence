@@ -27,6 +27,10 @@ jobs:
         run: python -B -m qev demo > demo.json
       - name: Mutation gate
         run: python -B -m qev mutation-check > mutations.json
+      - name: Native RVR QEV profile
+        run: python -B -m qev rvr-demo > rvr-demo.json
+      - name: Native RVR mutation gate
+        run: python -B -m qev rvr-mutation-check > rvr-mutations.json
       - name: Source lock
         run: python -B -m qev sources > sources.json
       - name: Diff hygiene

@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qev.dev/rvr/qev-preserved-observation-v0.schema.json",
+  "title": "RVR QEV preserved observation v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claimDigest",
+    "evidenceSetDigest",
+    "verificationProfileDigest",
+    "outcome",
+    "reasonCode",
+    "resultDigest"
+  ],
+  "properties": {
+    "claimDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "evidenceSetDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "verificationProfileDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "outcome": {
+      "$ref": "#/$defs/outcome"
+    },
+    "reasonCode": {
+      "$ref": "#/$defs/verificationReasonCode"
+    },
+    "resultDigest": {
+      "$ref": "#/$defs/digest"
+    }
+  },
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9._-]*$"
+    },
+    "decimalLength": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "outcome": {
+      "enum": [
+        "VERIFIED",
+        "REFUTED",
+        "UNVERIFIABLE"
+      ]
+    },
+    "verificationReasonCode": {
+      "enum": [
+        "rvr.qev.v0.relation_satisfied",
+        "rvr.qev.v0.relation_refuted",
+        "rvr.qev.v0.raw_evidence_unavailable",
+        "rvr.qev.v0.required_evidence_unavailable"
+      ]
+    },
+    "axis": {
+      "enum": [
+        "SATISFIED",
+        "REFUTED",
+        "CANNOT_ESTABLISH"
+      ]
+    },
+    "inputStatus": {
+      "enum": [
+        "VALID",
+        "CANNOT_ESTABLISH"
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "operation",
+        "requestEvidenceMember",
+        "packageEvidenceMember",
+        "expectedQevProfile",
+        "relation"
+      ],
+      "properties": {
+        "schema": {
+          "const": "rvr.claim.qev-preserved-observation.v0"
+        },
+        "operation": {
+          "const": "QEV_RECOMPUTE_PRESERVED"
+        },
+        "requestEvidenceMember": {
+          "$ref": "#/$defs/identifier"
+        },
+        "packageEvidenceMember": {
+          "$ref": "#/$defs/identifier"
+        },
+        "expectedQevProfile": {
+          "const": "quantum-evidence.v0"
+        },
+        "relation": {
+          "const": "request-binding+integrity+deterministic-postprocessing"
+        }
+      }
+    },
+    "presentEvidenceMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "mediaType",
+        "byteLength",
+        "digest"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "status": {
+          "const": "PRESENT"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "byteLength": {
+          "$ref": "#/$defs/decimalLength"
+        },
+        "digest": {
+          "$ref": "#/$defs/digest"
+        }
+      }
+    },
+    "unavailableEvidenceMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "reasonCode"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "status": {
+          "const": "UNAVAILABLE"
+        },
+        "reasonCode": {
+          "const": "rvr.qev.v0.evidence_unavailable"
+        }
+      }
+    },
+    "evidenceSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "members"
+      ],
+      "properties": {
+        "schema": {
+          "const": "rvr.evidence-set.v0"
+        },
+        "members": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/presentEvidenceMember"
+              },
+              {
+                "$ref": "#/$defs/unavailableEvidenceMember"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operation",
+        "requestEvidenceMember",
+        "packageEvidenceMember",
+        "inputStatus",
+        "requestBinding",
+        "integrity",
+        "deterministicVerification"
+      ],
+      "properties": {
+        "operation": {
+          "const": "QEV_RECOMPUTE_PRESERVED"
+        },
+        "requestEvidenceMember": {
+          "$ref": "#/$defs/identifier"
+        },
+        "packageEvidenceMember": {
+          "$ref": "#/$defs/identifier"
+        },
+        "inputStatus": {
+          "$ref": "#/$defs/inputStatus"
+        },
+        "requestBinding": {
+          "$ref": "#/$defs/axis"
+        },
+        "integrity": {
+          "$ref": "#/$defs/axis"
+        },
+        "deterministicVerification": {
+          "$ref": "#/$defs/axis"
+        }
+      }
+    },
+    "canonicalResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "outcome",
+        "reasonCode",
+        "evaluation"
+      ],
+      "properties": {
+        "schema": {
+          "const": "rvr.qev.canonical-result.v0"
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "reasonCode": {
+          "$ref": "#/$defs/verificationReasonCode"
+        },
+        "evaluation": {
+          "$ref": "#/$defs/evaluation"
+        }
+      }
+    }
+  }
+}
