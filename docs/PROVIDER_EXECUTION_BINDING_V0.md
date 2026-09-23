@@ -9,15 +9,18 @@ It binds:
 - requested shot count;
 - physical-circuit digest;
 - transpiler name/version/profile;
-- provider job id;
 - completion state;
 - raw-measurement digest and byte length.
 
-A successful result is `EXECUTION_BOUND` only **over the supplied provider artifact**.
+A successful result is `executionBinding = BOUND` only **over the supplied
+provider artifact**. Eight axes are compared. The artifact also retains a
+provider-assigned job ID, but this legacy verifier does not compare it with an
+independent expected job ID or use `requested_job` as an assigned-job anchor.
+The separate [live profile](LIVE_CAPTURE_REPLAY_V1.md) adds that claim/job check.
 
 ## Authentication is a separate axis
 
-`EXECUTION_BOUND` does not mean `PROVIDER_AUTHENTICATED`.
+`BOUND` does not mean provider authentication is established.
 
 An unsigned JSON response, copied API response, or provider-name string can establish internal consistency of supplied evidence but cannot authenticate who produced it. `UNVERIFIED_ASSERTION` therefore never upgrades provider authentication.
 
@@ -33,8 +36,17 @@ as separate claims.
 
 The finite gate mutates each bound dimension independently: provider, backend, request, shots, physical-circuit digest, transpiler identity, completion status, and raw measurements. Every mutation must refute the binding while leaving provider authentication independently unresolved.
 
-## Next step
+## Implemented adapter and retained limits
 
-A provider-specific adapter may map a real API/job artifact into this vendor-neutral schema. Its authentication status must be derived only from evidence actually supplied by that provider path. The adapter must not infer authentication merely because a job id is syntactically valid or because an API response was obtained over a client session.
+The [IBM Runtime adapter](IBM_QUANTUM_RUNTIME_ADAPTER_V0.md) is implemented and
+merged. Its synthetic conformance fixture and the separate preserved IBM live
+path are distinct. Run `python -B -m qev provider-binding-demo` and
+`python -B -m qev ibm-runtime-demo` for their finite controls.
 
-v0 does not claim a real provider adapter, real QPU execution, min-entropy, distribution equality, or cryptographic randomness.
+The legacy demo's `providerSpecificAdapter = NOT_INTEGRATED` describes that
+standalone vendor-neutral demo, not the repository's integration status.
+Null authentication and `UNVERIFIED_ASSERTION` yield `NOT_ESTABLISHED`; other
+authentication objects yield `UNSUPPORTED_AUTHENTICATION_EVIDENCE`, never a
+successful authentication claim. A job ID or an SDK session is not an attestation.
+No physical QPU authenticity, min-entropy, distribution equality or cryptographic
+randomness is established by this binding.

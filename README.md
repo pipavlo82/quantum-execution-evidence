@@ -1,80 +1,190 @@
 # Quantum Execution Evidence
 
-`quantum-execution-evidence` is an offline, synthetic, experimental verifier for evidence produced by stochastic execution pipelines.
-
-Its core boundary is simple:
+QEV is an experimental **offline verifier of preserved stochastic execution
+evidence**. It includes a synthetic conformance corpus, one preserved IBM Runtime
+capture, one preserved Moth Comet counts capture, and a provider-neutral evidence
+projection. Replay uses local bytes; it does not regenerate a quantum outcome.
 
 ```text
-recomputable verification of preserved observations
-!= regeneration of the same stochastic outcome
-!= authenticated physical execution
-!= entropy or cryptographic randomness
+recomputation of preserved evidence != repetition of a stochastic outcome
+byte consistency != authenticated physical execution != entropy certification
 ```
 
-The v0 profile binds an independently supplied request to preserved ordered bitstrings, explicit bit mappings, counts, and deterministic integer post-processing. A second valid sample may differ from the first and still satisfy the same declared procedure.## Quick start
+## Current project status and architecture
 
-Requirements: Python 3.12+ and Node.js 22+. Runtime networking and dynamic dependency installation are not used.
+This is the canonical project status. Audited baseline after merged PR #10:
+`44b25926be923a9cab846bca36a8a7a665774b22` (2026-09-23 UTC).
+Its [merge CI](https://github.com/pipavlo82/quantum-execution-evidence/actions/runs/35802120341)
+passed on Python 3.12 and 3.13. This is an exact checkpoint, not a moving claim
+about future `main`. [Audit coverage and validation](docs/DOCUMENTATION_AUDIT.md)
+record the documentation corrections and frozen boundaries.
 
-```bash
-python -m qev demo
-python -m qev verify --request fixtures/corpus/sample-a.request.json fixtures/corpus/sample-a.package.json
-python -m qev mutation-check
-python -m qev sources
-python -m unittest discover -s tests -v
-python -O -m unittest discover -s tests -v
+| Path | What works now | Evidence boundary |
+| --- | --- | --- |
+| Synthetic QEV v0 | Independent caller request -> ordered bytes -> mapping -> counts -> integer result; native Semantic ABI declaration check | Synthetic procedure identity and deterministic postprocessing only |
+| Native RVR v0 | Receipt envelope, profile audit, evidence closure, canonical result and recomputation | A different valid sample can be `VERIFIED + DIVERGED`; no hardware claim |
+| Legacy ReceiptOS and TSEI | Capsule/provenance builders and proof-ID helpers; native RVR-artifact preservation and layout-bijection evaluation | Legacy ReceiptOS root/summary/proof assembly is partly local bridge code; each TSEI profile has its own relation |
+| IBM direct live replay v1 (PR #8) | Captured intent/logical/ISA/returned snapshots and ordered shots -> native RVR + finite ideal TSEI -> native ReceiptOS export and saved-artifact replay | Exact two-qubit ideal relation; unsigned acquisition evidence |
+| Moth Comet counts v0 (PR #9) | Preserved HTTP bodies -> request/job/hash/counts/witness/budget consistency | Counts only; no circuit bytes, shot order or established physical measurement map; native RVR/TSEI/ReceiptOS not integrated for this profile |
+| Cross-provider model v0 (PR #10) | Both captures -> common identity/observation/issues + explicit capabilities + actual native-layer results; complete report replay | Comparable evidence fields, not equivalent circuits, distributions, trust scores or a new native receipt |
+
+The [integration map](docs/INTEGRATION_MAP.md) maps every layer to its code,
+commands and source pins. PRF, RSI/RBCF, Chronicle and PQ remain references only.
+
+### IBM path
+
+The saved IBM job is `dapdeqcak42c73cid5qg`, reported backend `ibm_fez`, with
+256 ordered shots and counts `00=119, 01=2, 10=10, 11=125` in `c1c0` order.
+Replay checks independent claim anchors, request/job agreement, raw bytes,
+histogram and logical/submitted/returned measurement maps. Native TSEI compares
+the complete ideal two-qubit operators in Q(zeta_8), modulo one global phase,
+under the finite angle-literal map. Native RVR gives `VERIFIED / REPRODUCED` for
+the preserved sample; the live ReceiptOS bridge binds the exact RVR bundle and
+its capture payloads and verifies the saved export's root and projections.
+
+The legacy `ibm-runtime-demo` still exercises a synthetic IBM-shaped fixture.
+The separate `live-demo`/`live-replay` path checks the preserved live capture.
+Provider execution binding is consistency over supplied fields; the legacy
+binding alone does not compare an assigned job ID to an independent expected ID.
+The live profile supplies that additional claim/job binding.
+
+### Moth path
+
+The saved Moth job is `4daf7153-f837-4f5a-bf65-a0525bd9dd7a`. Its provider reports
+`ibm_kingston` and provider job `dapgt48r7bnc73b3ei0g`; those are upstream claims.
+QEV recomputes 2048 shots, 2040 distinct 20-bit strings, marginals, four witness
+histograms/correlators and `S = 2.2890625` from preserved counts. The request asked
+for 32 output bytes and the response delivered **0 bytes**, with upstream grade
+`hardware-insufficient-entropy`; it contains an `entropy_report`, no certificate.
+
+Counts/pulse hash encoding is a local inference from matching hashes. Circuit
+hash agreement does not reveal its preimage. Commitment encoding remains
+unresolved, prior publication/timing and seed provenance are not established,
+and empty output does not exercise nonempty Toeplitz extraction. Witness and
+reported-budget arithmetic do not certify entropy or physical bit mapping.
+
+### Cross-provider common model
+
+`qev-cross-provider-evidence-v0` emits `qev.cross-provider-evidence.v0`:
+identity, common consistency/issues/observation, capabilities, native layers
+and provider-specific results. `ORDERED_SHOTS` and `COUNTS_ONLY` stay distinct.
+Missing, contradictory, malformed and unavailable evidence remain separate.
+Replay recomputes the complete report from the selected independent claim and
+capture bytes. IBM executes its existing native layers; Moth does not acquire
+those capabilities by appearing beside IBM. The common report itself is not
+a native RVR receipt or a ReceiptOS-root-bound artifact.
+
+## Evidence and threat boundaries
+
+Independently recomputed means locally derived from supplied bytes, not
+independent authorship or independent observation of the hardware. Provider
+names, backend names, completion and acquisition labels remain reported facts.
+Local unsigned claims are trust inputs: replacing both a claim and its evidence
+creates a different record, not verification of the original one.
+
+`providerAuthentication` remains **`NOT_ESTABLISHED`** for both captured paths.
+No cryptographic provider attestation verifier runs. Unsupported authentication
+objects in legacy binding are explicitly unsupported, never authenticated.
+Hashes, native roots and compatible declarations do not establish physical QPU
+authenticity, sampler independence, distribution equality, min-entropy,
+cryptographic randomness, device certification, general compiler correctness
+or production security. A ReceiptOS root can be valid over a refuted relation;
+root validity, RVR outcome and TSEI classification are distinct axes.
+
+## Offline quick start and replay
+
+Run from the repository root with Python 3.12+, Node.js 22+ and Bun 1.3.14
+(the CI-pinned Bun version) on PATH. No provider SDK, account, credentials,
+package installation or runtime network is required for these commands.
+For export/redirection examples on Windows, use `cmd.exe` to preserve stdout
+bytes rather than legacy PowerShell text redirection.
+
+```sh
+python -B -m qev demo
+python -B -m qev verify --request fixtures/corpus/sample-a.request.json fixtures/corpus/sample-a.package.json
+python -B -m qev live-demo > live-export.json
+python -B -m qev live-replay live-export.json
+python -B -m qev.moth_replay
+python -B -m qev.cross_cli demo
+python -B -m qev.cross_cli demo --provider ibm-direct > cross-ibm.json
+python -B -m qev.cross_cli replay --provider ibm-direct --artifact cross-ibm.json
+python -B -m qev.cross_cli demo --provider moth-comet > cross-moth.json
+python -B -m qev.cross_cli replay --provider moth-comet --artifact cross-moth.json
 ```
 
-The native Semantic ABI linker is executed from byte-pinned vendored source. Its result establishes declaration compatibility only.## What v0 establishes
+Live replay supports a separately reviewed `--claim`. Moth custom capture replay
+requires `--claim`; cross-provider custom input requires both `--capture` and
+`--claim` plus `--provider`. The cross-provider Moth importer retains the finite
+role names of this capture; it is not an arbitrary job importer. See the exact
+[IBM live](docs/LIVE_CAPTURE_REPLAY_V1.md), [Moth](docs/MOTH_COMET_COUNTS_V0.md)
+and [cross-provider](docs/CROSS_PROVIDER_EVIDENCE_V0.md) contracts.
 
-A successful finite check can establish that the supplied request matches the embedded request; preserved raw bytes match their declared digest; raw observations deterministically map to the supplied histogram and integer result; and the bounded claim edge is compatible with the pinned Semantic ABI declaration contract.
+## Validation
 
-The verifier keeps request binding, integrity, deterministic verification, source identity, declaration compatibility, provider authenticity, hardware execution, distribution claims, entropy, and device certification as separate axes. There is no global `verified=true`.## What v0 does not establish
+The post-PR #10 suite contains **259 tests** (218 pre-cross-provider + 41 new).
+Normal and optimized runs execute the same suite. The synthetic corpus has
+44 cases. Five source-mutation gates require **40 kills**: QEV 7, RVR 7,
+IBM live 7, Moth 7 and cross-provider 12. Positive controls per mutant are
+5/3/3/3/3 respectively. The provider-binding demo separately refutes eight
+input mutations; the IBM adapter demo refutes six and rejects malformed bits.
+These input controls are not additional source mutants.
 
-It does **not** establish authentic QPU execution, honest provider identity, sampler independence, distribution equality, min-entropy, cryptographic RNG, device certification, independent authorship, production security, or correctness of an arbitrary quantum compiler.
-
-ReceiptOS, TSEI, PRF, RSI, Chronicle and PQ remain source-pinned integration references only. Native RVR is executed through the separate QEV profile described below. See [docs/INTEGRATION_MAP.md](docs/INTEGRATION_MAP.md).
-
-The root license for newly authored repository code is intentionally **pending**. Vendored upstream license boundaries are preserved; see [LICENSING.md](LICENSING.md).
-
-## Native RVR QEV profile
-
-The repository now includes the experimental native RVR profile `rvr-qev-preserved-observation-v0`.
-It uses exact vendored RVR v0 canonicalization, profile-audit, evidence-closure, receipt-envelope, and recomputation primitives pinned to RVR commit `549a7e150ddc75df88dc90ee93f331fea7464567`.
-
-Run:
-
-```bash
-python -m qev rvr-demo
-python -m qev rvr-mutation-check
+```sh
+python -B -m unittest discover -s tests -v
+python -B -O -m unittest discover -s tests -v
+python -B -m qev mutation-check
+python -B -m qev rvr-demo
+python -B -m qev rvr-mutation-check
+python -B -m qev receiptos-demo
+python -B -m qev tsei-demo
+python -B -m qev quantum-transpile-demo
+python -B -m qev provider-binding-demo
+python -B -m qev ibm-runtime-demo
+python -B -m qev live-mutation-check
+python -B -m qev.moth_mutations
+python -B -m qev.cross_mutations
+python -B -m qev sources
+python -B -m qev.cross_cli sources
+python -B -m tools.check_docs
+git diff --check
 ```
 
-The profile demonstrates the stochastic boundary directly: a different valid preserved sample can be **VERIFIED + DIVERGED**. `DIVERGED` records receipt-identity divergence; it is not itself a semantic refutation.
+[CI](.github/workflows/ci.yml) runs every legacy gate, both test modes and
+normal/repeat/optimized byte comparisons for IBM export/replay/mutations,
+Moth replay/mutations and both cross-provider projections/replays/mutations.
+The main source lock has **214 local + 28 vendored files**; a separate
+cross-provider lock covers **8 files**. Neither lock includes itself. The
+documentation audit adds a Git-bound coverage record and checker outside runtime
+profile inventories, avoiding changes to frozen runtime/profile identities.
+The 16 historical reference records are metadata, not 16 executed dependencies.
 
-This RVR profile remains scoped to request binding, byte integrity, and deterministic post-processing over preserved QEV observations. It does not establish physical QPU execution, entropy, distribution correctness, or provider authenticity. ReceiptOS/TSEI/RSI/PRF/Chronicle/PQ remain separate integrations.
-# Additive offline live capture replay v1
+## Current limitations and next concrete work
 
-The new `python -B -m qev live-demo`, `live-replay <artifact>` and
-`live-mutation-check` commands replay preserved live IBM capture bytes offline.
-See [the live profile specification](docs/LIVE_CAPTURE_REPLAY_V1.md) for independent
-claim commitments, exact idealized ISA math, native RVR/TSEI/ReceiptOS execution,
-saved-artifact verification and limits. No SDK or service is needed. Existing
-synthetic admission and all earlier profile behavior remain unchanged.
+The IBM ideal relation supports active wires 0/1 and a finite gate/angle set;
+it is not a general compiler proof. Moth lacks the provenance needed for that
+relation and has no native receipt integration. The legacy ReceiptOS bridge's
+local root/summary/proof assembly is not the stronger live export/replay path.
+Expectation authorship remains shared; no independent implementation is claimed.
 
-## Moth Comet counts capture
+Next work is to obtain a precise upstream commitment-preimage encoding and
+circuit/measurement provenance specification for Moth, then test any newly
+available evidence under an explicit new profile. A counts-native RVR profile
+would need its own relation and mutation controls, without inventing shot order.
+Broader IBM circuit support or provider authentication likewise requires a new
+bounded contract and conformance evidence. None is implemented or implied here;
+these steps do not require another QPU job merely to repeat this audit.
 
-`python -B -m qev.moth_replay` checks one preserved live Moth capture offline.
-The requested 12 randomness qubits, 8 witness qubits and 2048 shots returned
-consistent counts and a budget-limited **zero-byte** output (32 requested).
-`python -B -m qev.moth_mutations` runs seven semantic mutation controls.
-See [the Moth profile](docs/MOTH_COMET_COUNTS_V0.md) for exact evidence and limits.
-Counts consistency does not establish hardware authenticity, entropy, ordered
-measurements or prior publication of the returned commitment.
+## Documentation and licensing
 
-## Provider-neutral evidence model v0
-
-`python -B -m qev.cross_cli demo` projects both preserved live captures into
-common evidence fields plus explicit provider capabilities and actual native
-execution results. Moth retains unavailable circuit/measurement provenance,
-zero-byte delivery and no native RVR/TSEI/ReceiptOS integration. Authentication
-remains NOT_ESTABLISHED for both. Existing profiles and captures are unchanged.
-See [the model and replay contract](docs/CROSS_PROVIDER_EVIDENCE_V0.md).
+Start with the [integration map](docs/INTEGRATION_MAP.md),
+[provenance](docs/PROVENANCE.md), [synthetic contract](docs/CONTRACT.md),
+[RVR profile](docs/RVR_QEV_PROFILE_V0.md),
+[legacy ReceiptOS scope](docs/RECEIPTOS_QEV_CAPSULE_V0.md),
+[TSEI artifact profile](docs/TSEI_QEV_PROFILE_V0.md),
+[layout profile](docs/QUANTUM_TRANSPILATION_BOUNDARY_V0.md),
+[binding contract](docs/PROVIDER_EXECUTION_BINDING_V0.md) and
+[IBM adapter](docs/IBM_QUANTUM_RUNTIME_ADAPTER_V0.md).
+[NEXT_NATIVE_RVR.md](docs/NEXT_NATIVE_RVR.md) is a superseded historical handoff.
+The root license for repository-authored code remains **pending**; no new
+license is granted by this audit. Vendored licenses and captured upstream
+material retain their separate boundaries: [LICENSING.md](LICENSING.md).

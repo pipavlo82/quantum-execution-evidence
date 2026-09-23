@@ -1,7 +1,7 @@
 [project]
 name = "quantum-execution-evidence"
 version = "0.1.0"
-description = "Offline synthetic evidence verifier for stochastic execution pipelines"
+description = "Offline verifier for synthetic and preserved live stochastic execution evidence"
 requires-python = ">=3.12"
 dependencies = []
 
