@@ -185,6 +185,8 @@ Start with the [integration map](docs/INTEGRATION_MAP.md),
 [binding contract](docs/PROVIDER_EXECUTION_BINDING_V0.md) and
 [IBM adapter](docs/IBM_QUANTUM_RUNTIME_ADAPTER_V0.md).
 [NEXT_NATIVE_RVR.md](docs/NEXT_NATIVE_RVR.md) is a superseded historical handoff.
-The root license for repository-authored code remains **pending**; no new
-license is granted by this audit. Vendored licenses and captured upstream
-material retain their separate boundaries: [LICENSING.md](LICENSING.md).
+Repository-authored QEV material is licensed under the
+[Apache License 2.0](LICENSE), with attribution and scope recorded in
+[NOTICE](NOTICE). Vendored software, preserved IBM/Moth evidence and upstream
+OpenAPI material retain their separate rights and license boundaries; see
+[LICENSING.md](LICENSING.md).
