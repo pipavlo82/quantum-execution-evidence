@@ -23,17 +23,19 @@
     "Offline Moth capture replay and semantic mutations",
     "Cross-provider evidence projection, replay and mutations",
     "Native Moth counts RVR replay and mutations",
+    "Native Moth ReceiptOS export, replay and mutations",
     "Documentation consistency",
     "Diff hygiene"
   ],
   "counts": {
     "crossFiles": 8,
-    "frozenFiles": 238,
+    "frozenFiles": 252,
     "localFiles": 214,
+    "mothReceiptosFiles": 9,
     "mothRvrFiles": 13,
     "referenceRecords": 16,
-    "sourceMutants": 47,
-    "tests": 293,
+    "sourceMutants": 56,
+    "tests": 330,
     "vendorFiles": 28
   },
   "documents": {
@@ -77,6 +79,10 @@
       "disposition": "updated",
       "review": "New counts-native RVR relation and exact boundaries"
     },
+    "docs/MOTH_RECEIPTOS_V0.md": {
+      "disposition": "updated",
+      "review": "Native portable packaging, exact attachment, independent claim and scoped nonclaims"
+    },
     "docs/NEXT_NATIVE_RVR.md": {
       "disposition": "updated",
       "review": "See docs/DOCUMENTATION_AUDIT.md coverage table"
@@ -110,22 +116,18 @@
       "review": "See docs/DOCUMENTATION_AUDIT.md coverage table"
     }
   },
-  "featureBase": "68c306b6b25d392f4de290e904f57e20fa3c0a0f",
+  "featureBase": "3ec4fc8a7e80d7137a03bab6a2a8f9deda218835",
   "featureFiles": [
-    "qev/moth_rvr.py",
-    "qev/moth_rvr_relation.py",
-    "qev/moth_rvr_cli.py",
-    "qev/moth_rvr_mutations.py",
-    "tests/test_moth_rvr.py",
-    "tools/pin_moth_rvr_profile.py",
-    "docs/MOTH_COUNTS_RVR_V0.md",
-    "profiles/rvr-qev-moth-counts-v0/profile.schema.json",
-    "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json",
-    "profiles/rvr-qev-moth-counts-v0/verification-profile.json",
-    "profiles/rvr-qev-moth-counts-v0/roles.json",
-    "profiles/rvr-qev-moth-counts-v0/conformance.json",
-    "profiles/rvr-qev-moth-counts-v0/claim.json",
-    "profiles/rvr-qev-moth-counts-v0/sources.json"
+    "qev/moth_receiptos.py",
+    "qev/moth_receiptos_cli.py",
+    "qev/moth_receiptos_bridge.ts",
+    "qev/moth_receiptos_mutations.py",
+    "tests/test_moth_receiptos.py",
+    "docs/MOTH_RECEIPTOS_V0.md",
+    "tools/pin_moth_receiptos_profile.py",
+    "profiles/moth-receiptos-v0/profile.json",
+    "profiles/moth-receiptos-v0/conformance.json",
+    "profiles/moth-receiptos-v0/sources.json"
   ],
   "frozenFiles": {
     ".gitattributes": "92a1fae24875b0efc08e63000361f06ea0361b28233c808699d85c92da6f1945",
@@ -133,6 +135,7 @@
     "docs/CROSS_PROVIDER_EVIDENCE_V0.md": "b289ca58ef1d115a54527896c45d21051c0eb9921b2244442ce50519c0d868c7",
     "docs/LIVE_CAPTURE_REPLAY_V1.md": "e1a2e6419c32ec71050c5bc88a38dcd12f92fe16412deacad84a947c2948639f",
     "docs/MOTH_COMET_COUNTS_V0.md": "4049e57d4fd22023d5bf89cd89ba6b01ceb0eafb14aae7ec3c224a237b6a436f",
+    "docs/MOTH_COUNTS_RVR_V0.md": "4813aa8fcecffb98f1322cc6a844902b5d87c37e1ad44bfe29d7550b8cd1332a",
     "docs/RVR_QEV_PROFILE_V0.md": "967118d0d8d5af8ed9fee86858f7587f22f382b58764f6fb2227202b13a6614b",
     "docs/moth-comet-v0/openapi.raw.json": "b0695071d500e28457a7d18fc4ef2e94cb60989761eeafff2cdd90f9bf553e39",
     "docs/moth-comet-v0/source.json": "b45ef7ac81f07b65c835a616e1b76a60b866c91adc1646ebab1140517a389d71",
@@ -277,6 +280,13 @@
     "profiles/qev-preserved-observation-v0/rvr-qev.schema.json": "0e89bf683e53757683748584913e86cd76c1c01bd7111032cfb63b6a8276a3a2",
     "profiles/qev-preserved-observation-v0/vectors.json": "88dcd905b4e8e376fc53510779bf070d66812444bdd97b129870be66b7c26fd5",
     "profiles/qev-preserved-observation-v0/verification-profile.json": "c38921bd0bd8157da047865a325875394ff044df3819b98f5afd6fb86f546812",
+    "profiles/rvr-qev-moth-counts-v0/claim.json": "b6a72e00592211a16c052ab7d76f5da920731dc070c81142d08e5f73b4d9e617",
+    "profiles/rvr-qev-moth-counts-v0/conformance.json": "f5c0086639e626d64a951ac16e83be10ea6eee16fb9165f1118ff5f6209e64c4",
+    "profiles/rvr-qev-moth-counts-v0/profile.schema.json": "3ac39d1015d5d1fa3a7a18f57ba3eb5d8dc4836768799eaa1cef98d104ebc6db",
+    "profiles/rvr-qev-moth-counts-v0/roles.json": "9bbe74b0bd2a291acfc1d4d1d55ad4434ec69c6f684e1a464099ba5bfdbea926",
+    "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json": "360e348792e1347ae56cd39a948397be00ce6689391cee7b20ae3684ed0eaa27",
+    "profiles/rvr-qev-moth-counts-v0/sources.json": "11a70a1a122531af347db3fd5fcfaeebdff880570e522aef41d4ea4dcab44008",
+    "profiles/rvr-qev-moth-counts-v0/verification-profile.json": "da71c114b736338ffa198e69b003e872862eed7ad96e8123378a3eeab4f23aec",
     "qev/__init__.py": "92b1dfb8965a5b874587727aaf58da03e130b3d861b93ab08292d5ca126908c7",
     "qev/__main__.py": "a77c60bfde33acfb8191b45e5e05abb95e317fff5ea104dd50165f1737bdd05e",
     "qev/adapters.py": "b5a881dee92d1b1e880ed38a966fde4784efe09295cf4010d4f859c31edd2802",
@@ -302,6 +312,10 @@
     "qev/moth_comet.py": "76c51c23fb0c56799674a6e93c1e02bf8243e563bdbfa039f98f8798f13d815f",
     "qev/moth_mutations.py": "51f452508822204ffdc4348e586e5c2a2379860fb5171ab409216191e60c285f",
     "qev/moth_replay.py": "1bd74334b37da8f982b4eb5c7566ab594fdc6a1410ef80f5966fcf713a91a9f1",
+    "qev/moth_rvr.py": "9b5f805d23d9ffa452fed2eb022a998ccfe704727b1475fb475636f73d08660e",
+    "qev/moth_rvr_cli.py": "ea4d81391558b5688c90df66fa12599c95ca8207063b86464c3c0717041ddde1",
+    "qev/moth_rvr_mutations.py": "038ecaa224c7b27a82e348dd4d5df81e0f0781ce991e1f1b79fef54fcdc9f150",
+    "qev/moth_rvr_relation.py": "af78c4940b09f13ed14dac2cd5bc1e5e13949edad578b2b0f4d3dcf07a72fc71",
     "qev/mutations.py": "aa76470e3d8729200e4344e52d5af92812001b7b03371cb60117b034ba56aff9",
     "qev/provider_binding.py": "be96ad7ee641f2fe6deb82f38178822898ff4cfecd3735f0a25d7a309145faae",
     "qev/provider_binding_native.py": "79c2d8e690f54ca9a4f8d7b860f7edec91327d7fd79a7befb0516e07d6b58b7b",
@@ -324,6 +338,7 @@
     "tests/test_ibm_runtime_adapter.py": "6e9a132a67ec38fb3cf67652c76f4eccdf7e3aaaa55719a51a0d247b700faf1b",
     "tests/test_live_replay.py": "1dc7180c378d1c627cca4747343139520cac2848244d107b40327ed7ec736a0b",
     "tests/test_moth_comet.py": "c169c8b5ec33884e2014ea10d5038d07749eb51a973e8523ece163bb0e717674",
+    "tests/test_moth_rvr.py": "63c8914174dca8f471542f08e4b6e5ab0c54ac18848dc67dfa5b0f24179618b8",
     "tests/test_profile.py": "03281fbe6b3dd7338de37bdc8a189ddf2cad27c6087e9bc0e6fa8f8e5a648d7b",
     "tests/test_provider_binding.py": "0ef3dd8880d9b4f15af3d07aa01fd936605a596b39320d05f3aef0a4ee945f17",
     "tests/test_quantum_transpilation.py": "79cb790baff31fda60af22185a2a546c26dd606d8c44b2f2d17867c7330b9355",
@@ -338,6 +353,7 @@
     "tools/pin_cross_profile.py": "5b3ddb65716e097e015327d1f966e819c6236364564be3d284cddc50a658d54b",
     "tools/pin_live_profile.py": "2e9e78a94916c1994902c51c5f12e20509aac184dfbf5d2c4a08e90c1da39cfd",
     "tools/pin_lock.py": "720644939f4761e469537b11e844abdedd9f74a60911bde92ab47347d7cea48c",
+    "tools/pin_moth_rvr_profile.py": "950e1443b5af83e3dd47cd6d00944a27832018de3eccda4b28a0c1a1029aa35a",
     "vendor/receiptos-v0/LICENSE": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
     "vendor/receiptos-v0/schemas/evidence-capsule.v0.schema.json": "f8b8c44bffa4d7cb827564cfa663ffe60396b4aa39991762c855a24765c1d159",
     "vendor/receiptos-v0/src/receiptos/canon/canonicalize.ts": "fca18d1642e6fe47d26ae2eb9f4bf15cf305653d6a7a08a5a0a09e2d6a716c81",
@@ -393,6 +409,7 @@
     "profiles/cross-provider-evidence-v0/profile.json": "qev-cross-provider-evidence-v0",
     "profiles/live-capture-replay-v1/verification-profile.json": "rvr-qev-live-capture-replay-v1",
     "profiles/moth-comet-counts-v0/profile.json": "qev-moth-comet-counts-v0",
+    "profiles/moth-receiptos-v0/profile.json": "receiptos-qev-moth-counts-v0",
     "profiles/qev-preserved-observation-v0/verification-profile.json": "rvr-qev-preserved-observation-v0",
     "profiles/rvr-qev-moth-counts-v0/verification-profile.json": "rvr-qev-moth-counts-v0"
   },

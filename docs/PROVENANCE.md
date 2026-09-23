@@ -88,3 +88,21 @@ are documented in [the new specification](MOTH_COUNTS_RVR_V0.md). No new QPU job
 provider network, credential use or cryptographic provider authentication is
 part of this implementation. Apache-2.0 applies to new authored code and prose,
 not as a relicensing of the preserved acquisition evidence.
+
+## Additive Moth ReceiptOS packaging
+
+Base: merged PR #13, `3ec4fc8a7e80d7137a03bab6a2a8f9deda218835`, with
+[green base CI](https://github.com/pipavlo82/quantum-execution-evidence/actions/runs/35810845842).
+The separate [packaging contract](MOTH_RECEIPTOS_V0.md) reuses the unchanged
+Moth counts-native RVR profile and all 12 existing ReceiptOS vendor files from
+`45b46bf7df3a60b32583291f577a36bf19d22f00`. It executes the native root builder,
+root verifier, summary builder and portable-proof builder. No upstream bytes,
+old profile, capture or license are rewritten. Its own lock covers nine local
+files; the manifest additionally binds the old RVR profile and lock.
+
+An attachment binds exact serialized RVR/capture bytes, while an independent
+claim determines the requested record. The fixed unanchored envelope and epoch
+compatibility sentinels do not attest acquisition time, provider authorization,
+hardware execution or entropy. Provider authentication remains NOT_ESTABLISHED.
+No QPU job, provider network or credentials are used. New authored material is
+Apache-2.0; preserved evidence and vendor rights retain their existing scope.

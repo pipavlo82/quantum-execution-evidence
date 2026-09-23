@@ -123,3 +123,29 @@ and an additional CI step (18 named steps total). Current README, integration,
 provenance and superseded handoff prose distinguish the new RVR path from the
 unchanged Moth counts and cross-provider v0 contracts. This is an additive
 feature extension, not a backfill of native semantics onto the frozen artifacts.
+
+## Moth ReceiptOS extension over merged PR #13
+
+The current extension starts from `3ec4fc8a7e80d7137a03bab6a2a8f9deda218835`.
+It adds [Moth ReceiptOS packaging](MOTH_RECEIPTOS_V0.md), preserving all 14 files
+introduced by the preceding Moth RVR change, including its source lock. Together
+with the original 238 frozen files, the maintainer gate now checks **252** exact
+file identities. Historical counts and audit conclusions above remain scoped
+to their named checkpoints.
+
+Current coverage is 19 documentation files, 330 tests (37 new), 56 source-mutant
+kills (9 new), and 19 named CI steps. The new profile has nine additive locked
+files, with its lock excluded from its own inventory. It pins the unchanged
+RVR profile/lock and 12 existing ReceiptOS vendor files. Main source-lock counts
+stay 214 local + 28 vendored; cross-provider stays eight; Moth RVR stays 13.
+
+Current README, integration map and superseded handoff now describe packaging
+as implemented. The PR #13 merge/green-CI checkpoint replaces the old PR #12
+base. Next work moves to a new common-projection version; frozen v0 adapters
+still do not execute Moth RVR or ReceiptOS. Old native nonintegration labels
+remain scoped to the original evaluator rather than being silently rewritten.
+Root integrity, independently recomputed RVR semantics and zero-byte delivery
+remain separate; provider authentication and entropy certification are absent.
+CLI docs add export/replay with an independent claim, explicit byte bounds,
+fixed unanchored metadata and epoch compatibility sentinels. CI adds repeated
+and optimized exports/replays/mutation gates and an exact custom-bundle export.

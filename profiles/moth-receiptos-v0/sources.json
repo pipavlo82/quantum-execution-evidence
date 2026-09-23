@@ -1,0 +1,11 @@
+{
+  "docs/MOTH_RECEIPTOS_V0.md": "3032b61be91c0188ecc6dcd542e63d14afca51881f8ee2404201853e413ca876",
+  "profiles/moth-receiptos-v0/conformance.json": "aa476480b1b2c6a9daa34ecc91023262625228264bb92f3d88bf24d4b93fb1e7",
+  "profiles/moth-receiptos-v0/profile.json": "ce53536192a820740e3a9a62bf15e15791992024c298bcbef5ec7c28db331184",
+  "qev/moth_receiptos.py": "e874f1710ed9a486929cd6df80a4552fff799e9be46cba32367c64fb42dc7a7c",
+  "qev/moth_receiptos_bridge.ts": "ea508b61416dd3060ab7009ea57fdb580d510c5539acc4921ca83b343766e218",
+  "qev/moth_receiptos_cli.py": "55c5d46c93c5db52e4c9a91badd582ddc388980469f028e23a3e3c6a1b26aab0",
+  "qev/moth_receiptos_mutations.py": "3c4be8f52d20fb11b17e011a756abf00ccd69eb4b550a1522db42f0344ff514b",
+  "tests/test_moth_receiptos.py": "3f4483927a063681f67abdaa3252f374c6a227c695490c9478f2ea6d067b0817",
+  "tools/pin_moth_receiptos_profile.py": "ea455897e79427a05fb87c1018ba6d9c3778a3e350d5382504d3c84c7b1fa9cc"
+}

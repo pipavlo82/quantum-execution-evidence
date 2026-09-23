@@ -1,0 +1,73 @@
+{
+  "controls": [
+    "verified",
+    "refuted",
+    "unverifiable"
+  ],
+  "mutants": [
+    {
+      "after": "True",
+      "before": "sha(raw) == attachment['sha256']",
+      "expectedRejection": "ATTACHMENT_DIGEST",
+      "id": "attachment-digest",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "json_same(native['evidence'], expected)",
+      "expectedRejection": "ENVELOPE_PROJECTION_OR_ANCHOR",
+      "id": "root-covered-envelope",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "fresh['verification']['ok'] is True",
+      "expectedRejection": "RECEIPT_ROOT_MISMATCH",
+      "id": "native-root",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "json_same(computed, saved['rvrReplay'])",
+      "expectedRejection": "STORED_RVR_REPLAY",
+      "id": "saved-rvr-result",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "json_same(fresh['verification'], native['verification'])",
+      "expectedRejection": "NATIVE_VERIFICATION_PROJECTION",
+      "id": "native-verification",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "json_same(fresh['summary'], native['summary'])",
+      "expectedRejection": "NATIVE_SUMMARY_PROJECTION",
+      "id": "native-summary",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "json_same(fresh['proof'], native['proof'])",
+      "expectedRejection": "NATIVE_PROOF_PROJECTION",
+      "id": "native-proof",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "True",
+      "before": "json_same(saved['profile'], profile)",
+      "expectedRejection": "PACKAGING_PROFILE_IDENTITY",
+      "id": "packaging-profile",
+      "source": "qev/moth_receiptos.py"
+    },
+    {
+      "after": "computed = moth_rvr.recompute(bundle, bundle['claim'], root=root)",
+      "before": "computed = moth_rvr.recompute(bundle, expected_claim, root=root)",
+      "expectedRejection": "INDEPENDENT_CLAIM_MISMATCH",
+      "id": "independent-claim",
+      "source": "qev/moth_receiptos.py"
+    }
+  ],
+  "schema": "qev.moth-receiptos-falsification.v0"
+}
