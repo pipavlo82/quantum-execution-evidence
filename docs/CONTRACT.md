@@ -1,8 +1,11 @@
 # Quantum execution evidence v0 — finite experimental contract
 
-Adapted from the repaired local contract dated 2026-09-21. OFFLINE / SYNTHETIC / EXPERIMENTAL.
-This standalone repository preserves the local profile; it is not a framework,
-standard, native RVR receipt, ReceiptOS capsule, Chronicle entry or TSEI proof.
+This document scopes the original `quantum-evidence.v0` synthetic checker,
+adapted from the repaired local contract dated 2026-09-21. Its result alone is
+not a native RVR receipt, ReceiptOS capsule, Chronicle entry or TSEI proof.
+The repository also has separate native integrations and preserved live profiles;
+see [current project status](../README.md#current-project-status-and-architecture).
+Live evidence is never relabeled synthetic to enter this contract.
 
 ## Local trust roots and identities
 
@@ -114,8 +117,10 @@ lengths. No invalid set is filled from defaults. `INVENTORY_INVALID`,
 failures; no mutation was killed when admission failed. They are not hardware verdicts.
 
 The standalone source lock must contain every unique path in the separately fixed
-`qev/source_inventory.py`: all local technical files and the four exact vendor
-files (linker, manifest schema and their two licenses). Empty, partial, duplicate
+`qev/source_inventory.py`: currently 214 declared local files and 28 exact vendor
+files across Semantic ABI, RVR, ReceiptOS and TSEI. The original four-file vendor
+surface was Semantic ABI. The additive cross-provider model has its own eight-file
+lock; the Git-bound documentation audit/checker is outside runtime inventories. Empty, partial, duplicate
 or redirected inventories fail before native execution. Vendor origin identities
 must exactly match the fixed source inventory. The lock excludes itself to avoid
 circularity; its digest is recorded in external commit evidence, and Git binds it.

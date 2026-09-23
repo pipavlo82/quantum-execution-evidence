@@ -59,7 +59,13 @@ A TSEI `stable` result does not establish:
 
 It also does not mean ReceiptOS packaging was verified; that is a separate layer.
 
-The intended stack is:
+The implemented composition boundaries are shown below. The artifact-preservation
+demo evaluates an RVR bundle directly; it does not consume a ReceiptOS export.
+Run `python -B -m qev tsei-demo`. The separate live path invokes TSEI inside its
+IBM relation before ReceiptOS packaging, as detailed in the
+[integration map](INTEGRATION_MAP.md).
+
+The conceptual composition is:
 
 ```text
 QEV evidence

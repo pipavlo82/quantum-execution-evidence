@@ -1,22 +1,17 @@
-# Native RVR step — completed on feature branch
+# Superseded native RVR handoff
 
-The previously described next step is now implemented as `rvr-qev-preserved-observation-v0`. The text below is retained as the design handoff that led to implementation.
+The native RVR step is implemented and merged in PR #1. Native ReceiptOS
+packaging (PR #2), native TSEI artifact preservation (PR #3), layout preservation
+(PR #4), provider binding (PR #6), IBM recorded adapter (PR #7), IBM live replay
+(PR #8), Moth counts (PR #9) and the cross-provider model (PR #10) are also merged.
+PR #5 removed an obsolete reference. None of these is a pending RVR next step.
 
-The next vertical step after RVR acceptance is native ReceiptOS packaging of the RVR artifact without changing RVR/QEV identities.
+Use [the canonical project status](../README.md#current-project-status-and-architecture)
+and its [next concrete work](../README.md#current-limitations-and-next-concrete-work).
+The [RVR profile](RVR_QEV_PROFILE_V0.md) remains scoped to the synthetic preserved
+request/package relation; [live replay](LIVE_CAPTURE_REPLAY_V1.md) is a separate
+profile. Moth counts still have no native RVR/ReceiptOS/TSEI integration.
 
-# Historical native RVR design handoff
-
-Historical status at the time this handoff was written: **NOT INTEGRATED**. The requirements below are now implemented by `rvr-qev-preserved-observation-v0` and retained for provenance.
-
-The current QEV result is not an RVR receipt and must not be relabeled as one. The inspected RVR generic profile uses its own canonical encoding and verification relation; QEV's integer-bearing observation package does not satisfy that profile merely because it is deterministic to re-check.
-
-A native integration should be additive and profile-defined, without changing the generic RVR core.## Required work
-
-1. Define a Quantum Execution Evidence Verification Profile with an explicit canonical byte contract for request identity, ordered observation identity, mapping identity, counts, deterministic post-processing, provider-evidence references, and unresolved physical/entropy claims.
-2. Define which dependencies are required for recomputation and how their exact bytes or immutable identities are resolved.
-3. Map the QEV deterministic result into the native RVR separation between verification outcome and recomputation status.
-4. Add vectors where the same declared procedure has different valid samples; both must remain valid without claiming identical outcome reproduction.
-5. Add vectors for missing evidence, contradictory evidence, unsupported claim elevation, profile drift, and changed mapping/provider/job identities.
-6. Execute the actual native RVR adapter against the profile and preserve its native result without a local compatibility shim pretending to be RVR.
-
-After that pass, ReceiptOS may package the native RVR artifact while preserving upstream byte identities. TSEI/RSI/PRF integration should follow their own native contracts, not be inferred from this profile's existence.
+The original design handoff remains available in
+[the audited baseline](https://github.com/pipavlo82/quantum-execution-evidence/blob/44b25926be923a9cab846bca36a8a7a665774b22/docs/NEXT_NATIVE_RVR.md).
+Its future-tense language records historical planning, not current project status.

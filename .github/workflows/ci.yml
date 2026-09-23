@@ -63,8 +63,6 @@ jobs:
           python -B -O -m qev live-mutation-check > live-mutations-optimized.json
           cmp live-mutations.json live-mutations-repeat.json
           cmp live-mutations.json live-mutations-optimized.json
-      - name: Diff hygiene
-        run: git diff --check
       - name: Offline Moth capture replay and semantic mutations
         run: |
           python -B -m qev.moth_replay > moth-replay.json
@@ -97,3 +95,7 @@ jobs:
           python -B -O -m qev.cross_mutations > cross-mutations-optimized.json
           cmp cross-mutations.json cross-mutations-repeat.json
           cmp cross-mutations.json cross-mutations-optimized.json
+      - name: Documentation consistency
+        run: python -B -m tools.check_docs
+      - name: Diff hygiene
+        run: git diff --check
