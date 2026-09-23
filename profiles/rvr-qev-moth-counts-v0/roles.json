@@ -1,0 +1,32 @@
+{
+  "members": [
+    "SUBMIT_ATTEMPTED.json",
+    "job-20260922T2328006744863Z.body.json",
+    "job-20260922T2328006744863Z.http.json",
+    "job-reference.json",
+    "manifest.json",
+    "request.body.json",
+    "result-20260922T2328006744863Z.body.json",
+    "result-20260922T2328006744863Z.http.json",
+    "status-20260922T2326204143474Z.body.json",
+    "status-20260922T2326204143474Z.http.json",
+    "status-20260922T2326503636962Z.body.json",
+    "status-20260922T2326503636962Z.http.json",
+    "status-20260922T2328006744863Z.body.json",
+    "status-20260922T2328006744863Z.http.json",
+    "submit.body.json",
+    "submit.http.json",
+    "terminal-observation.json"
+  ],
+  "roles": {
+    "job": "job-20260922T2328006744863Z.body.json",
+    "request": "request.body.json",
+    "result": "result-20260922T2328006744863Z.body.json",
+    "statuses": [
+      "status-20260922T2326204143474Z.body.json",
+      "status-20260922T2326503636962Z.body.json",
+      "status-20260922T2328006744863Z.body.json"
+    ],
+    "submit": "submit.body.json"
+  }
+}

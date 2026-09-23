@@ -1,7 +1,7 @@
 # Integration map
 
 Current status is centralized in [README](../README.md#current-project-status-and-architecture).
-This map names executed mechanisms and their exact scope after merged PR #10.
+This map names executed mechanisms and their exact scope including the additive Moth counts-native RVR profile.
 An executed mechanism is not automatically a successful or authenticated claim.
 
 | Component | Executed surface / command | Boundary |
@@ -18,6 +18,7 @@ An executed mechanism is not automatically a successful or authenticated claim.
 | IBM live ideal TSEI | `qev/live_tsei_bridge.ts`, `qev/live_math.py`; included in live replay | `qev-live-ideal-two-qubit-isa-v1`; finite exact ideal full-operator and measurement relation |
 | IBM live ReceiptOS | `qev/live_receiptos_bridge.ts`, `qev/live_portable.py`; `python -B -m qev live-replay live-export.json` after export | Actual native root/verifier/summary/portable functions; complete RVR/capture attachment checked |
 | Moth counts | `qev/moth_comet.py`, `qev/moth_replay.py`; `python -B -m qev.moth_replay` | `qev-moth-comet-counts-v0`; no native RVR/TSEI/ReceiptOS for this counts profile |
+| Moth native RVR | `qev/moth_rvr.py`, `qev/moth_rvr_relation.py`; `python -B -m qev.moth_rvr_cli demo` | `rvr-qev-moth-counts-v0`; counts-only native receipt/replay; insufficient-entropy delivery is a separate observation |
 | Cross-provider model | `qev/cross_provider.py`, `qev/cross_adapters.py`; `python -B -m qev.cross_cli demo` | `qev-cross-provider-evidence-v0`; explicit capabilities and actual per-provider native results, not a new native receipt |
 | PRF | SOURCE_PINNED_REFERENCE / NOT_INTEGRATED | No PRF adapter runs |
 | RSI / RBCF | SOURCE_PINNED_REFERENCE / NOT_INTEGRATED | No RSI admission/profile execution |
@@ -38,6 +39,9 @@ code. Exact source paths and hashes are in [source_inventory.py](../qev/source_i
 and [sources.lock.json](../sources.lock.json). The latter locks 214 local files.
 [Cross-provider sources](../profiles/cross-provider-evidence-v0/sources.json)
 separately lock eight additive files.
+[Moth native RVR sources](../profiles/rvr-qev-moth-counts-v0/sources.json) lock
+13 additive files; its native manifest also pins the unchanged counts runtime
+and three RVR vendor files. No older profile identity is changed.
 
 [reference-pins.json](reference-pins.json) retains 16 inherited source-reference
 records. Those records are historical metadata; they do not control runtime
@@ -51,8 +55,11 @@ IBM live evaluation runs native TSEI within the live relation and native RVR
 over the committed evidence. Live export then packages the bundle with native
 ReceiptOS functions; replay checks the saved artifact. Cross-provider IBM only
 attempts ReceiptOS after VERIFIED semantics, whereas the standalone live export
-can represent REFUTED/UNVERIFIABLE outcomes with a valid root. Moth runs its
-counts relation without any native RVR, TSEI or ReceiptOS call.
+can represent REFUTED/UNVERIFIABLE outcomes with a valid root. The original Moth
+counts and cross-provider v0 adapters remain unchanged and make no native RVR,
+TSEI or ReceiptOS call. The separate [Moth RVR path](MOTH_COUNTS_RVR_V0.md)
+executes native receipt primitives over the counts relation. ReceiptOS packaging
+and TSEI are not integrated for that new profile.
 
 `providerAuthentication = NOT_ESTABLISHED` on both captured paths. Neither
 source identity, a compatible Semantic ABI declaration, native execution,

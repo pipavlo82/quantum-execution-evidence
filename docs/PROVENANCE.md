@@ -74,3 +74,17 @@ New audit documentation/checker metadata is Git-bound outside runtime profiles.
 No new capture, provider-network access or credential use is part of replay or
 this audit. Source identity and locally reproduced results do not establish
 hardware authenticity, entropy or independent authorship.
+
+## Additive Moth counts-native RVR
+
+The new `rvr-qev-moth-counts-v0` implementation starts from PR #12 merge
+`68c306b6b25d392f4de290e904f57e20fa3c0a0f`, after merged documentation audit
+PR #11 and Apache-2.0 licensing PR #12. It adds repository-authored profile,
+relation, replay, tests and seven source mutants. The original capture, counts
+verifier, vendor bytes and older profile identities remain unchanged. Native
+RVR primitives use the already pinned adapter above; no new upstream code is
+downloaded. The 13-file additive lock and native transitive dependency manifest
+are documented in [the new specification](MOTH_COUNTS_RVR_V0.md). No new QPU job,
+provider network, credential use or cryptographic provider authentication is
+part of this implementation. Apache-2.0 applies to new authored code and prose,
+not as a relicensing of the preserved acquisition evidence.

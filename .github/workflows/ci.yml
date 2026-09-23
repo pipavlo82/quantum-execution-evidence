@@ -95,6 +95,24 @@ jobs:
           python -B -O -m qev.cross_mutations > cross-mutations-optimized.json
           cmp cross-mutations.json cross-mutations-repeat.json
           cmp cross-mutations.json cross-mutations-optimized.json
+      - name: Native Moth counts RVR replay and mutations
+        run: |
+          python -B -m qev.moth_rvr_cli sources
+          python -B -m qev.moth_rvr_cli demo --output moth-rvr.json
+          python -B -m qev.moth_rvr_cli demo --output moth-rvr-repeat.json
+          python -B -O -m qev.moth_rvr_cli demo --output moth-rvr-optimized.json
+          cmp moth-rvr.json moth-rvr-repeat.json
+          cmp moth-rvr.json moth-rvr-optimized.json
+          python -B -m qev.moth_rvr_cli replay --artifact moth-rvr.json --claim profiles/rvr-qev-moth-counts-v0/claim.json > moth-rvr-replay.json
+          python -B -m qev.moth_rvr_cli replay --artifact moth-rvr.json --claim profiles/rvr-qev-moth-counts-v0/claim.json > moth-rvr-replay-repeat.json
+          python -B -O -m qev.moth_rvr_cli replay --artifact moth-rvr.json --claim profiles/rvr-qev-moth-counts-v0/claim.json > moth-rvr-replay-optimized.json
+          cmp moth-rvr-replay.json moth-rvr-replay-repeat.json
+          cmp moth-rvr-replay.json moth-rvr-replay-optimized.json
+          python -B -m qev.moth_rvr_mutations > moth-rvr-mutations.json
+          python -B -m qev.moth_rvr_mutations > moth-rvr-mutations-repeat.json
+          python -B -O -m qev.moth_rvr_mutations > moth-rvr-mutations-optimized.json
+          cmp moth-rvr-mutations.json moth-rvr-mutations-repeat.json
+          cmp moth-rvr-mutations.json moth-rvr-mutations-optimized.json
       - name: Documentation consistency
         run: python -B -m tools.check_docs
       - name: Diff hygiene

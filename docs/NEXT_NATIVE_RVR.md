@@ -10,7 +10,10 @@ Use [the canonical project status](../README.md#current-project-status-and-archi
 and its [next concrete work](../README.md#current-limitations-and-next-concrete-work).
 The [RVR profile](RVR_QEV_PROFILE_V0.md) remains scoped to the synthetic preserved
 request/package relation; [live replay](LIVE_CAPTURE_REPLAY_V1.md) is a separate
-profile. Moth counts still have no native RVR/ReceiptOS/TSEI integration.
+profile. The additive [Moth counts-native RVR profile](MOTH_COUNTS_RVR_V0.md)
+now implements its own counts-only relation, mutation gate and replay. Its
+ReceiptOS packaging and TSEI integration remain absent; the old Moth and
+cross-provider profiles retain their scoped historical contracts.
 
 The original design handoff remains available in
 [the audited baseline](https://github.com/pipavlo82/quantum-execution-evidence/blob/44b25926be923a9cab846bca36a8a7a665774b22/docs/NEXT_NATIVE_RVR.md).
