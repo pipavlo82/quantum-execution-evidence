@@ -113,6 +113,26 @@ jobs:
           python -B -O -m qev.moth_rvr_mutations > moth-rvr-mutations-optimized.json
           cmp moth-rvr-mutations.json moth-rvr-mutations-repeat.json
           cmp moth-rvr-mutations.json moth-rvr-mutations-optimized.json
+      - name: Native Moth ReceiptOS export, replay and mutations
+        run: |
+          python -B -m qev.moth_receiptos_cli sources
+          python -B -m qev.moth_receiptos_cli demo --output moth-portable.json
+          python -B -m qev.moth_receiptos_cli demo --output moth-portable-repeat.json
+          python -B -O -m qev.moth_receiptos_cli demo --output moth-portable-optimized.json
+          cmp moth-portable.json moth-portable-repeat.json
+          cmp moth-portable.json moth-portable-optimized.json
+          python -B -m qev.moth_receiptos_cli export --bundle moth-rvr.json --claim profiles/rvr-qev-moth-counts-v0/claim.json --output moth-portable-custom.json
+          cmp moth-portable.json moth-portable-custom.json
+          python -B -m qev.moth_receiptos_cli replay --artifact moth-portable.json --claim profiles/rvr-qev-moth-counts-v0/claim.json > moth-portable-replay.json
+          python -B -m qev.moth_receiptos_cli replay --artifact moth-portable.json --claim profiles/rvr-qev-moth-counts-v0/claim.json > moth-portable-replay-repeat.json
+          python -B -O -m qev.moth_receiptos_cli replay --artifact moth-portable.json --claim profiles/rvr-qev-moth-counts-v0/claim.json > moth-portable-replay-optimized.json
+          cmp moth-portable-replay.json moth-portable-replay-repeat.json
+          cmp moth-portable-replay.json moth-portable-replay-optimized.json
+          python -B -m qev.moth_receiptos_mutations > moth-portable-mutations.json
+          python -B -m qev.moth_receiptos_mutations > moth-portable-mutations-repeat.json
+          python -B -O -m qev.moth_receiptos_mutations > moth-portable-mutations-optimized.json
+          cmp moth-portable-mutations.json moth-portable-mutations-repeat.json
+          cmp moth-portable-mutations.json moth-portable-mutations-optimized.json
       - name: Documentation consistency
         run: python -B -m tools.check_docs
       - name: Diff hygiene

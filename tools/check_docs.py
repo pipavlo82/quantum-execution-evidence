@@ -76,14 +76,19 @@ def run():
         if module in ('qev.cross_cli', 'qev.moth_rvr_cli'):
             need(command in ('demo', 'replay', 'sources'), 'CROSS_CLI_SUBCOMMAND:' + command)
 
+        if module == 'qev.moth_receiptos_cli':
+            need(command in ('demo', 'export', 'replay', 'sources'), 'MOTH_RECEIPTOS_SUBCOMMAND:' + command)
+
     from qev import sources, source_inventory
     from qev.cross_provider import FILES, check_sources
     source_result = sources.validate()
     need(sources.successful(source_result), 'MAIN_SOURCE_LOCK')
     check_sources()
-    from qev import moth_rvr
+    from qev import moth_rvr, moth_receiptos
+    moth_receiptos.check_sources()
     moth_rvr.check_sources()
     counts = manifest['counts']
+    need(len(moth_receiptos.FILES) == counts['mothReceiptosFiles'], 'MOTH_RECEIPTOS_SOURCE_COUNT')
     need(len(moth_rvr.FILES) == counts['mothRvrFiles'], 'MOTH_RVR_SOURCE_COUNT')
     need(len(source_inventory.LOCAL_FILES) == counts['localFiles'], 'LOCAL_COUNT')
     need(len(source_inventory.ALL_VENDOR_FILES) == counts['vendorFiles'], 'VENDOR_COUNT')
@@ -125,7 +130,7 @@ def run():
          and 'node-version: "22"' in workflow, 'CI_RUNTIME_MATRIX')
     need('python -B -m tools.check_docs' in workflow, 'DOCS_NOT_IN_CI')
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
-    for token in ('**293 tests**', '**47 kills**', '**214 local + 28 vendored files**', '**8 files**', '**13 files**'):
+    for token in ('**330 tests**', '**56 kills**', '**214 local + 28 vendored files**', '**8 files**', '**13 files**', '**9 files**'):
         need(token in readme, 'README_COUNT:' + token)
     for name, digest in manifest['legalFiles'].items():
         need(sha((ROOT / name).read_bytes()) == digest, 'LEGAL_FILE:' + name)
