@@ -1,0 +1,15 @@
+{
+  "docs/MOTH_COUNTS_RVR_V0.md": "4813aa8fcecffb98f1322cc6a844902b5d87c37e1ad44bfe29d7550b8cd1332a",
+  "profiles/rvr-qev-moth-counts-v0/claim.json": "b6a72e00592211a16c052ab7d76f5da920731dc070c81142d08e5f73b4d9e617",
+  "profiles/rvr-qev-moth-counts-v0/conformance.json": "f5c0086639e626d64a951ac16e83be10ea6eee16fb9165f1118ff5f6209e64c4",
+  "profiles/rvr-qev-moth-counts-v0/profile.schema.json": "3ac39d1015d5d1fa3a7a18f57ba3eb5d8dc4836768799eaa1cef98d104ebc6db",
+  "profiles/rvr-qev-moth-counts-v0/roles.json": "9bbe74b0bd2a291acfc1d4d1d55ad4434ec69c6f684e1a464099ba5bfdbea926",
+  "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json": "360e348792e1347ae56cd39a948397be00ce6689391cee7b20ae3684ed0eaa27",
+  "profiles/rvr-qev-moth-counts-v0/verification-profile.json": "da71c114b736338ffa198e69b003e872862eed7ad96e8123378a3eeab4f23aec",
+  "qev/moth_rvr.py": "9b5f805d23d9ffa452fed2eb022a998ccfe704727b1475fb475636f73d08660e",
+  "qev/moth_rvr_cli.py": "ea4d81391558b5688c90df66fa12599c95ca8207063b86464c3c0717041ddde1",
+  "qev/moth_rvr_mutations.py": "038ecaa224c7b27a82e348dd4d5df81e0f0781ce991e1f1b79fef54fcdc9f150",
+  "qev/moth_rvr_relation.py": "af78c4940b09f13ed14dac2cd5bc1e5e13949edad578b2b0f4d3dcf07a72fc71",
+  "tests/test_moth_rvr.py": "63c8914174dca8f471542f08e4b6e5ab0c54ac18848dc67dfa5b0f24179618b8",
+  "tools/pin_moth_rvr_profile.py": "950e1443b5af83e3dd47cd6d00944a27832018de3eccda4b28a0c1a1029aa35a"
+}

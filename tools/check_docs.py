@@ -73,7 +73,7 @@ def run():
         if module == 'qev':
             source = (ROOT / 'qev/__main__.py').read_text(encoding='utf-8')
             need(repr(command) in source, 'CLI_SUBCOMMAND:' + command)
-        if module == 'qev.cross_cli':
+        if module in ('qev.cross_cli', 'qev.moth_rvr_cli'):
             need(command in ('demo', 'replay', 'sources'), 'CROSS_CLI_SUBCOMMAND:' + command)
 
     from qev import sources, source_inventory
@@ -81,7 +81,10 @@ def run():
     source_result = sources.validate()
     need(sources.successful(source_result), 'MAIN_SOURCE_LOCK')
     check_sources()
+    from qev import moth_rvr
+    moth_rvr.check_sources()
     counts = manifest['counts']
+    need(len(moth_rvr.FILES) == counts['mothRvrFiles'], 'MOTH_RVR_SOURCE_COUNT')
     need(len(source_inventory.LOCAL_FILES) == counts['localFiles'], 'LOCAL_COUNT')
     need(len(source_inventory.ALL_VENDOR_FILES) == counts['vendorFiles'], 'VENDOR_COUNT')
     need(len(FILES) == counts['crossFiles'], 'CROSS_COUNT')
@@ -122,7 +125,7 @@ def run():
          and 'node-version: "22"' in workflow, 'CI_RUNTIME_MATRIX')
     need('python -B -m tools.check_docs' in workflow, 'DOCS_NOT_IN_CI')
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
-    for token in ('**259 tests**', '**40 kills**', '**214 local + 28 vendored files**', '**8 files**'):
+    for token in ('**293 tests**', '**47 kills**', '**214 local + 28 vendored files**', '**8 files**', '**13 files**'):
         need(token in readme, 'README_COUNT:' + token)
     for name, digest in manifest['legalFiles'].items():
         need(sha((ROOT / name).read_bytes()) == digest, 'LEGAL_FILE:' + name)
@@ -139,9 +142,9 @@ def run():
         need(token in licensing_text, 'LICENSING_SCOPE:' + token)
     tracked = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, check=True,
                              stdout=subprocess.PIPE).stdout.decode().split('\0')
-    allowed = set(frozen) | set(manifest['mutableFiles']) | set(manifest['auditFiles'])
+    allowed = set(frozen) | set(manifest['mutableFiles']) | set(manifest['auditFiles']) | set(manifest['featureFiles'])
     need(set(filter(None, tracked)) <= allowed, 'UNREVIEWED_TRACKED_FILE')
-    for name in manifest['mutableFiles'] + manifest['auditFiles']:
+    for name in manifest['mutableFiles'] + manifest['auditFiles'] + manifest['featureFiles']:
         need(b'\r' not in (ROOT / name).read_bytes(), 'EDITED_FILE_NOT_LF:' + name)
     return {'status': 'PASS', 'documents': len(actual), 'internalLinks': links,
             'codePathReferences': references, 'cliModuleCommandPairs': len(commands),

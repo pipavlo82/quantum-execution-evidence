@@ -1,0 +1,15 @@
+{
+  "captureClaim": {
+    "authority": "LOCAL_UNSIGNED_CAPTURE_COMMITMENT",
+    "jobId": "4daf7153-f837-4f5a-bf65-a0525bd9dd7a",
+    "manifestSha256": "63d48c9e8e9d8a3ed90bd267e18e76002dcdd18caede5b1bbff0c301da9f9caf",
+    "origin": "LIVE_MOTH_API_CAPTURE",
+    "profile": "qev-moth-comet-counts-v0",
+    "requestSha256": "f4716aec7faa42522de44d8db4e9daa7c260b4629c0a30a4d214c6ed103cb248",
+    "schema": "qev.moth-comet-claim.v0"
+  },
+  "profile": "rvr-qev-moth-counts-v0",
+  "providerAuthentication": "NOT_ESTABLISHED",
+  "relation": "preserved-counts-and-report-consistency",
+  "schema": "rvr.claim.qev-moth-counts.v0"
+}

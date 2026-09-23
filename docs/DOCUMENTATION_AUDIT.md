@@ -109,3 +109,17 @@ GitHub metadata/CI observations are distinct from provider-network access.
 counts-only with no circuit/measurement provenance or native receipt integration;
 the common model does not add capabilities. No entropy, hardware authenticity,
 general compiler correctness or independent authorship claim is introduced.
+
+## Current additive Moth RVR extension
+
+The counts and validation numbers earlier in this report describe the original
+PR #11 audit checkpoint. PR #12 subsequently selected Apache-2.0 without
+changing captured/runtime/profile bytes. The Moth native RVR extension starts
+at `68c306b6b25d392f4de290e904f57e20fa3c0a0f` and preserves all 238 original
+frozen files. The maintainer manifest now includes one new specification
+(18 Markdown documents total), 34 additional tests (293 total), seven new
+source mutants (47 total), 13 separately locked feature files, one lock file,
+and an additional CI step (18 named steps total). Current README, integration,
+provenance and superseded handoff prose distinguish the new RVR path from the
+unchanged Moth counts and cross-provider v0 contracts. This is an additive
+feature extension, not a backfill of native semantics onto the frozen artifacts.

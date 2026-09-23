@@ -1,0 +1,52 @@
+{
+  "controls": [
+    "preserved-capture",
+    "payload-map-order",
+    "counts-key-order"
+  ],
+  "mutants": [
+    {
+      "after": "True",
+      "before": "sha(payloads['manifest.json']) == old['manifestSha256']",
+      "id": "manifest-anchor",
+      "source": "qev/moth_rvr_relation.py"
+    },
+    {
+      "after": "True",
+      "before": "sha(payloads[request]) == old['requestSha256']",
+      "id": "request-anchor",
+      "source": "qev/moth_rvr_relation.py"
+    },
+    {
+      "after": "True",
+      "before": "sha(payloads[name]) == row['sha256'] and len(payloads[name]) == row['bytes']",
+      "id": "member-identity",
+      "source": "qev/moth_rvr_relation.py"
+    },
+    {
+      "after": "True",
+      "before": "data[name]['job_id'] == old['jobId']",
+      "id": "assigned-job",
+      "source": "qev/moth_rvr_relation.py"
+    },
+    {
+      "after": "'VERIFIED' if missing",
+      "before": "'UNVERIFIABLE' if missing",
+      "id": "missing-outcome",
+      "source": "qev/moth_rvr_relation.py"
+    },
+    {
+      "after": "'VERIFIED' if contradictions",
+      "before": "'REFUTED' if contradictions",
+      "id": "contradiction-outcome",
+      "source": "qev/moth_rvr_relation.py"
+    },
+    {
+      "after": "pass",
+      "before": "contradictions.append('COUNTS:' + reason)",
+      "id": "counts-refutation",
+      "source": "qev/moth_rvr_relation.py"
+    }
+  ],
+  "schema": "qev.moth-rvr-falsification.v0"
+}

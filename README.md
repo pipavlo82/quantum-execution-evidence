@@ -12,12 +12,14 @@ byte consistency != authenticated physical execution != entropy certification
 
 ## Current project status and architecture
 
-This is the canonical project status. Audited baseline after merged PR #10:
-`44b25926be923a9cab846bca36a8a7a665774b22` (2026-09-23 UTC).
-Its [merge CI](https://github.com/pipavlo82/quantum-execution-evidence/actions/runs/35802120341)
-passed on Python 3.12 and 3.13. This is an exact checkpoint, not a moving claim
-about future `main`. [Audit coverage and validation](docs/DOCUMENTATION_AUDIT.md)
-record the documentation corrections and frozen boundaries.
+This is the canonical project status, including the additive Moth counts-native
+RVR implementation. Its verified base is merged PR #12:
+`68c306b6b25d392f4de290e904f57e20fa3c0a0f` (2026-09-23 UTC).
+[Base CI](https://github.com/pipavlo82/quantum-execution-evidence/actions/runs/35807258616)
+passed on Python 3.12 and 3.13. PR #11 merged the documentation audit; PR #12
+selected Apache-2.0 for authored material. These are exact checkpoints, not a
+claim that this new feature is already merged. [Audit coverage](docs/DOCUMENTATION_AUDIT.md)
+records frozen boundaries and the current additive extension.
 
 | Path | What works now | Evidence boundary |
 | --- | --- | --- |
@@ -26,6 +28,7 @@ record the documentation corrections and frozen boundaries.
 | Legacy ReceiptOS and TSEI | Capsule/provenance builders and proof-ID helpers; native RVR-artifact preservation and layout-bijection evaluation | Legacy ReceiptOS root/summary/proof assembly is partly local bridge code; each TSEI profile has its own relation |
 | IBM direct live replay v1 (PR #8) | Captured intent/logical/ISA/returned snapshots and ordered shots -> native RVR + finite ideal TSEI -> native ReceiptOS export and saved-artifact replay | Exact two-qubit ideal relation; unsigned acquisition evidence |
 | Moth Comet counts v0 (PR #9) | Preserved HTTP bodies -> request/job/hash/counts/witness/budget consistency | Counts only; no circuit bytes, shot order or established physical measurement map; native RVR/TSEI/ReceiptOS not integrated for this profile |
+| Moth counts-native RVR v0 | Preserved counts capture -> native profile audit, evidence closure, receipt and independent-claim replay | `rvr-qev-moth-counts-v0`; counts consistency only; zero-byte delivery/insufficient-entropy grade preserved; no ReceiptOS/TSEI |
 | Cross-provider model v0 (PR #10) | Both captures -> common identity/observation/issues + explicit capabilities + actual native-layer results; complete report replay | Comparable evidence fields, not equivalent circuits, distributions, trust scores or a new native receipt |
 
 The [integration map](docs/INTEGRATION_MAP.md) maps every layer to its code,
@@ -63,6 +66,18 @@ unresolved, prior publication/timing and seed provenance are not established,
 and empty output does not exercise nonempty Toeplitz extraction. Witness and
 reported-budget arithmetic do not certify entropy or physical bit mapping.
 
+The separate [counts-native RVR profile](docs/MOTH_COUNTS_RVR_V0.md) now wraps
+this relation in a native receipt and re-evaluates saved artifacts against an
+independently selected claim. The captured record is `VERIFIED / REPRODUCED`
+with `hardware-insufficient-entropy` and zero-byte output retained separately.
+No shot order is required. The original counts profile is unchanged.
+
+```text
+IBM capture -> QEV live + finite TSEI -> native RVR -> ReceiptOS
+Moth capture -> counts verifier -> native RVR
+                              -> cross-provider model v0
+```
+
 ### Cross-provider common model
 
 `qev-cross-provider-evidence-v0` emits `qev.cross-provider-evidence.v0`:
@@ -71,7 +86,9 @@ and provider-specific results. `ORDERED_SHOTS` and `COUNTS_ONLY` stay distinct.
 Missing, contradictory, malformed and unavailable evidence remain separate.
 Replay recomputes the complete report from the selected independent claim and
 capture bytes. IBM executes its existing native layers; Moth does not acquire
-those capabilities by appearing beside IBM. The common report itself is not
+those capabilities by appearing beside IBM. This unchanged v0 adapter does not
+invoke the new Moth RVR profile; its Moth native nonintegration labels remain
+correct for that adapter. The common report itself is not
 a native RVR receipt or a ReceiptOS-root-bound artifact.
 
 ## Evidence and threat boundaries
@@ -105,6 +122,8 @@ python -B -m qev verify --request fixtures/corpus/sample-a.request.json fixtures
 python -B -m qev live-demo > live-export.json
 python -B -m qev live-replay live-export.json
 python -B -m qev.moth_replay
+python -B -m qev.moth_rvr_cli demo --output moth-rvr.json
+python -B -m qev.moth_rvr_cli replay --artifact moth-rvr.json --claim profiles/rvr-qev-moth-counts-v0/claim.json
 python -B -m qev.cross_cli demo
 python -B -m qev.cross_cli demo --provider ibm-direct > cross-ibm.json
 python -B -m qev.cross_cli replay --provider ibm-direct --artifact cross-ibm.json
@@ -121,11 +140,11 @@ and [cross-provider](docs/CROSS_PROVIDER_EVIDENCE_V0.md) contracts.
 
 ## Validation
 
-The post-PR #10 suite contains **259 tests** (218 pre-cross-provider + 41 new).
+The current suite contains **293 tests** (259 at the PR #12 base + 34 Moth RVR tests).
 Normal and optimized runs execute the same suite. The synthetic corpus has
-44 cases. Five source-mutation gates require **40 kills**: QEV 7, RVR 7,
-IBM live 7, Moth 7 and cross-provider 12. Positive controls per mutant are
-5/3/3/3/3 respectively. The provider-binding demo separately refutes eight
+44 cases. Six source-mutation gates require **47 kills**: QEV 7, RVR 7,
+IBM live 7, Moth counts 7, cross-provider 12 and Moth native RVR 7. Positive
+controls per mutant are 5/3/3/3/3/3 respectively. The provider-binding demo separately refutes eight
 input mutations; the IBM adapter demo refutes six and rejects malformed bits.
 These input controls are not additional source mutants.
 
@@ -143,6 +162,8 @@ python -B -m qev ibm-runtime-demo
 python -B -m qev live-mutation-check
 python -B -m qev.moth_mutations
 python -B -m qev.cross_mutations
+python -B -m qev.moth_rvr_mutations
+python -B -m qev.moth_rvr_cli sources
 python -B -m qev sources
 python -B -m qev.cross_cli sources
 python -B -m tools.check_docs
@@ -151,9 +172,12 @@ git diff --check
 
 [CI](.github/workflows/ci.yml) runs every legacy gate, both test modes and
 normal/repeat/optimized byte comparisons for IBM export/replay/mutations,
-Moth replay/mutations and both cross-provider projections/replays/mutations.
+Moth counts replay/mutations, Moth RVR export/replay/mutations and both
+cross-provider projections/replays/mutations.
 The main source lock has **214 local + 28 vendored files**; a separate
-cross-provider lock covers **8 files**. Neither lock includes itself. The
+cross-provider lock covers **8 files** and the Moth RVR lock covers **13 files**.
+These locks exclude themselves. The Moth native manifest additionally pins its
+transitive runtime dependencies and unchanged RVR primitives. The
 documentation audit adds a Git-bound coverage record and checker outside runtime
 profile inventories, avoiding changes to frozen runtime/profile identities.
 The 16 historical reference records are metadata, not 16 executed dependencies.
@@ -162,17 +186,17 @@ The 16 historical reference records are metadata, not 16 executed dependencies.
 
 The IBM ideal relation supports active wires 0/1 and a finite gate/angle set;
 it is not a general compiler proof. Moth lacks the provenance needed for that
-relation and has no native receipt integration. The legacy ReceiptOS bridge's
+relation. Its native counts RVR receipt establishes a narrower relation. The legacy ReceiptOS bridge's
 local root/summary/proof assembly is not the stronger live export/replay path.
 Expectation authorship remains shared; no independent implementation is claimed.
 
-Next work is to obtain a precise upstream commitment-preimage encoding and
-circuit/measurement provenance specification for Moth, then test any newly
-available evidence under an explicit new profile. A counts-native RVR profile
-would need its own relation and mutation controls, without inventing shot order.
-Broader IBM circuit support or provider authentication likewise requires a new
-bounded contract and conformance evidence. None is implemented or implied here;
-these steps do not require another QPU job merely to repeat this audit.
+Next work is to assess ReceiptOS packaging for the Moth RVR bundle. Provider
+authentication is conditional on a real cryptographically verifiable provider
+receipt, signature or attestation; none is available in this evidence. Broader
+IBM circuit support is a separate later bounded profile. Precise upstream
+Moth commitment encoding and circuit/measurement provenance remain unresolved
+evidence requirements. This implementation uses only the preserved capture;
+it submits no QPU jobs and uses no provider network or credentials.
 
 ## Documentation and licensing
 

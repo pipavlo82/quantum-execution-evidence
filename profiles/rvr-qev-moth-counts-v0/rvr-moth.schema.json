@@ -1,0 +1,417 @@
+{
+  "$defs": {
+    "axis": {
+      "enum": [
+        "SATISFIED",
+        "REFUTED",
+        "CANNOT_ESTABLISH"
+      ]
+    },
+    "canonicalResult": {
+      "additionalProperties": false,
+      "properties": {
+        "countsVerification": {
+          "additionalProperties": false,
+          "properties": {
+            "reason": {
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "NOT_EVALUATED",
+                "CONSISTENT",
+                "REFUTED",
+                "UNVERIFIABLE"
+              ]
+            }
+          },
+          "required": [
+            "state",
+            "reason"
+          ],
+          "type": "object"
+        },
+        "issues": {
+          "additionalProperties": false,
+          "properties": {
+            "contradiction": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            "missing": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array",
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "missing",
+            "contradiction"
+          ],
+          "type": "object"
+        },
+        "limits": {
+          "additionalProperties": false,
+          "properties": {
+            "TSEI": {
+              "const": "NOT_INTEGRATED_FOR_THIS_PROFILE"
+            },
+            "circuitProvenance": {
+              "const": "UNAVAILABLE_NO_CIRCUIT_BYTES"
+            },
+            "commitmentEncoding": {
+              "const": "UNRESOLVED"
+            },
+            "commitmentTiming": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "cryptographicRandomness": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "entropyQualification": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "measurementProvenance": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "nonemptyToeplitzExtraction": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "physicalQpuExecution": {
+              "const": "UPSTREAM_REPORTED_NOT_INDEPENDENTLY_AUTHENTICATED"
+            },
+            "providerAuthentication": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "receiptOS": {
+              "const": "NOT_INTEGRATED_FOR_THIS_PROFILE"
+            },
+            "seedProvenance": {
+              "const": "NOT_ESTABLISHED"
+            },
+            "shotOrder": {
+              "const": "UNAVAILABLE_COUNTS_ONLY"
+            }
+          },
+          "required": [
+            "providerAuthentication",
+            "physicalQpuExecution",
+            "entropyQualification",
+            "cryptographicRandomness",
+            "circuitProvenance",
+            "measurementProvenance",
+            "shotOrder",
+            "commitmentEncoding",
+            "commitmentTiming",
+            "seedProvenance",
+            "nonemptyToeplitzExtraction",
+            "receiptOS",
+            "TSEI"
+          ],
+          "type": "object"
+        },
+        "observation": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "countsSha256": {
+                  "$ref": "#/$defs/digest"
+                },
+                "deliveredBytes": {
+                  "$ref": "#/$defs/decimalLength"
+                },
+                "delivery": {
+                  "type": "string"
+                },
+                "gradeAuthority": {
+                  "const": "UPSTREAM_REPORTED_ARITHMETIC_CHECKED_NOT_ENTROPY_CERTIFIED"
+                },
+                "reportedGrade": {
+                  "type": "string"
+                },
+                "representation": {
+                  "const": "COUNTS_ONLY"
+                },
+                "requestedBytes": {
+                  "$ref": "#/$defs/decimalLength"
+                },
+                "shots": {
+                  "$ref": "#/$defs/decimalLength"
+                },
+                "uniqueBitstrings": {
+                  "$ref": "#/$defs/decimalLength"
+                },
+                "width": {
+                  "$ref": "#/$defs/decimalLength"
+                },
+                "witnessS": {
+                  "type": "string"
+                },
+                "witnessSigmaAlgebra": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "shots",
+                "uniqueBitstrings",
+                "width",
+                "requestedBytes",
+                "deliveredBytes",
+                "witnessS",
+                "witnessSigmaAlgebra",
+                "delivery",
+                "reportedGrade",
+                "representation",
+                "countsSha256",
+                "gradeAuthority"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "outcome": {
+          "$ref": "#/$defs/outcome"
+        },
+        "reasonCode": {
+          "$ref": "#/$defs/verificationReasonCode"
+        },
+        "schema": {
+          "const": "rvr.qev.moth-counts-result.v0"
+        }
+      },
+      "required": [
+        "schema",
+        "outcome",
+        "reasonCode",
+        "issues",
+        "countsVerification",
+        "observation",
+        "limits"
+      ],
+      "type": "object"
+    },
+    "claim": {
+      "additionalProperties": false,
+      "properties": {
+        "captureClaim": {
+          "additionalProperties": false,
+          "properties": {
+            "authority": {
+              "const": "LOCAL_UNSIGNED_CAPTURE_COMMITMENT"
+            },
+            "jobId": {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            },
+            "manifestSha256": {
+              "$ref": "#/$defs/digest"
+            },
+            "origin": {
+              "const": "LIVE_MOTH_API_CAPTURE"
+            },
+            "profile": {
+              "const": "qev-moth-comet-counts-v0"
+            },
+            "requestSha256": {
+              "$ref": "#/$defs/digest"
+            },
+            "schema": {
+              "const": "qev.moth-comet-claim.v0"
+            }
+          },
+          "required": [
+            "authority",
+            "jobId",
+            "manifestSha256",
+            "origin",
+            "profile",
+            "requestSha256",
+            "schema"
+          ],
+          "type": "object"
+        },
+        "profile": {
+          "const": "rvr-qev-moth-counts-v0"
+        },
+        "providerAuthentication": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "relation": {
+          "const": "preserved-counts-and-report-consistency"
+        },
+        "schema": {
+          "const": "rvr.claim.qev-moth-counts.v0"
+        }
+      },
+      "required": [
+        "schema",
+        "profile",
+        "relation",
+        "providerAuthentication",
+        "captureClaim"
+      ],
+      "type": "object"
+    },
+    "decimalLength": {
+      "pattern": "^(0|[1-9][0-9]*)$",
+      "type": "string"
+    },
+    "digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "evidenceSet": {
+      "additionalProperties": false,
+      "properties": {
+        "members": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/presentEvidenceMember"
+              },
+              {
+                "$ref": "#/$defs/unavailableEvidenceMember"
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "schema": {
+          "const": "rvr.evidence-set.v0"
+        }
+      },
+      "required": [
+        "schema",
+        "members"
+      ],
+      "type": "object"
+    },
+    "identifier": {
+      "enum": [
+        "SUBMIT_ATTEMPTED.json",
+        "job-20260922T2328006744863Z.body.json",
+        "job-20260922T2328006744863Z.http.json",
+        "job-reference.json",
+        "manifest.json",
+        "request.body.json",
+        "result-20260922T2328006744863Z.body.json",
+        "result-20260922T2328006744863Z.http.json",
+        "status-20260922T2326204143474Z.body.json",
+        "status-20260922T2326204143474Z.http.json",
+        "status-20260922T2326503636962Z.body.json",
+        "status-20260922T2326503636962Z.http.json",
+        "status-20260922T2328006744863Z.body.json",
+        "status-20260922T2328006744863Z.http.json",
+        "submit.body.json",
+        "submit.http.json",
+        "terminal-observation.json"
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "VERIFIED",
+        "REFUTED",
+        "UNVERIFIABLE"
+      ]
+    },
+    "presentEvidenceMember": {
+      "additionalProperties": false,
+      "properties": {
+        "byteLength": {
+          "$ref": "#/$defs/decimalLength"
+        },
+        "digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "mediaType": {
+          "const": "application/json"
+        },
+        "status": {
+          "const": "PRESENT"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "mediaType",
+        "byteLength",
+        "digest"
+      ],
+      "type": "object"
+    },
+    "unavailableEvidenceMember": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "reasonCode": {
+          "const": "qev.moth.rvr.v0.evidence_unavailable"
+        },
+        "status": {
+          "const": "UNAVAILABLE"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "reasonCode"
+      ],
+      "type": "object"
+    },
+    "verificationReasonCode": {
+      "enum": [
+        "qev.moth.rvr.v0.verified",
+        "qev.moth.rvr.v0.refuted",
+        "qev.moth.rvr.v0.unverifiable"
+      ]
+    }
+  },
+  "$id": "urn:qev:rvr-moth-counts-v0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claimDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "evidenceSetDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "outcome": {
+      "$ref": "#/$defs/outcome"
+    },
+    "reasonCode": {
+      "$ref": "#/$defs/verificationReasonCode"
+    },
+    "resultDigest": {
+      "$ref": "#/$defs/digest"
+    },
+    "verificationProfileDigest": {
+      "$ref": "#/$defs/digest"
+    }
+  },
+  "required": [
+    "claimDigest",
+    "evidenceSetDigest",
+    "verificationProfileDigest",
+    "outcome",
+    "reasonCode",
+    "resultDigest"
+  ],
+  "title": "Native RVR Moth counts v0",
+  "type": "object"
+}

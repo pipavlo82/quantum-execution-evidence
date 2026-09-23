@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "profileId": {
+      "const": "rvr-qev-moth-counts-v0"
+    }
+  },
+  "required": [
+    "profileId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,211 @@
+{
+  "canonicalByteContract": {
+    "arrayOrder": "preserved-with-duplicates",
+    "domain": "null-boolean-unicode-scalar-string-array-object",
+    "encoding": "UTF-8",
+    "id": "rvr-canonical-json-v0",
+    "lineSeparators": "U+2028-and-U+2029-literal",
+    "numbers": "forbidden",
+    "objectKeyOrder": "unicode-scalar-value-ascending",
+    "solidus": "literal",
+    "stringEscaping": "rvr-json-string-escaping-v0",
+    "unicode": "scalar-values-only-no-normalization",
+    "whitespace": "none"
+  },
+  "canonicalResultContract": {
+    "outcomeProjection": "/outcome",
+    "reasonCodeProjection": "/reasonCode",
+    "schemaPath": "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json",
+    "schemaPointer": "#/$defs/canonicalResult",
+    "schemaSha256": "360e348792e1347ae56cd39a948397be00ce6689391cee7b20ae3684ed0eaa27"
+  },
+  "conformanceVectorSet": {
+    "digest": "5108707cc63b1cdd87447e8a67ba60d093e2e999eda70aaa550d933e6ff36546",
+    "digestRule": "sha256-utf8-sorted-path-tab-file-sha256-lf-rows",
+    "id": "qev-moth-rvr-falsification-v0",
+    "members": [
+      {
+        "id": "conformance-0",
+        "path": "profiles/rvr-qev-moth-counts-v0/conformance.json",
+        "requiredForRecomputation": false,
+        "sha256": "f5c0086639e626d64a951ac16e83be10ea6eee16fb9165f1118ff5f6209e64c4"
+      },
+      {
+        "id": "conformance-1",
+        "path": "qev/moth_rvr_mutations.py",
+        "requiredForRecomputation": false,
+        "sha256": "038ecaa224c7b27a82e348dd4d5df81e0f0781ce991e1f1b79fef54fcdc9f150"
+      },
+      {
+        "id": "conformance-2",
+        "path": "tests/test_moth_rvr.py",
+        "requiredForRecomputation": false,
+        "sha256": "63c8914174dca8f471542f08e4b6e5ab0c54ac18848dc67dfa5b0f24179618b8"
+      }
+    ]
+  },
+  "dependencyResolution": {
+    "base": "SUPPLIED_PROFILE_PACKAGE_ROOT",
+    "locatorRole": "NORMATIVE_PACKAGE_RELATIVE_PATH",
+    "pathFormat": "relative-posix-no-empty-dot-dotdot-or-colon-segments",
+    "verificationOrder": "resolve-read-sha256-match-use"
+  },
+  "evidenceSetContract": {
+    "digestRule": "sha256-utf8-rvr-canonical-json-v0-normalized-member-order",
+    "schemaPath": "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json",
+    "schemaPointer": "#/$defs/evidenceSet",
+    "schemaSha256": "360e348792e1347ae56cd39a948397be00ce6689391cee7b20ae3684ed0eaa27"
+  },
+  "externalContextPolicy": {
+    "ambientInputs": "FORBIDDEN",
+    "immutableCommitments": [
+      "claim.captureClaim",
+      "claim.relation",
+      "claim.providerAuthentication"
+    ],
+    "mode": "COMMITTED_SNAPSHOTS_ONLY"
+  },
+  "profileId": "rvr-qev-moth-counts-v0",
+  "profileSchemaContract": {
+    "constraints": {
+      "id": "moth-profile-schema",
+      "path": "profiles/rvr-qev-moth-counts-v0/profile.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "3ac39d1015d5d1fa3a7a18f57ba3eb5d8dc4836768799eaa1cef98d104ebc6db"
+    },
+    "manifest": {
+      "id": "verification-profile-manifest-schema",
+      "path": "vendor/rvr-v0/verification-profile-manifest.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "148afeb484d3866c1caae82e574182c1b748dd461dfaeb1d8095ecf4905690c1"
+    }
+  },
+  "reasonCodeNamespace": {
+    "gateRejections": [
+      "qev.moth.rvr.v0.rejected"
+    ],
+    "recomputation": [
+      "rvr.recompute.identical",
+      "rvr.recompute.canonical_result_diverged",
+      "rvr.recompute.normative_dependency_unavailable",
+      "rvr.recompute.normative_dependency_identity_mismatch",
+      "rvr.recompute.committed_evidence_unavailable"
+    ],
+    "verification": [
+      "qev.moth.rvr.v0.verified",
+      "qev.moth.rvr.v0.refuted",
+      "qev.moth.rvr.v0.unverifiable"
+    ]
+  },
+  "resultHashRules": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8-exactly-once",
+    "input": "rvr-canonical-json-v0(canonicalResult)",
+    "output": "lowercase-hex-no-prefix"
+  },
+  "schema": "rvr.verification-profile.v0",
+  "schemaContracts": [
+    {
+      "id": "rvr-schema",
+      "path": "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json",
+      "requiredForRecomputation": true,
+      "sha256": "360e348792e1347ae56cd39a948397be00ce6689391cee7b20ae3684ed0eaa27"
+    },
+    {
+      "id": "runtime-0",
+      "path": "qev/moth_rvr.py",
+      "requiredForRecomputation": true,
+      "sha256": "9b5f805d23d9ffa452fed2eb022a998ccfe704727b1475fb475636f73d08660e"
+    },
+    {
+      "id": "runtime-1",
+      "path": "qev/moth_rvr_relation.py",
+      "requiredForRecomputation": true,
+      "sha256": "af78c4940b09f13ed14dac2cd5bc1e5e13949edad578b2b0f4d3dcf07a72fc71"
+    },
+    {
+      "id": "runtime-2",
+      "path": "qev/moth_rvr_cli.py",
+      "requiredForRecomputation": true,
+      "sha256": "ea4d81391558b5688c90df66fa12599c95ca8207063b86464c3c0717041ddde1"
+    },
+    {
+      "id": "runtime-3",
+      "path": "qev/moth_comet.py",
+      "requiredForRecomputation": true,
+      "sha256": "76c51c23fb0c56799674a6e93c1e02bf8243e563bdbfa039f98f8798f13d815f"
+    },
+    {
+      "id": "runtime-4",
+      "path": "qev/moth_replay.py",
+      "requiredForRecomputation": true,
+      "sha256": "1bd74334b37da8f982b4eb5c7566ab594fdc6a1410ef80f5966fcf713a91a9f1"
+    },
+    {
+      "id": "runtime-5",
+      "path": "qev/live_common.py",
+      "requiredForRecomputation": true,
+      "sha256": "5b7a551784dbfedb91c1c94a75003cc2cf66be8167e6761cd26751fffd5a6071"
+    },
+    {
+      "id": "runtime-6",
+      "path": "qev/sources.py",
+      "requiredForRecomputation": true,
+      "sha256": "f4aeba870302e6207d9c4de0c56fdecebc4c93e47d4dcd08a55db45ca9b64f01"
+    },
+    {
+      "id": "runtime-7",
+      "path": "qev/source_inventory.py",
+      "requiredForRecomputation": true,
+      "sha256": "1fe1e86435513e040ad26d10d1ba7997a1df984d7fd5af3a3a7fe748f0a73478"
+    },
+    {
+      "id": "runtime-8",
+      "path": "qev/admission.py",
+      "requiredForRecomputation": true,
+      "sha256": "3450ce9b1381454051a58cc5dc87b266f0f105156cd9131caf84f8091ae181e6"
+    },
+    {
+      "id": "runtime-9",
+      "path": "qev/inventory.py",
+      "requiredForRecomputation": true,
+      "sha256": "db01cbbb4752c0c37394c373d4df5520180f5804de65da5fbcad88fdfc013424"
+    },
+    {
+      "id": "runtime-10",
+      "path": "qev/adapters.py",
+      "requiredForRecomputation": true,
+      "sha256": "b5a881dee92d1b1e880ed38a966fde4784efe09295cf4010d4f859c31edd2802"
+    },
+    {
+      "id": "runtime-11",
+      "path": "qev/__init__.py",
+      "requiredForRecomputation": true,
+      "sha256": "92b1dfb8965a5b874587727aaf58da03e130b3d861b93ab08292d5ca126908c7"
+    },
+    {
+      "id": "runtime-12",
+      "path": "profiles/rvr-qev-moth-counts-v0/roles.json",
+      "requiredForRecomputation": true,
+      "sha256": "9bbe74b0bd2a291acfc1d4d1d55ad4434ec69c6f684e1a464099ba5bfdbea926"
+    },
+    {
+      "id": "vendor-4",
+      "path": "vendor/rvr-v0/LICENSE",
+      "requiredForRecomputation": true,
+      "sha256": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251"
+    },
+    {
+      "id": "vendor-5",
+      "path": "vendor/rvr-v0/adapter.py",
+      "requiredForRecomputation": true,
+      "sha256": "03505efc8ee993f118fad2c71f706870d25de0da61a393a1f18f7b310bded235"
+    }
+  ],
+  "verificationSpecification": {
+    "id": "moth-specification",
+    "path": "docs/MOTH_COUNTS_RVR_V0.md",
+    "requiredForRecomputation": true,
+    "sha256": "4813aa8fcecffb98f1322cc6a844902b5d87c37e1ad44bfe29d7550b8cd1332a"
+  }
+}

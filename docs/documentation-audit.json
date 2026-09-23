@@ -22,6 +22,7 @@
     "Offline live capture replay and source mutations",
     "Offline Moth capture replay and semantic mutations",
     "Cross-provider evidence projection, replay and mutations",
+    "Native Moth counts RVR replay and mutations",
     "Documentation consistency",
     "Diff hygiene"
   ],
@@ -29,8 +30,10 @@
     "crossFiles": 8,
     "frozenFiles": 238,
     "localFiles": 214,
+    "mothRvrFiles": 13,
     "referenceRecords": 16,
-    "tests": 259,
+    "sourceMutants": 47,
+    "tests": 293,
     "vendorFiles": 28
   },
   "documents": {
@@ -70,6 +73,10 @@
       "disposition": "preserved",
       "review": "See docs/DOCUMENTATION_AUDIT.md coverage table"
     },
+    "docs/MOTH_COUNTS_RVR_V0.md": {
+      "disposition": "updated",
+      "review": "New counts-native RVR relation and exact boundaries"
+    },
     "docs/NEXT_NATIVE_RVR.md": {
       "disposition": "updated",
       "review": "See docs/DOCUMENTATION_AUDIT.md coverage table"
@@ -103,6 +110,23 @@
       "review": "See docs/DOCUMENTATION_AUDIT.md coverage table"
     }
   },
+  "featureBase": "68c306b6b25d392f4de290e904f57e20fa3c0a0f",
+  "featureFiles": [
+    "qev/moth_rvr.py",
+    "qev/moth_rvr_relation.py",
+    "qev/moth_rvr_cli.py",
+    "qev/moth_rvr_mutations.py",
+    "tests/test_moth_rvr.py",
+    "tools/pin_moth_rvr_profile.py",
+    "docs/MOTH_COUNTS_RVR_V0.md",
+    "profiles/rvr-qev-moth-counts-v0/profile.schema.json",
+    "profiles/rvr-qev-moth-counts-v0/rvr-moth.schema.json",
+    "profiles/rvr-qev-moth-counts-v0/verification-profile.json",
+    "profiles/rvr-qev-moth-counts-v0/roles.json",
+    "profiles/rvr-qev-moth-counts-v0/conformance.json",
+    "profiles/rvr-qev-moth-counts-v0/claim.json",
+    "profiles/rvr-qev-moth-counts-v0/sources.json"
+  ],
   "frozenFiles": {
     ".gitattributes": "92a1fae24875b0efc08e63000361f06ea0361b28233c808699d85c92da6f1945",
     ".gitignore": "9aafd075170ab2dd40fd70d5d8408e5ef3b7d6dc535fbe764f203e45dd00fd90",
@@ -343,6 +367,10 @@
     "vendor/tsei-v0/src/receiptos/challenge/transformation-stability-cycle.ts": "67c9e9cc2877ef3df42994cad1e300cb7d075593204beb77ef08f858e89f09df",
     "vendor/tsei-v0/src/receiptos/challenge/transformation-stability.ts": "9346436b6413eeb3d96a4d5208d3fb73e3ba532a80028cfd8a0252a6522286ea"
   },
+  "legalFiles": {
+    "LICENSE": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
+    "NOTICE": "19e374f11c3a1312b7838acf89cabe2b08ee133f39f63706d5013dd9d50bf43a"
+  },
   "mutableFiles": [
     ".github/workflows/ci.yml",
     "LICENSE",
@@ -365,11 +393,8 @@
     "profiles/cross-provider-evidence-v0/profile.json": "qev-cross-provider-evidence-v0",
     "profiles/live-capture-replay-v1/verification-profile.json": "rvr-qev-live-capture-replay-v1",
     "profiles/moth-comet-counts-v0/profile.json": "qev-moth-comet-counts-v0",
-    "profiles/qev-preserved-observation-v0/verification-profile.json": "rvr-qev-preserved-observation-v0"
+    "profiles/qev-preserved-observation-v0/verification-profile.json": "rvr-qev-preserved-observation-v0",
+    "profiles/rvr-qev-moth-counts-v0/verification-profile.json": "rvr-qev-moth-counts-v0"
   },
-  "schema": "qev.documentation-audit.v1",
-  "legalFiles": {
-    "LICENSE": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
-    "NOTICE": "19e374f11c3a1312b7838acf89cabe2b08ee133f39f63706d5013dd9d50bf43a"
-  }
+  "schema": "qev.documentation-audit.v1"
 }
