@@ -9,10 +9,10 @@
       "size_bytes": 587
     },
     {
-      "git_blob_sha1": "9e4e880d21951f13fbec055722307ee9593ac6e9",
+      "git_blob_sha1": "c8318d91ac58bac2e26144dcb36d168c43f95209",
       "path": ".github/workflows/ci.yml",
-      "sha256": "88049b64ebdfcd08dfc346d83b33fbaac03f9ad18bd957984ae7805eee2a2f46",
-      "size_bytes": 3537
+      "sha256": "55921a131f0724eb36956497462eff229eca21f59549be1c5f733f2e4e4cd477",
+      "size_bytes": 5113
     },
     {
       "git_blob_sha1": "997d8c7c10738ee91fe7e48924f75a0687fbcb4a",
@@ -27,10 +27,10 @@
       "size_bytes": 2665
     },
     {
-      "git_blob_sha1": "bb54d3e1f4328e5caf27a67c722d1bb0435ce9a6",
+      "git_blob_sha1": "6a17a8b7cfd88bed40c959af788d8e6e7669411b",
       "path": "README.md",
-      "sha256": "684e26ab8ad04f98b3984be48b1ccdf3e7a05cc09ce61f0fc6e827c9f8c08277",
-      "size_bytes": 4469
+      "sha256": "35875f4a32ee4560c72ce5da99c360c79dc725a23aa183ccdb05a34eb850c3e1",
+      "size_bytes": 4972
     },
     {
       "git_blob_sha1": "628ad1a29595d288a1ac2cdb77c29a2530a1f10a",

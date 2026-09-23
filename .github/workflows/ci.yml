@@ -77,3 +77,23 @@ jobs:
           python -B -O -m qev.moth_mutations > moth-mutations-optimized.json
           cmp moth-mutations.json moth-mutations-repeat.json
           cmp moth-mutations.json moth-mutations-optimized.json
+      - name: Cross-provider evidence projection, replay and mutations
+        run: |
+          python -B -m qev.cross_cli sources
+          for provider in ibm-direct moth-comet; do
+            python -B -m qev.cross_cli demo --provider "$provider" > "cross-$provider.json"
+            python -B -m qev.cross_cli demo --provider "$provider" > "cross-$provider-repeat.json"
+            python -B -O -m qev.cross_cli demo --provider "$provider" > "cross-$provider-optimized.json"
+            cmp "cross-$provider.json" "cross-$provider-repeat.json"
+            cmp "cross-$provider.json" "cross-$provider-optimized.json"
+            python -B -m qev.cross_cli replay --provider "$provider" --artifact "cross-$provider.json" > "cross-$provider-replay.json"
+            python -B -m qev.cross_cli replay --provider "$provider" --artifact "cross-$provider.json" > "cross-$provider-replay-repeat.json"
+            python -B -O -m qev.cross_cli replay --provider "$provider" --artifact "cross-$provider.json" > "cross-$provider-replay-optimized.json"
+            cmp "cross-$provider-replay.json" "cross-$provider-replay-repeat.json"
+            cmp "cross-$provider-replay.json" "cross-$provider-replay-optimized.json"
+          done
+          python -B -m qev.cross_mutations > cross-mutations.json
+          python -B -m qev.cross_mutations > cross-mutations-repeat.json
+          python -B -O -m qev.cross_mutations > cross-mutations-optimized.json
+          cmp cross-mutations.json cross-mutations-repeat.json
+          cmp cross-mutations.json cross-mutations-optimized.json

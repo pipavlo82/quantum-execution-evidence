@@ -69,3 +69,12 @@ consistent counts and a budget-limited **zero-byte** output (32 requested).
 See [the Moth profile](docs/MOTH_COMET_COUNTS_V0.md) for exact evidence and limits.
 Counts consistency does not establish hardware authenticity, entropy, ordered
 measurements or prior publication of the returned commitment.
+
+## Provider-neutral evidence model v0
+
+`python -B -m qev.cross_cli demo` projects both preserved live captures into
+common evidence fields plus explicit provider capabilities and actual native
+execution results. Moth retains unavailable circuit/measurement provenance,
+zero-byte delivery and no native RVR/TSEI/ReceiptOS integration. Authentication
+remains NOT_ESTABLISHED for both. Existing profiles and captures are unchanged.
+See [the model and replay contract](docs/CROSS_PROVIDER_EVIDENCE_V0.md).

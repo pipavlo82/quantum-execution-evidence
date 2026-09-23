@@ -1,0 +1,13 @@
+{
+  "files": {
+    "docs/CROSS_PROVIDER_EVIDENCE_V0.md": "b289ca58ef1d115a54527896c45d21051c0eb9921b2244442ce50519c0d868c7",
+    "profiles/cross-provider-evidence-v0/profile.json": "db55c1f1802b1c4818d9b30f98e37a3b51e6b749f69c849c1832b9c800abc51f",
+    "qev/cross_adapters.py": "3886e23c3a5325a9831a9ed21d79649bda79dcdc1e1d09fc3d40de3b9ce7414e",
+    "qev/cross_cli.py": "8564436c64560d8dfc676ab9d75c79aaec10a48ddbffc5a5845729b39631017f",
+    "qev/cross_mutations.py": "112efa131c87d47607529120c4297fe1d63c4438196393f114eedd9126457c9d",
+    "qev/cross_provider.py": "da7358e5c7e318667cbde90ff361cc0f1fe59f9ae46027df6b7c10c2762cd806",
+    "tests/test_cross_provider.py": "6e7d55cfd572484017c7782e03193e089d84e6f4f10ba77a7b52268cd369fe34",
+    "tools/pin_cross_profile.py": "5b3ddb65716e097e015327d1f966e819c6236364564be3d284cddc50a658d54b"
+  },
+  "schema": "qev.cross-provider-sources.v0"
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "qev.cross-provider-profile.v0",
+  "profileId": "qev-cross-provider-evidence-v0",
+  "reportSchema": "qev.cross-provider-evidence.v0",
+  "specification": "docs/CROSS_PROVIDER_EVIDENCE_V0.md",
+  "providers": ["ibm-direct", "moth-comet"],
+  "entrypoint": "python -B -m qev.cross_cli",
+  "sourceLock": "profiles/cross-provider-evidence-v0/sources.json",
+  "legacySourceLock": "sources.lock.json",
+  "input": "Bounded raw capture bytes and separate local unsigned claim",
+  "commonFields": ["identity", "common"],
+  "providerFields": ["capabilities", "nativeLayers", "providerSpecific"],
+  "outcomes": ["CONSISTENT", "INCOMPLETE", "CONTRADICTED", "MALFORMED", "CANNOT_RECOMPUTE"],
+  "issueClasses": ["missing", "contradiction", "malformed", "unavailable"],
+  "providerAuthentication": "NOT_ESTABLISHED",
+  "runtimeNetwork": "FORBIDDEN",
+  "newNativeProfile": false,
+  "comparisonMeaning": "Comparable evidence surfaces, not equal experiments, distributions or trust scores"
+}
