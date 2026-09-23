@@ -27,7 +27,7 @@ enumerates every document, profile ID, frozen byte hash and expected count.
 | [Integration map](INTEGRATION_MAP.md) | Replaced ReceiptOS/TSEI NOT_INTEGRATED and Semantic-ABI-only vendor claims with scoped executed surfaces; retained actual reference-only components |
 | [RVR handoff](NEXT_NATIVE_RVR.md) | Replaced completed-on-feature/pending ReceiptOS wording with merged history and current status links; original planning is retained in Git history |
 | [Provenance](PROVENANCE.md) | Scoped original extraction to its historical time; documented subsequent integrations, captures, 28 vendors and two source locks; retained original SHAs |
-| [Licensing](../LICENSING.md) | Retained pending root license and upstream licenses; clarified inherited reference metadata versus later vendoring and Moth evidence/OpenAPI boundaries |
+| [Licensing](../LICENSING.md) | The audit originally retained a pending root license; the current repository now selects Apache-2.0 for repository-authored material while preserving vendor, capture and upstream OpenAPI boundaries |
 | [Synthetic contract](CONTRACT.md) | Scoped synthetic-only restrictions to quantum-evidence.v0; replaced obsolete four-vendor/all-technical-files inventory claim with current finite inventories |
 | [Provider binding](PROVIDER_EXECUTION_BINDING_V0.md) | Corrected EXECUTION_BOUND to actual BOUND; described eight axes and lack of independent expected-job-ID comparison; IBM adapter is implemented |
 | [IBM adapter](IBM_QUANTUM_RUNTIME_ADAPTER_V0.md) | Removed no-live-job claim; distinguished synthetic demo from preserved live replay and caller-supplied capture arguments; utility retrieves, does not submit |
@@ -68,9 +68,14 @@ identity just to add documentation QA. The checker rejects changes to every
 pre-existing path outside the explicitly reviewed mutable set.
 
 The source counts remain 214 local + 28 vendored and eight cross-provider files;
-both source locks exclude themselves. The 16 inherited reference records are
-not executable dependency counts or freshly fetched upstream source evidence.
-All four vendor families retain exact upstream commits and license hashes.
+both runtime source locks exclude themselves. The later root-license selection
+adds `LICENSE` and `NOTICE` as Git-bound legal metadata outside those runtime
+inventories, so selecting a license does not repin native verification profiles.
+The documentation checker pins both legal-file hashes, package license metadata
+and the explicit vendor/capture exclusions in `LICENSING.md`. The 16 inherited
+reference records are not executable dependency counts or freshly fetched
+upstream source evidence. All four vendor families retain exact upstream commits
+and license hashes.
 Upstream paths inside the frozen TSEI specification refer to crystal-receipt
 at `45b46bf7df3a60b32583291f577a36bf19d22f00`, not missing QEV implementation files.
 Only the declared vendored subset is present; upstream Rust/tests are not run

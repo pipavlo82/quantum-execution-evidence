@@ -345,7 +345,9 @@
   },
   "mutableFiles": [
     ".github/workflows/ci.yml",
+    "LICENSE",
     "LICENSING.md",
+    "NOTICE",
     "README.md",
     "docs/CONTRACT.md",
     "docs/IBM_QUANTUM_RUNTIME_ADAPTER_V0.md",
@@ -365,5 +367,9 @@
     "profiles/moth-comet-counts-v0/profile.json": "qev-moth-comet-counts-v0",
     "profiles/qev-preserved-observation-v0/verification-profile.json": "rvr-qev-preserved-observation-v0"
   },
-  "schema": "qev.documentation-audit.v1"
+  "schema": "qev.documentation-audit.v1",
+  "legalFiles": {
+    "LICENSE": "fa7fe2e14249d2da31c0d2a0bbefc17a1994a93b42ae652a3dab450b6f1c0251",
+    "NOTICE": "19e374f11c3a1312b7838acf89cabe2b08ee133f39f63706d5013dd9d50bf43a"
+  }
 }

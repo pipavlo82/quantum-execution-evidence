@@ -21,16 +21,16 @@
       "size_bytes": 131
     },
     {
-      "git_blob_sha1": "134c0b2139db606336fe8d08941f68d4c6aefa3e",
+      "git_blob_sha1": "fb33258c29ba99f36629e8b5ea776b8b4e414104",
       "path": "LICENSING.md",
-      "sha256": "0fbc6b41476a17cea65b86a1ef6c2279eaa3de8c02cfbb35aa9418ced25234cc",
-      "size_bytes": 3483
+      "sha256": "59eb8d8d3a7f422a853c57e332cb95e90173aa960f74c799e48cce5f43311a68",
+      "size_bytes": 3918
     },
     {
-      "git_blob_sha1": "35860e4e58c0774171ea23b8bbe490c76d0fad3d",
+      "git_blob_sha1": "89408a3458eee815a1b886ed3addced1dc0e91b2",
       "path": "README.md",
-      "sha256": "3b637435a3fb9cfe943102e2f9c2f67253ba2ba82d9e11626c4e5807003a503f",
-      "size_bytes": 11201
+      "sha256": "6972f445a1205b97de526fc6cd07929b31b98e65ddf3854444a7cdcf125916dc",
+      "size_bytes": 11287
     },
     {
       "git_blob_sha1": "65ec92610bc4529bb994616ad25bbf8817a81386",
@@ -681,10 +681,10 @@
       "size_bytes": 4659
     },
     {
-      "git_blob_sha1": "4638ea9cb558312dffbedca65dfa34d77fdc1365",
+      "git_blob_sha1": "a4c5f01c04588c36cde82d1f61130abb7c225d1a",
       "path": "pyproject.toml",
-      "sha256": "0d17e163c523170757706000e867a52af1ef08ba84b174830cb38561a6942ed3",
-      "size_bytes": 276
+      "sha256": "ac94e4c4ddc5ef5302de89cb009c131ad02a3989edca7fec7b8b37956e6e35cc",
+      "size_bytes": 310
     },
     {
       "git_blob_sha1": "b250517954c9171a2abdaa69ab0e40786e4c5824",

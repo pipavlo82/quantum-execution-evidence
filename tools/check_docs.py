@@ -124,6 +124,19 @@ def run():
     readme = (ROOT / 'README.md').read_text(encoding='utf-8')
     for token in ('**259 tests**', '**40 kills**', '**214 local + 28 vendored files**', '**8 files**'):
         need(token in readme, 'README_COUNT:' + token)
+    for name, digest in manifest['legalFiles'].items():
+        need(sha((ROOT / name).read_bytes()) == digest, 'LEGAL_FILE:' + name)
+    license_text = (ROOT / 'LICENSE').read_text(encoding='utf-8')
+    notice_text = (ROOT / 'NOTICE').read_text(encoding='utf-8')
+    package_text = (ROOT / 'pyproject.toml').read_text(encoding='utf-8')
+    licensing_text = (ROOT / 'LICENSING.md').read_text(encoding='utf-8')
+    need('Apache License\nVersion 2.0, January 2004' in license_text, 'ROOT_LICENSE_NOT_APACHE_2_0')
+    need('Copyright 2026 Pavlo Tvardovskyi' in notice_text, 'NOTICE_COPYRIGHT')
+    need('license = { file = "LICENSE" }' in package_text
+         and 'license-status = "apache-2.0"' in package_text, 'PACKAGE_LICENSE_METADATA')
+    for token in ('preserved historical evidence', 'not relicensed', 'vendor/semantic-abi/',
+                  'vendor/rvr-v0/', 'vendor/receiptos-v0/', 'vendor/tsei-v0/'):
+        need(token in licensing_text, 'LICENSING_SCOPE:' + token)
     tracked = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, check=True,
                              stdout=subprocess.PIPE).stdout.decode().split('\0')
     allowed = set(frozen) | set(manifest['mutableFiles']) | set(manifest['auditFiles'])
